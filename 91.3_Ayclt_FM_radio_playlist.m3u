@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://raw.githubusercontent.com/913AycltFM/Radio-Stations-That-Can-Be-Played-On-A-IPTV_or_Plex_or_jellyfin/main/91.3_Ayclt_FM_radio_guide.xml"
+#EXTM3U url-tvg="https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/main/91.3_Ayclt_FM_radio_guide.xml"
 
 #EXTINF:-1 tvg-id="913AycltFM" tvg-name="91.3 Ayclt FM" tvg-logo="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1778824541.png" tvg-background="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" tvg-art="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" tvg-chno="1" group-title="Music",91.3 Ayclt FM
 https://tv.913aycltfm.com/memfs/4706b7ae-6d40-40f3-a5df-ac62035e1c42.m3u8
@@ -11,4 +11,3 @@ https://tv.913aycltfm.com/memfs/c421623b-6171-4fc8-8514-86993233d910.m3u8
 
 #EXTINF:-1 tvg-id="913AycltFMLiveStudioCam" tvg-name="91.3 Ayclt FM Live Studio Cam" tvg-logo="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1778824541.png" tvg-background="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" tvg-art="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" tvg-chno="1.4" group-title="Live",91.3 Ayclt FM Live Studio Cam
 https://tv.913aycltfm.com/memfs/64d3d799-4409-49da-9ffc-657f71c0743b.m3u8
-
