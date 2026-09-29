@@ -13,6 +13,7 @@ TIMEZONE = ZoneInfo("America/Chicago")
 DAYS_AHEAD = 7
 XML_OUTPUT = "91.3_Ayclt_FM_radio_guide.xml"
 JSON_OUTPUT = "epg.json"
+STREAMER_ART_CACHE_FILE = "streamer_art_cache.json"
 
 STATIONS = {
     "913AycltFM": "91.3_ayclt_fm",
@@ -224,7 +225,7 @@ def fetch_streamers(station_slug):
         data = fetch_json(endpoint)
     except RuntimeError as error:
         print(f"Streamer/DJ artwork lookup unavailable for {station_slug}: {error}")
-        return {}, {}, {}
+        return load_station_streamer_cache(station_slug)
 
     rows = find_schedule_list(data)
     by_name = {}
@@ -266,6 +267,7 @@ def fetch_streamers(station_slug):
         print(f"  DJ artwork: {display_name or username or streamer_id} (ID {streamer_id}) -> {art}")
 
     print(f"Loaded {len(by_id)} streamer/DJ artwork entries for {station_slug}.")
+    save_streamer_art_cache(station_slug, by_name, by_id, by_username)
     return by_name, by_id, by_username
 
 
@@ -275,25 +277,115 @@ def normalize_streamer_name(value):
     return " ".join(str(value).strip().casefold().replace("_", " ").split())
 
 
+def load_streamer_art_cache():
+    path = Path(STREAMER_ART_CACHE_FILE)
+    if not path.exists():
+        return {}, {}, {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        print(f"Streamer artwork cache could not be read: {error}")
+        return {}, {}, {}
+
+    by_name = {}
+    by_username = {}
+    by_id = {}
+
+    for row in data.get("streamers", []):
+        if not isinstance(row, dict):
+            continue
+        art = str(row.get("art") or "").strip()
+        if not art:
+            continue
+        streamer_id = str(row.get("id") or "").strip()
+        name = normalize_streamer_name(row.get("name"))
+        username = normalize_streamer_name(row.get("username"))
+        if streamer_id:
+            by_id[streamer_id] = art
+        if name:
+            by_name[name] = art
+        if username:
+            by_username[username] = art
+
+    print(f"Loaded {len(by_id)} cached streamer/DJ artwork entries.")
+    return by_name, by_id, by_username
+
+
+def save_streamer_art_cache(station_slug, by_name, by_id, by_username):
+    # Keep a compact, station-scoped cache so temporary API failures do not
+    # replace known DJ artwork with station artwork.
+    path = Path(STREAMER_ART_CACHE_FILE)
+    try:
+        existing = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"stations": {}}
+    except (OSError, json.JSONDecodeError):
+        existing = {"stations": {}}
+
+    stations = existing.setdefault("stations", {})
+    rows = []
+    for streamer_id, art in sorted(by_id.items()):
+        name = next((n for n, a in by_name.items() if a == art), "")
+        username = next((u for u, a in by_username.items() if a == art), "")
+        rows.append({"id": streamer_id, "name": name, "username": username, "art": art})
+    stations[station_slug] = {"streamers": rows}
+    path.write_text(json.dumps(existing, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def load_station_streamer_cache(station_slug):
+    path = Path(STREAMER_ART_CACHE_FILE)
+    if not path.exists():
+        return {}, {}, {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        station = data.get("stations", {}).get(station_slug, {})
+        rows = station.get("streamers", [])
+    except (OSError, json.JSONDecodeError):
+        return {}, {}, {}
+
+    by_name = {}
+    by_username = {}
+    by_id = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        art = str(row.get("art") or "").strip()
+        if not art:
+            continue
+        streamer_id = str(row.get("id") or "").strip()
+        name = normalize_streamer_name(row.get("name"))
+        username = normalize_streamer_name(row.get("username"))
+        if streamer_id:
+            by_id[streamer_id] = art
+        if name:
+            by_name[name] = art
+        if username:
+            by_username[username] = art
+    return by_name, by_id, by_username
+
+
 def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username):
     name, streamer_id = get_streamer_info(item)
-
     normalized_name = normalize_streamer_name(name)
 
-    # Prefer the numeric ID supplied by AzuraCast when the schedule includes it.
-    if streamer_id and str(streamer_id).isdigit() and str(streamer_id) in streamer_art_by_id:
-        return streamer_art_by_id[str(streamer_id)]
+    if streamer_id:
+        cached = streamer_art_by_id.get(str(streamer_id).strip())
+        if cached:
+            return cached
+        # AzuraCast's direct artwork endpoint works without the /streamers
+        # index and can redirect to the versioned custom artwork.
+        if str(streamer_id).strip().isdigit():
+            return streamer_art_url(station_slug, str(streamer_id).strip())
 
-    # Match the live DJ by display name. This automatically follows new/removed DJs.
-    if normalized_name and normalized_name in streamer_art_by_name:
-        return streamer_art_by_name[normalized_name]
+    if normalized_name:
+        cached = streamer_art_by_name.get(normalized_name)
+        if cached:
+            return cached
 
-    # Some schedule payloads identify the DJ by username rather than display name.
     username = get_field(item, ["streamer_username", "username"])
     if username:
         normalized_username = normalize_streamer_name(username)
-        if normalized_username in streamer_art_by_username:
-            return streamer_art_by_username[normalized_username]
+        cached = streamer_art_by_username.get(normalized_username)
+        if cached:
+            return cached
 
     return None
 
