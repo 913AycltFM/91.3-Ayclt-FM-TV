@@ -371,10 +371,17 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
 
         live_program = is_live_program(item)
         icon = get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username) if live_program else None
+
+        # Resolve live DJ artwork from the streamer name/ID when the
+        # /streamers index is unavailable.
         if live_program and not icon:
-            _, streamer_id = get_streamer_info(item)
-            if streamer_id:
-                icon = streamer_art_url(station_slug, streamer_id)
+            live_name, streamer_id = get_streamer_info(item)
+            if live_name:
+                normalized_live_name = normalize_streamer_name(live_name)
+                icon = streamer_art_by_name.get(normalized_live_name)
+
+            if not icon and streamer_id:
+                icon = streamer_art_by_id.get(str(streamer_id).strip())
 
         events.append({
             "channel_id": channel["id"],
