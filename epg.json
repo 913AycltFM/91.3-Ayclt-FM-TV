@@ -4,19 +4,6 @@
     "station_name": "91.3 Ayclt FM",
     "title": "91.3 Ayclt FM",
     "description": "Dickinson's Texas #1 Hit Music Station",
-    "start": "2026-09-29T11:00:00-05:00",
-    "end": "2026-09-29T12:00:00-05:00",
-    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
-    "fallback": true,
-    "live": false,
-    "live_badge": "",
-    "display_title": "91.3 Ayclt FM"
-  },
-  {
-    "channel_id": "913AycltFM",
-    "station_name": "91.3 Ayclt FM",
-    "title": "91.3 Ayclt FM",
-    "description": "Dickinson's Texas #1 Hit Music Station",
     "start": "2026-09-29T12:00:00-05:00",
     "end": "2026-09-29T13:00:00-05:00",
     "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
@@ -1872,17 +1859,17 @@
     "display_title": "Rock Doc"
   },
   {
-    "channel_id": "913AycltFMHD2",
-    "station_name": "91.3 Ayclt FM HD2",
-    "title": "91.3 Ayclt FM HD2",
+    "channel_id": "913AycltFM",
+    "station_name": "91.3 Ayclt FM",
+    "title": "91.3 Ayclt FM",
     "description": "Dickinson's Texas #1 Hit Music Station",
-    "start": "2026-09-29T11:00:00-05:00",
-    "end": "2026-09-29T12:00:00-05:00",
-    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png",
+    "start": "2026-10-06T11:00:00-05:00",
+    "end": "2026-10-06T12:00:00-05:00",
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
     "fallback": true,
     "live": false,
     "live_badge": "",
-    "display_title": "91.3 Ayclt FM HD2"
+    "display_title": "91.3 Ayclt FM"
   },
   {
     "channel_id": "913AycltFMHD2",
@@ -4056,17 +4043,17 @@
     "display_title": "91.3 Ayclt FM HD2"
   },
   {
-    "channel_id": "913AycltFMHD3",
-    "station_name": "91.3 Ayclt FM HD3",
-    "title": "91.3 Ayclt FM HD3",
+    "channel_id": "913AycltFMHD2",
+    "station_name": "91.3 Ayclt FM HD2",
+    "title": "91.3 Ayclt FM HD2",
     "description": "Dickinson's Texas #1 Hit Music Station",
-    "start": "2026-09-29T11:00:00-05:00",
-    "end": "2026-09-29T12:00:00-05:00",
-    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png",
+    "start": "2026-10-06T11:00:00-05:00",
+    "end": "2026-10-06T12:00:00-05:00",
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png",
     "fallback": true,
     "live": false,
     "live_badge": "",
-    "display_title": "91.3 Ayclt FM HD3"
+    "display_title": "91.3 Ayclt FM HD2"
   },
   {
     "channel_id": "913AycltFMHD3",
@@ -6240,17 +6227,17 @@
     "display_title": "91.3 Ayclt FM HD3"
   },
   {
-    "channel_id": "913AycltFMLiveStudioCam",
-    "station_name": "91.3 Ayclt FM Live Studio Cam",
-    "title": "91.3 Ayclt FM Live Studio Cam",
-    "description": "91.3 Ayclt FM Live Studio Cam",
-    "start": "2026-09-29T11:00:00-05:00",
-    "end": "2026-09-29T12:00:00-05:00",
-    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
+    "channel_id": "913AycltFMHD3",
+    "station_name": "91.3 Ayclt FM HD3",
+    "title": "91.3 Ayclt FM HD3",
+    "description": "Dickinson's Texas #1 Hit Music Station",
+    "start": "2026-10-06T11:00:00-05:00",
+    "end": "2026-10-06T12:00:00-05:00",
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png",
     "fallback": true,
     "live": false,
     "live_badge": "",
-    "display_title": "91.3 Ayclt FM Live Studio Cam"
+    "display_title": "91.3 Ayclt FM HD3"
   },
   {
     "channel_id": "913AycltFMLiveStudioCam",
@@ -8110,5 +8097,18 @@
     "live": true,
     "live_badge": "LIVE",
     "display_title": "Rock Doc"
+  },
+  {
+    "channel_id": "913AycltFMLiveStudioCam",
+    "station_name": "91.3 Ayclt FM Live Studio Cam",
+    "title": "91.3 Ayclt FM Live Studio Cam",
+    "description": "91.3 Ayclt FM Live Studio Cam",
+    "start": "2026-10-06T11:00:00-05:00",
+    "end": "2026-10-06T12:00:00-05:00",
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
+    "fallback": true,
+    "live": false,
+    "live_badge": "",
+    "display_title": "91.3 Ayclt FM Live Studio Cam"
   }
 ]
