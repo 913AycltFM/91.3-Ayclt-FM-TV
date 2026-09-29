@@ -261,28 +261,34 @@ def normalize_streamer_name(value):
     return " ".join(str(value).strip().casefold().replace("_", " ").split())
 
 
+# Optional explicit numeric AzuraCast streamer IDs.
+# Add each DJ here once the numeric ID is known. The ID is used to build
+# /api/station/{station}/streamer/{id}/art.
+STREAMER_IDS = {
+    # "JB In The Morning": "10",
+}
+
+
 def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id):
     name, streamer_id = get_streamer_info(item)
 
-    # Prefer the exact streamer ID from the schedule. This avoids depending
-    # on the /streamers collection endpoint being publicly accessible.
-    if streamer_id:
-        direct_url = streamer_art_url(station_slug, streamer_id)
-        if direct_url:
-            print(f"  Using direct DJ artwork: {name or streamer_id} -> {direct_url}")
+    # Prefer an explicit numeric streamer ID configured above when the
+    # schedule payload only provides the DJ name.
+    normalized_name = normalize_streamer_name(name)
+    for configured_name, configured_id in STREAMER_IDS.items():
+        if normalized_name == normalize_streamer_name(configured_name):
+            direct_url = streamer_art_url(station_slug, str(configured_id))
+            print(f"  Using configured DJ artwork: {name or configured_id} -> {direct_url}")
             return direct_url
 
-    normalized_name = normalize_streamer_name(name)
+    # Otherwise use the numeric ID supplied by AzuraCast schedule data.
+    if streamer_id and str(streamer_id).isdigit():
+        direct_url = streamer_art_url(station_slug, str(streamer_id))
+        print(f"  Using AzuraCast streamer ID artwork: {name or streamer_id} -> {direct_url}")
+        return direct_url
 
-    if normalized_name:
-        if normalized_name in streamer_art_by_name:
-            return streamer_art_by_name[normalized_name]
-
-        # Match common AzuraCast display-name variations such as
-        # "JB In The Morning" vs "JB In the Morning".
-        for known_name, art_url in streamer_art_by_name.items():
-            if normalized_name == normalize_streamer_name(known_name):
-                return art_url
+    if normalized_name and normalized_name in streamer_art_by_name:
+        return streamer_art_by_name[normalized_name]
 
     return None
 
