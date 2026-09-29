@@ -276,7 +276,8 @@ jobs:
 
           git add \
             "91.3_Ayclt_FM_radio_guide.xml" \
-            "epg.json"
+            "epg.json" \
+            "streamer_art_cache.json"
 
           git commit \
             -m "Update 91.3 Ayclt FM EPG"
