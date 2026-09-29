@@ -35,7 +35,7 @@
   <programme start="20260929150000 -0500" stop="20260929170000 -0500" channel="913AycltFM">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art-1789162055.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -119,7 +119,7 @@
   <programme start="20260930080000 -0500" stop="20260930100000 -0500" channel="913AycltFM">
     <title lang="en">JB In The Morning</title>
     <desc lang="en">Live DJ: JB In The Morning</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art-1779216579.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -138,7 +138,7 @@
   <programme start="20260930120000 -0500" stop="20260930140000 -0500" channel="913AycltFM">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art-1778678763.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -152,7 +152,7 @@
   <programme start="20260930150000 -0500" stop="20260930170000 -0500" channel="913AycltFM">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art-1789162055.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -236,7 +236,7 @@
   <programme start="20261001090000 -0500" stop="20261001130000 -0500" channel="913AycltFM">
     <title lang="en">Rock Doc</title>
     <desc lang="en">Live DJ: Rock Doc</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/12/art-1780097307.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -270,7 +270,7 @@
   <programme start="20261001180000 -0500" stop="20261001220000 -0500" channel="913AycltFM">
     <title lang="en">DJ Nicko</title>
     <desc lang="en">Live DJ: DJ Nicko</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/13/art-1782247189.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -329,7 +329,7 @@
   <programme start="20261002080000 -0500" stop="20261002100000 -0500" channel="913AycltFM">
     <title lang="en">JB In The Morning</title>
     <desc lang="en">Live DJ: JB In The Morning</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art-1779216579.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -338,7 +338,7 @@
   <programme start="20261002100000 -0500" stop="20261002120000 -0500" channel="913AycltFM">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art-1778678763.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -352,7 +352,7 @@
   <programme start="20261002130000 -0500" stop="20261002150000 -0500" channel="913AycltFM">
     <title lang="en">Rock Doc</title>
     <desc lang="en">Live DJ: Rock Doc</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/12/art-1780097307.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -376,7 +376,7 @@
   <programme start="20261002180000 -0500" stop="20261002220000 -0500" channel="913AycltFM">
     <title lang="en">DJ Nicko</title>
     <desc lang="en">Live DJ: DJ Nicko</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/13/art-1782247189.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -475,7 +475,7 @@
   <programme start="20261003160000 -0500" stop="20261003180000 -0500" channel="913AycltFM">
     <title lang="en">DJ CoyoteDave</title>
     <desc lang="en">Live DJ: DJ CoyoteDave</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/5/art-1779386803.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -564,7 +564,7 @@
   <programme start="20261004100000 -0500" stop="20261004120000 -0500" channel="913AycltFM">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art-1778678763.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -673,7 +673,7 @@
   <programme start="20261005080000 -0500" stop="20261005100000 -0500" channel="913AycltFM">
     <title lang="en">JB In The Morning</title>
     <desc lang="en">Live DJ: JB In The Morning</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art-1779216579.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -682,7 +682,7 @@
   <programme start="20261005100000 -0500" stop="20261005120000 -0500" channel="913AycltFM">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art-1778678763.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -710,7 +710,7 @@
   <programme start="20261005150000 -0500" stop="20261005170000 -0500" channel="913AycltFM">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art-1789162055.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -794,7 +794,7 @@
   <programme start="20261006090000 -0500" stop="20261006110000 -0500" channel="913AycltFM">
     <title lang="en">Rock Doc</title>
     <desc lang="en">Live DJ: Rock Doc</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/12/art-1780097307.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2503,7 +2503,7 @@
   <programme start="20260929150000 -0500" stop="20260929170000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art-1789162055.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2587,7 +2587,7 @@
   <programme start="20260930080000 -0500" stop="20260930100000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">JB In The Morning</title>
     <desc lang="en">Live DJ: JB In The Morning</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art-1779216579.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2606,7 +2606,7 @@
   <programme start="20260930120000 -0500" stop="20260930140000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art-1778678763.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2620,7 +2620,7 @@
   <programme start="20260930150000 -0500" stop="20260930170000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art-1789162055.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2704,7 +2704,7 @@
   <programme start="20261001090000 -0500" stop="20261001130000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">Rock Doc</title>
     <desc lang="en">Live DJ: Rock Doc</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/12/art-1780097307.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2738,7 +2738,7 @@
   <programme start="20261001180000 -0500" stop="20261001220000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ Nicko</title>
     <desc lang="en">Live DJ: DJ Nicko</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/13/art-1782247189.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2797,7 +2797,7 @@
   <programme start="20261002080000 -0500" stop="20261002100000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">JB In The Morning</title>
     <desc lang="en">Live DJ: JB In The Morning</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art-1779216579.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2806,7 +2806,7 @@
   <programme start="20261002100000 -0500" stop="20261002120000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art-1778678763.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2820,7 +2820,7 @@
   <programme start="20261002130000 -0500" stop="20261002150000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">Rock Doc</title>
     <desc lang="en">Live DJ: Rock Doc</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/12/art-1780097307.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2844,7 +2844,7 @@
   <programme start="20261002180000 -0500" stop="20261002220000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ Nicko</title>
     <desc lang="en">Live DJ: DJ Nicko</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/13/art-1782247189.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -2943,7 +2943,7 @@
   <programme start="20261003160000 -0500" stop="20261003180000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ CoyoteDave</title>
     <desc lang="en">Live DJ: DJ CoyoteDave</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/5/art-1779386803.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -3032,7 +3032,7 @@
   <programme start="20261004100000 -0500" stop="20261004120000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art-1778678763.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -3141,7 +3141,7 @@
   <programme start="20261005080000 -0500" stop="20261005100000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">JB In The Morning</title>
     <desc lang="en">Live DJ: JB In The Morning</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art-1779216579.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -3150,7 +3150,7 @@
   <programme start="20261005100000 -0500" stop="20261005120000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art-1778678763.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -3178,7 +3178,7 @@
   <programme start="20261005150000 -0500" stop="20261005170000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art-1789162055.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
@@ -3262,7 +3262,7 @@
   <programme start="20261006090000 -0500" stop="20261006110000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">Rock Doc</title>
     <desc lang="en">Live DJ: Rock Doc</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/12/art-1780097307.jpg" />
     <live/>
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
