@@ -142,6 +142,49 @@ def get_program_title(item, channel_name):
     return str(value).strip() if value else channel_name
 
 
+def normalize_streamer_name(value):
+    return " ".join(str(value).strip().lower().split()).replace("dj ", "", 1)
+
+
+def load_streamer_art_cache():
+    try:
+        with open("streamer_art_cache.json", encoding="utf-8") as f:
+            data = json.load(f)
+    except (FileNotFoundError, OSError, json.JSONDecodeError):
+        return {}
+
+    lookup = {}
+    stations = data.get("stations", {}) if isinstance(data, dict) else {}
+
+    for station_data in stations.values():
+        if not isinstance(station_data, dict):
+            continue
+
+        for streamer in station_data.get("streamers", []):
+            if not isinstance(streamer, dict):
+                continue
+
+            streamer_id = streamer.get("id")
+            name = streamer.get("name") or streamer.get("username")
+            art = streamer.get("art")
+
+            if not name:
+                continue
+
+            key = normalize_streamer_name(name)
+
+            if streamer_id is not None:
+                lookup[key] = str(streamer_id)
+
+            if art:
+                lookup[f"art:{key}"] = str(art)
+
+    return lookup
+
+
+STREAMER_ART_CACHE = load_streamer_art_cache()
+
+
 def get_streamer_info(item):
     if not isinstance(item, dict):
         return "", ""
@@ -221,11 +264,25 @@ def streamer_art_url(station_slug, streamer_id):
 
 
 def get_streamer_art(item, station_slug):
-    # The schedule API is authoritative. Do not use a separate streamer list
-    # to guess which DJ is assigned to a scheduled programme.
-    _name, streamer_id = get_streamer_info(item)
+    # Prefer the streamer ID supplied by the schedule API.
+    name, streamer_id = get_streamer_info(item)
+
     if streamer_id:
         return streamer_art_url(station_slug, streamer_id)
+
+    # Some AzuraCast schedule responses identify the DJ by name but do not
+    # include the streamer ID. Fall back to the repository cache so LIVE
+    # programmes still receive the correct DJ artwork.
+    key = normalize_streamer_name(name) if name else ""
+    if key:
+        cached_art = STREAMER_ART_CACHE.get(f"art:{key}")
+        if cached_art:
+            return cached_art
+
+        cached_id = STREAMER_ART_CACHE.get(key)
+        if cached_id:
+            return streamer_art_url(station_slug, cached_id)
+
     return None
 
 
