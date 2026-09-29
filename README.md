@@ -21,7 +21,7 @@ The IPTV playlist is:
 
 The playlist is linked to this XMLTV guide:
 
-`https://raw.githubusercontent.com/913AycltFM/Radio-Stations-That-Can-Be-Played-On-A-IPTV_or_Plex_or_jellyfin/main/91.3_Ayclt_FM_radio_guide.xml`
+`https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/refs/heads/main/91.3_Ayclt_FM_radio_guide.xml`
 
 ## EPG
 
