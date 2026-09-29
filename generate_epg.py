@@ -224,7 +224,7 @@ def fetch_streamers(station_slug):
         data = fetch_json(endpoint)
     except RuntimeError as error:
         print(f"Streamer/DJ artwork lookup unavailable for {station_slug}: {error}")
-        return {}, {}
+        return {}, {}, {}
 
     rows = find_schedule_list(data)
     by_name = {}
@@ -275,15 +275,7 @@ def normalize_streamer_name(value):
     return " ".join(str(value).strip().casefold().replace("_", " ").split())
 
 
-# Optional explicit numeric AzuraCast streamer IDs.
-# Add each DJ here once the numeric ID is known. The ID is used to build
-# /api/station/{station}/streamer/{id}/art.
-STREAMER_IDS = {
-    "JB In The Morning": "10",
-}
-
-
-def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id):
+def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username):
     name, streamer_id = get_streamer_info(item)
 
     normalized_name = normalize_streamer_name(name)
@@ -364,7 +356,7 @@ def fetch_station_schedule(station_slug, start_date, end_date):
     return schedules
 
 
-def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_art_by_name, streamer_art_by_id):
+def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username):
     events = []
 
     for item in schedules:
@@ -378,7 +370,7 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
             continue
 
         live_program = is_live_program(item)
-        icon = get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id) if live_program else None
+        icon = get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username) if live_program else None
 
         events.append({
             "channel_id": channel["id"],
