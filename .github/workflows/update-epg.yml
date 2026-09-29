@@ -255,6 +255,7 @@ jobs:
           if git diff --quiet -- \
             "91.3_Ayclt_FM_radio_guide.xml" \
             "epg.json" \
+            "streamer_art_cache.json"
           then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -275,6 +276,7 @@ jobs:
           git add \
             "91.3_Ayclt_FM_radio_guide.xml" \
             "epg.json" \
+            "streamer_art_cache.json"
 
           git commit \
             -m "Update 91.3 Ayclt FM EPG"
