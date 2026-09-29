@@ -228,6 +228,7 @@ def fetch_streamers(station_slug):
 
     rows = find_schedule_list(data)
     by_name = {}
+    by_username = {}
     by_id = {}
 
     for streamer in rows:
@@ -235,24 +236,37 @@ def fetch_streamers(station_slug):
             continue
 
         streamer_id = get_field(streamer, ["id", "streamer_id", "dj_id"])
-        name = get_field(streamer, ["display_name", "name", "username", "streamer_name", "dj_name"])
+        display_name = get_field(streamer, ["display_name", "name", "streamer_name", "dj_name"])
+        username = get_field(streamer, ["streamer_username", "username"])
 
         if streamer_id is None:
             continue
 
         streamer_id = str(streamer_id).strip()
-        name = str(name).strip() if name else ""
-        art = streamer_art_url(station_slug, streamer_id)
+        display_name = str(display_name).strip() if display_name else ""
+        username = str(username).strip() if username else ""
+
+        # AzuraCast exposes the resolved artwork URL directly in the
+        # /streamers response. Use it when available. This supports DJs
+        # being added/removed without maintaining a manual ID list.
+        art = get_field(streamer, ["art"])
+        if not art:
+            art = streamer_art_url(station_slug, streamer_id)
+
+        art = str(art).strip() if art else None
 
         by_id[streamer_id] = art
 
-        if name:
-            by_name[normalize_streamer_name(name)] = art
+        if display_name:
+            by_name[normalize_streamer_name(display_name)] = art
 
-        print(f"  DJ artwork: {name or streamer_id} -> {art}")
+        if username:
+            by_username[normalize_streamer_name(username)] = art
+
+        print(f"  DJ artwork: {display_name or username or streamer_id} (ID {streamer_id}) -> {art}")
 
     print(f"Loaded {len(by_id)} streamer/DJ artwork entries for {station_slug}.")
-    return by_name, by_id
+    return by_name, by_id, by_username
 
 
 def normalize_streamer_name(value):
@@ -272,23 +286,22 @@ STREAMER_IDS = {
 def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id):
     name, streamer_id = get_streamer_info(item)
 
-    # Prefer an explicit numeric streamer ID configured above when the
-    # schedule payload only provides the DJ name.
     normalized_name = normalize_streamer_name(name)
-    for configured_name, configured_id in STREAMER_IDS.items():
-        if normalized_name == normalize_streamer_name(configured_name):
-            direct_url = streamer_art_url(station_slug, str(configured_id))
-            print(f"  Using configured DJ artwork: {name or configured_id} -> {direct_url}")
-            return direct_url
 
-    # Otherwise use the numeric ID supplied by AzuraCast schedule data.
-    if streamer_id and str(streamer_id).isdigit():
-        direct_url = streamer_art_url(station_slug, str(streamer_id))
-        print(f"  Using AzuraCast streamer ID artwork: {name or streamer_id} -> {direct_url}")
-        return direct_url
+    # Prefer the numeric ID supplied by AzuraCast when the schedule includes it.
+    if streamer_id and str(streamer_id).isdigit() and str(streamer_id) in streamer_art_by_id:
+        return streamer_art_by_id[str(streamer_id)]
 
+    # Match the live DJ by display name. This automatically follows new/removed DJs.
     if normalized_name and normalized_name in streamer_art_by_name:
         return streamer_art_by_name[normalized_name]
+
+    # Some schedule payloads identify the DJ by username rather than display name.
+    username = get_field(item, ["streamer_username", "username"])
+    if username:
+        normalized_username = normalize_streamer_name(username)
+        if normalized_username in streamer_art_by_username:
+            return streamer_art_by_username[normalized_username]
 
     return None
 
@@ -607,7 +620,7 @@ def main():
         if station_slug not in streamer_cache:
             streamer_cache[station_slug] = fetch_streamers(station_slug)
 
-        streamer_art_by_name, streamer_art_by_id = streamer_cache[station_slug]
+        streamer_art_by_name, streamer_art_by_id, streamer_art_by_username = streamer_cache[station_slug]
 
         actual_events = convert_schedule(
             channel,
@@ -617,6 +630,7 @@ def main():
             station_slug,
             streamer_art_by_name,
             streamer_art_by_id,
+            streamer_art_by_username,
         )
 
         all_events.extend(
@@ -633,7 +647,7 @@ def main():
     ]
 
     fm_station_slug = STATIONS["913AycltFM"]
-    fm_streamer_art_by_name, fm_streamer_art_by_id = streamer_cache[fm_station_slug]
+    fm_streamer_art_by_name, fm_streamer_art_by_id, fm_streamer_art_by_username = streamer_cache[fm_station_slug]
 
     fm_events = convert_schedule(
         fm_channel,
@@ -643,6 +657,7 @@ def main():
         fm_station_slug,
         fm_streamer_art_by_name,
         fm_streamer_art_by_id,
+        fm_streamer_art_by_username,
     )
 
     live_cam_events = []
