@@ -12,7 +12,6 @@ on:
   push:
     paths:
       - "generate_epg.py"
-      - "streamer_art_cache.json"
       - ".github/workflows/update-epg.yml"
 
 
