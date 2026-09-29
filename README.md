@@ -12,7 +12,6 @@ This repository provides channel metadata, live HLS streams, a rolling XMLTV pro
 | 91.3 Ayclt FM HD2 | 1.2 | `913AycltFMHD2` |
 | 91.3 Ayclt FM HD3 | 1.3 | `913AycltFMHD3` |
 | 91.3 Ayclt FM Live Studio Cam | 1.4 | `913AycltFMLiveStudioCam` |
-| The Mid West Plainsman | 1.5 | `TheMidWestPlainsman` |
 
 ## Playlist
 
