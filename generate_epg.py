@@ -185,6 +185,64 @@ def load_streamer_art_cache():
 STREAMER_ART_CACHE = load_streamer_art_cache()
 
 
+def fetch_streamer_directory(station_slug):
+    """Fetch the current AzuraCast streamer directory for a station."""
+    data = fetch_json(f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers")
+    if isinstance(data, dict):
+        for key in ("streamers", "data", "items", "results"):
+            value = data.get(key)
+            if isinstance(value, list):
+                return value
+    return data if isinstance(data, list) else []
+
+
+def build_streamer_directory(station_slug):
+    """Build name/ID/art lookups directly from the live Streamers API."""
+    lookup = {}
+    streamers = fetch_streamer_directory(station_slug)
+
+    for streamer in streamers:
+        if not isinstance(streamer, dict):
+            continue
+
+        streamer_id = get_field(streamer, ["id", "streamer_id", "streamerId"])
+        name = get_field(streamer, ["name", "display_name", "displayName", "username"])
+        art = get_field(streamer, ["art", "art_url", "artUrl", "artwork", "artwork_url", "artworkUrl"])
+
+        if not name:
+            continue
+
+        key = normalize_streamer_name(name)
+        entry = {"id": str(streamer_id) if streamer_id is not None else "", "name": str(name), "username": str(get_field(streamer, ["username"]) or ""), "art": str(art) if art else ""}
+        lookup[key] = entry
+
+        username = get_field(streamer, ["username"])
+        if username:
+            lookup[normalize_streamer_name(username)] = entry
+
+    return lookup, streamers
+
+
+def write_streamer_art_cache(station_slug, streamers):
+    """Persist the current API directory for fallback/debugging."""
+    entries = []
+    for streamer in streamers:
+        if not isinstance(streamer, dict):
+            continue
+        streamer_id = get_field(streamer, ["id", "streamer_id", "streamerId"])
+        name = get_field(streamer, ["name", "display_name", "displayName", "username"])
+        username = get_field(streamer, ["username"])
+        art = get_field(streamer, ["art", "art_url", "artUrl", "artwork", "artwork_url", "artworkUrl"])
+        if streamer_id is None or not name:
+            continue
+        if not art:
+            art = streamer_art_url(station_slug, streamer_id)
+        entries.append({"id": str(streamer_id), "name": str(name), "username": str(username or ""), "art": str(art or "")})
+
+    payload = {"stations": {station_slug: {"streamers": sorted(entries, key=lambda x: x["name"].lower())}}}
+    Path("streamer_art_cache.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8")
+
+
 def get_streamer_info(item):
     if not isinstance(item, dict):
         return "", ""
@@ -263,22 +321,30 @@ def streamer_art_url(station_slug, streamer_id):
     return f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamer/{streamer_id}/art"
 
 
-def get_streamer_art(item, station_slug):
+def get_streamer_art(item, station_slug, streamer_directory=None):
     # Prefer the streamer ID supplied by the schedule API.
     name, streamer_id = get_streamer_info(item)
 
     if streamer_id:
         return streamer_art_url(station_slug, streamer_id)
 
-    # Some AzuraCast schedule responses identify the DJ by name but do not
-    # include the streamer ID. Fall back to the repository cache so LIVE
-    # programmes still receive the correct DJ artwork.
+    # The live Streamers API is the authoritative fallback when the schedule
+    # identifies the DJ by name but omits the streamer ID.
     key = normalize_streamer_name(name) if name else ""
+    if key and streamer_directory:
+        entry = streamer_directory.get(key)
+        if entry:
+            if entry.get("art"):
+                return entry["art"]
+            if entry.get("id"):
+                return streamer_art_url(station_slug, entry["id"])
+
+    # Repository cache remains a last-resort fallback if the API response
+    # changes shape or a temporary API response omits a current streamer.
     if key:
         cached_art = STREAMER_ART_CACHE.get(f"art:{key}")
         if cached_art:
             return cached_art
-
         cached_id = STREAMER_ART_CACHE.get(key)
         if cached_id:
             return streamer_art_url(station_slug, cached_id)
@@ -344,7 +410,7 @@ def fetch_station_schedule(station_slug, start_date, end_date):
     return schedules
 
 
-def convert_schedule(channel, schedules, minimum, maximum, station_slug):
+def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_directory=None):
     events = []
 
     for item in schedules:
@@ -358,7 +424,7 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug):
             continue
 
         live_program = is_live_program(item)
-        icon = get_streamer_art(item, station_slug) if live_program else None
+        icon = get_streamer_art(item, station_slug, streamer_directory) if live_program else None
 
         events.append({
             "channel_id": channel["id"],
@@ -603,6 +669,20 @@ def main():
 
     all_events = []
     schedule_cache = {}
+    streamer_directories = {}
+
+    # Pull the current DJ/streamer directory directly from AzuraCast.
+    # This discovers new/removed DJs without hard-coded streamer IDs.
+    for station_slug in STATIONS.values():
+        try:
+            directory, raw_streamers = build_streamer_directory(station_slug)
+            streamer_directories[station_slug] = directory
+            if station_slug == STATIONS["913AycltFM"]:
+                write_streamer_art_cache(station_slug, raw_streamers)
+            print(f"Discovered {len(directory)} streamers for {station_slug}")
+        except Exception as error:
+            print(f"Streamer directory fetch failed for {station_slug}: {error}")
+            streamer_directories[station_slug] = {}
 
     for channel in CHANNELS:
         channel_id = channel["id"]
