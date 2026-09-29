@@ -1,4 +1,3 @@
-import hashlib
 import json
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -14,7 +13,6 @@ TIMEZONE = ZoneInfo("America/Chicago")
 DAYS_AHEAD = 7
 XML_OUTPUT = "91.3_Ayclt_FM_radio_guide.xml"
 JSON_OUTPUT = "epg.json"
-STREAMER_ART_CACHE_FILE = "streamer_art_cache.json"
 
 STATIONS = {
     "913AycltFM": "91.3_ayclt_fm",
@@ -33,7 +31,7 @@ CHANNELS = [
 def fetch_json(url):
     refresh_url = f"{url}{'&' if '?' in url else '?'}epg_refresh={int(time.time())}"
     request = Request(refresh_url, headers={
-        "User-Agent": "91.3-Ayclt-FM-EPG/1.2",
+        "User-Agent": "91.3-Ayclt-FM-EPG/1.3",
         "Cache-Control": "no-cache, no-store, max-age=0",
         "Pragma": "no-cache",
         "Accept": "application/json",
@@ -66,7 +64,7 @@ def find_schedule_list(data):
     if not isinstance(data, dict):
         return []
 
-    keys = ["schedule", "schedules", "streamers", "data", "items", "results"]
+    keys = ["schedule", "schedules", "data", "items", "results"]
     for key in keys:
         value = data.get(key)
         if isinstance(value, list):
@@ -96,9 +94,11 @@ def parse_datetime(value):
             return datetime.fromtimestamp(value, tz=ZoneInfo("UTC")).astimezone(TIMEZONE)
         except Exception:
             return None
+
     value = str(value).strip()
     if not value:
         return None
+
     if value.isdigit():
         try:
             timestamp = int(value)
@@ -107,6 +107,7 @@ def parse_datetime(value):
             return datetime.fromtimestamp(timestamp, tz=ZoneInfo("UTC")).astimezone(TIMEZONE)
         except Exception:
             pass
+
     try:
         dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
         if dt.tzinfo is None:
@@ -114,11 +115,13 @@ def parse_datetime(value):
         return dt.astimezone(TIMEZONE)
     except Exception:
         pass
+
     for fmt in ["%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M", "%Y/%m/%d %H:%M:%S", "%Y/%m/%d %H:%M"]:
         try:
             return datetime.strptime(value, fmt).replace(tzinfo=TIMEZONE)
         except Exception:
             continue
+
     return None
 
 
@@ -139,76 +142,37 @@ def get_program_title(item, channel_name):
 
 
 def get_streamer_info(item):
-    """Extract streamer/DJ name and ID from AzuraCast schedule data.
-
-    AzuraCast can return the streamer as a string, an object, or nested
-    inside another object. Check all common shapes so the artwork endpoint
-    can be called directly when a streamer ID is present.
-    """
     if not isinstance(item, dict):
         return "", ""
 
-    streamer = get_field(
-        item,
-        ["streamer", "streamer_name", "dj", "dj_name", "presenter", "presenter_name"],
-    )
-    streamer_id = get_field(
-        item,
-        [
-            "streamer_id",
-            "dj_id",
-            "presenter_id",
-            "streamerId",
-            "djId",
-            "presenterId",
-        ],
-    )
+    streamer = get_field(item, ["streamer", "streamer_name", "dj", "dj_name", "presenter", "presenter_name"])
+    streamer_id = get_field(item, [
+        "streamer_id", "dj_id", "presenter_id",
+        "streamerId", "djId", "presenterId",
+    ])
 
     name = None
 
     if isinstance(streamer, dict):
         if streamer_id is None:
-            streamer_id = get_field(
-                streamer,
-                [
-                    "id",
-                    "streamer_id",
-                    "dj_id",
-                    "presenter_id",
-                    "streamerId",
-                    "djId",
-                    "presenterId",
-                ],
-            )
-        name = get_field(
-            streamer,
-            ["name", "display_name", "username", "title", "streamer_name", "dj_name"],
-        )
+            streamer_id = get_field(streamer, [
+                "id", "streamer_id", "dj_id", "presenter_id",
+                "streamerId", "djId", "presenterId",
+            ])
+        name = get_field(streamer, ["name", "display_name", "username", "title", "streamer_name", "dj_name"])
     else:
         name = streamer
 
-    # Some schedule payloads put the streamer object under a nested key.
     for key in ("schedule", "data", "user", "presenter", "dj"):
         nested = item.get(key)
         if isinstance(nested, dict):
             if streamer_id is None:
-                streamer_id = get_field(
-                    nested,
-                    [
-                        "streamer_id",
-                        "dj_id",
-                        "presenter_id",
-                        "streamerId",
-                        "djId",
-                        "presenterId",
-                        "id",
-                    ],
-                )
+                streamer_id = get_field(nested, [
+                    "streamer_id", "dj_id", "presenter_id",
+                    "streamerId", "djId", "presenterId", "id",
+                ])
             if not name:
-                name = get_field(
-                    nested,
-                    ["name", "display_name", "username", "title", "streamer_name", "dj_name"],
-                )
+                name = get_field(nested, ["name", "display_name", "username", "title", "streamer_name", "dj_name"])
 
     return (
         str(name).strip() if name else "",
@@ -222,246 +186,20 @@ def streamer_art_url(station_slug, streamer_id):
     return f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamer/{streamer_id}/art"
 
 
-def fetch_artwork_hash(url):
-    """Force-fetch current DJ artwork and return a short content hash.
-
-    A unique query parameter is added on every 5-minute workflow run so
-    upstream/CDN caches cannot return an older DJ image."""
-    refresh_url = f"{url}{'&' if '?' in url else '?'}epg_refresh={int(time.time())}"
-    request = Request(refresh_url, headers={
-        "User-Agent": "91.3-Ayclt-FM-EPG/1.2",
-        "Accept": "image/*,*/*;q=0.8",
-        "Cache-Control": "no-cache, no-store, max-age=0",
-        "Pragma": "no-cache",
-        "Connection": "close",
-    })
-
-    try:
-        with urlopen(request, timeout=30) as response:
-            artwork = response.read()
-        if not artwork:
-            return None
-        return hashlib.sha256(artwork).hexdigest()[:16]
-    except (HTTPError, URLError, TimeoutError, ConnectionError, OSError) as error:
-        print(f"  Artwork refresh failed for {refresh_url}: {type(error).__name__}: {error}")
-        return None
-
-
-def cache_bust_artwork_url(url):
-    """Add a content-based cache-buster without changing the URL every run."""
-    if not url:
-        return None
-    content_hash = fetch_artwork_hash(url)
-    if not content_hash:
-        return url
-    separator = "&" if "?" in url else "?"
-    return f"{url}{separator}epg_art={content_hash}"
-
-
-def fetch_streamers(station_slug):
-    endpoint = f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers?epg_refresh={int(time.time())}"
-
-    try:
-        data = fetch_json(endpoint)
-    except RuntimeError as error:
-        print(f"Streamer/DJ artwork lookup unavailable for {station_slug}: {error}")
-        return load_station_streamer_cache(station_slug)
-
-    rows = find_schedule_list(data)
-    if not rows:
-        print(f"Streamer/DJ API returned no streamer records for {station_slug}; using cached artwork instead.")
-        return load_station_streamer_cache(station_slug)
-
-    by_name = {}
-    by_username = {}
-    by_id = {}
-    streamer_records = {}
-
-    for streamer in rows:
-        if not isinstance(streamer, dict):
-            continue
-
-        streamer_id = get_field(streamer, ["id", "streamer_id", "dj_id"])
-        display_name = get_field(streamer, ["display_name", "name", "streamer_name", "dj_name"])
-        username = get_field(streamer, ["streamer_username", "username"])
-
-        if streamer_id is None:
-            continue
-
-        streamer_id = str(streamer_id).strip()
-        display_name = str(display_name).strip() if display_name else ""
-        username = str(username).strip() if username else ""
-
-        # AzuraCast exposes the resolved artwork URL directly in the
-        # /streamers response. Use it when available. This supports DJs
-        # being added/removed without maintaining a manual ID list.
-        art = get_field(streamer, ["art"])
-        if not art:
-            art = streamer_art_url(station_slug, streamer_id)
-
-        art = str(art).strip() if art else None
-
-        # Check the actual image every 5-minute workflow run. The content hash
-        # changes only when the DJ artwork changes, so normal runs stay stable.
-        if art:
-            art = cache_bust_artwork_url(art)
-
-        by_id[streamer_id] = art
-        streamer_records[streamer_id] = {
-            "name": display_name,
-            "username": username,
-        }
-
-        if display_name:
-            by_name[normalize_streamer_name(display_name)] = art
-
-        if username:
-            by_username[normalize_streamer_name(username)] = art
-
-        print(f"  DJ artwork: {display_name or username or streamer_id} (ID {streamer_id}) -> {art}")
-
-    print(f"Loaded {len(by_id)} streamer/DJ artwork entries for {station_slug}.")
-    save_streamer_art_cache(
-        station_slug,
-        by_name,
-        by_id,
-        by_username,
-        streamer_records,
-    )
-    return by_name, by_id, by_username
-
-
 def normalize_streamer_name(value):
     if not value:
         return ""
     return " ".join(str(value).strip().casefold().replace("_", " ").split())
 
 
-def load_streamer_art_cache():
-    path = Path(STREAMER_ART_CACHE_FILE)
-    if not path.exists():
-        return {}, {}, {}
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as error:
-        print(f"Streamer artwork cache could not be read: {error}")
-        return {}, {}, {}
-
-    by_name = {}
-    by_username = {}
-    by_id = {}
-
-    for row in data.get("streamers", []):
-        if not isinstance(row, dict):
-            continue
-        art = str(row.get("art") or "").strip()
-        if not art:
-            continue
-        streamer_id = str(row.get("id") or "").strip()
-        name = normalize_streamer_name(row.get("name"))
-        username = normalize_streamer_name(row.get("username"))
-        if streamer_id:
-            by_id[streamer_id] = art
-        if name:
-            by_name[name] = art
-        if username:
-            by_username[username] = art
-
-    print(f"Loaded {len(by_id)} cached streamer/DJ artwork entries.")
-    return by_name, by_id, by_username
-
-
-def save_streamer_art_cache(station_slug, by_name, by_id, by_username, streamer_records=None):
-    # Keep a compact, station-scoped cache so temporary API failures do not
-    # replace known DJ artwork with station artwork.
-    path = Path(STREAMER_ART_CACHE_FILE)
-    try:
-        existing = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"stations": {}}
-    except (OSError, json.JSONDecodeError):
-        existing = {"stations": {}}
-
-    stations = existing.setdefault("stations", {})
-    rows = []
-    records = streamer_records or {}
-    for streamer_id, art in sorted(by_id.items()):
-        record = records.get(streamer_id, {})
-        rows.append({
-            "id": streamer_id,
-            "name": record.get("name", ""),
-            "username": record.get("username", ""),
-            "art": art,
-        })
-    stations[station_slug] = {"streamers": rows}
-    path.write_text(json.dumps(existing, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-
-def load_station_streamer_cache(station_slug):
-    path = Path(STREAMER_ART_CACHE_FILE)
-    if not path.exists():
-        return {}, {}, {}
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-        station = data.get("stations", {}).get(station_slug, {})
-        rows = station.get("streamers", [])
-    except (OSError, json.JSONDecodeError):
-        return {}, {}, {}
-
-    by_name = {}
-    by_username = {}
-    by_id = {}
-    for row in rows:
-        if not isinstance(row, dict):
-            continue
-        art = str(row.get("art") or "").strip()
-        if not art:
-            continue
-        streamer_id = str(row.get("id") or "").strip()
-        name = normalize_streamer_name(row.get("name"))
-        username = normalize_streamer_name(row.get("username"))
-        if streamer_id:
-            by_id[streamer_id] = art
-        if name:
-            by_name[name] = art
-        if username:
-            by_username[username] = art
-    return by_name, by_id, by_username
-
-
-def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username):
+def get_streamer_art(item, station_slug):
     name, streamer_id = get_streamer_info(item)
-    normalized_name = normalize_streamer_name(name)
 
-    # Prefer the exact streamer ID when AzuraCast supplies one.
     if streamer_id:
-        cached = streamer_art_by_id.get(str(streamer_id).strip())
-        if cached:
-            return cached
-        if str(streamer_id).strip().isdigit():
-            return streamer_art_url(station_slug, str(streamer_id).strip())
+        return streamer_art_url(station_slug, streamer_id)
 
-    # Match the explicit streamer/DJ name.
-    if normalized_name:
-        cached = streamer_art_by_name.get(normalized_name)
-        if cached:
-            return cached
-
-    # Some AzuraCast schedule responses do not include a streamer object at
-    # all. For live-DJ entries, the programme title is the DJ name, so use it
-    # as a final artwork lookup key.
-    title = get_program_title(item, "")
-    normalized_title = normalize_streamer_name(title)
-    if normalized_title:
-        cached = streamer_art_by_name.get(normalized_title)
-        if cached:
-            return cached
-
-    username = get_field(item, ["streamer_username", "username"])
-    if username:
-        normalized_username = normalize_streamer_name(username)
-        cached = streamer_art_by_username.get(normalized_username)
-        if cached:
-            return cached
-
+    # If AzuraCast supplies the DJ name but not the ID, there is no safe way
+    # to construct the streamer-art endpoint. Use the channel artwork.
     return None
 
 
@@ -523,7 +261,7 @@ def fetch_station_schedule(station_slug, start_date, end_date):
     return schedules
 
 
-def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username):
+def convert_schedule(channel, schedules, minimum, maximum, station_slug):
     events = []
 
     for item in schedules:
@@ -537,18 +275,7 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
             continue
 
         live_program = is_live_program(item)
-        icon = get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username) if live_program else None
-
-        # Resolve live DJ artwork from the streamer name/ID when the
-        # /streamers index is unavailable.
-        if live_program and not icon:
-            live_name, streamer_id = get_streamer_info(item)
-            if live_name:
-                normalized_live_name = normalize_streamer_name(live_name)
-                icon = streamer_art_by_name.get(normalized_live_name)
-
-            if not icon and streamer_id:
-                icon = streamer_art_by_id.get(str(streamer_id).strip())
+        icon = get_streamer_art(item, station_slug) if live_program else None
 
         events.append({
             "channel_id": channel["id"],
@@ -586,7 +313,11 @@ def add_filler_blocks(result, channel, start_time, end_time):
 
 
 def fill_schedule_gaps(channel, events, start_time, end_time):
-    scheduled = sorted(events, key=lambda x: (x["start"], -(x["end"] - x["start"]).total_seconds(), x["title"]))
+    scheduled = sorted(
+        events,
+        key=lambda x: (x["start"], -(x["end"] - x["start"]).total_seconds(), x["title"]),
+    )
+
     real_events = []
 
     for event in scheduled:
@@ -665,21 +396,32 @@ def validate_timelines(events):
     for event in events:
         grouped.setdefault(event["channel_id"], []).append(event)
 
+    valid = True
+
     for channel_id, channel_events in grouped.items():
         channel_events.sort(key=lambda x: (x["start"], x["end"]))
         previous = None
 
         for event in channel_events:
             if event["end"] <= event["start"]:
-                return False
+                print(
+                    f"Invalid timeline: {channel_id}: "
+                    f"{event['title']} {event['start'].isoformat()} -> {event['end'].isoformat()}"
+                )
+                valid = False
+                continue
 
             if previous and event["start"] < previous["end"]:
-                print(f"Overlap: {channel_id}")
-                return False
+                print(
+                    f"Overlap: {channel_id}: "
+                    f"'{previous['title']}' {previous['start'].isoformat()} -> {previous['end'].isoformat()} "
+                    f"overlaps '{event['title']}' {event['start'].isoformat()} -> {event['end'].isoformat()}"
+                )
+                valid = False
 
             previous = event
 
-    return True
+    return valid
 
 
 def generate_xml(events):
@@ -769,7 +511,6 @@ def main():
 
     all_events = []
     schedule_cache = {}
-    streamer_cache = {}
 
     for channel in CHANNELS:
         channel_id = channel["id"]
@@ -787,25 +528,15 @@ def main():
                 end_time.date(),
             )
 
-        if station_slug not in streamer_cache:
-            streamer_cache[station_slug] = fetch_streamers(station_slug)
-
-        streamer_art_by_name, streamer_art_by_id, streamer_art_by_username = streamer_cache[station_slug]
-
         actual_events = convert_schedule(
             channel,
             schedule_cache[station_slug],
             start_time,
             end_time,
             station_slug,
-            streamer_art_by_name,
-            streamer_art_by_id,
-            streamer_art_by_username,
         )
 
-        all_events.extend(
-            fill_schedule_gaps(channel, actual_events, start_time, end_time)
-        )
+        all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
 
     # Live Studio Cam mirrors the FM live-DJ schedule, including the same DJ artwork.
     live_cam = next(channel for channel in CHANNELS if channel["id"] == "913AycltFMLiveStudioCam")
@@ -817,17 +548,12 @@ def main():
     ]
 
     fm_station_slug = STATIONS["913AycltFM"]
-    fm_streamer_art_by_name, fm_streamer_art_by_id, fm_streamer_art_by_username = streamer_cache[fm_station_slug]
-
     fm_events = convert_schedule(
         fm_channel,
         schedule_cache[fm_station_slug],
         start_time,
         end_time,
         fm_station_slug,
-        fm_streamer_art_by_name,
-        fm_streamer_art_by_id,
-        fm_streamer_art_by_username,
     )
 
     live_cam_events = []
@@ -842,10 +568,7 @@ def main():
 
         live_cam_events.append(cam_event)
 
-    all_events.extend(
-        fill_schedule_gaps(live_cam, live_cam_events, start_time, end_time)
-    )
-
+    all_events.extend(fill_schedule_gaps(live_cam, live_cam_events, start_time, end_time))
     all_events = clean_events(all_events)
 
     if not validate_timelines(all_events):
