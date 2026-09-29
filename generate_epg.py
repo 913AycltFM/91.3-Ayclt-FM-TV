@@ -146,34 +146,45 @@ def get_streamer_info(item):
     if not isinstance(item, dict):
         return "", ""
 
-    streamer = get_field(item, ["streamer", "streamer_name", "dj", "dj_name", "presenter", "presenter_name"])
-    streamer_id = get_field(item, [
-        "streamer_id", "dj_id", "presenter_id",
-        "streamerId", "djId", "presenterId",
-    ])
+    # Pull the streamer/DJ directly from the AzuraCast schedule API item.
+    streamer = get_field(
+        item,
+        ["streamer", "streamer_name", "dj", "dj_name", "presenter", "presenter_name"],
+    )
+    streamer_id = get_field(
+        item,
+        ["streamer_id", "dj_id", "presenter_id", "streamerId", "djId", "presenterId"],
+    )
 
     name = None
 
     if isinstance(streamer, dict):
         if streamer_id is None:
-            streamer_id = get_field(streamer, [
-                "id", "streamer_id", "dj_id", "presenter_id",
-                "streamerId", "djId", "presenterId",
-            ])
-        name = get_field(streamer, ["name", "display_name", "username", "title", "streamer_name", "dj_name"])
-    else:
+            streamer_id = get_field(
+                streamer,
+                ["id", "streamer_id", "dj_id", "presenter_id", "streamerId", "djId", "presenterId"],
+            )
+        name = get_field(
+            streamer,
+            ["name", "display_name", "username", "title", "streamer_name", "dj_name"],
+        )
+    elif streamer:
         name = streamer
 
-    for key in ("schedule", "data", "user", "presenter", "dj"):
+    # AzuraCast can nest schedule/presenter data inside the schedule response.
+    for key in ("schedule", "data", "user", "presenter", "dj", "streamer"):
         nested = item.get(key)
         if isinstance(nested, dict):
             if streamer_id is None:
-                streamer_id = get_field(nested, [
-                    "streamer_id", "dj_id", "presenter_id",
-                    "streamerId", "djId", "presenterId", "id",
-                ])
+                streamer_id = get_field(
+                    nested,
+                    ["id", "streamer_id", "dj_id", "presenter_id", "streamerId", "djId", "presenterId"],
+                )
             if not name:
-                name = get_field(nested, ["name", "display_name", "username", "title", "streamer_name", "dj_name"])
+                name = get_field(
+                    nested,
+                    ["name", "display_name", "username", "title", "streamer_name", "dj_name"],
+                )
 
     return (
         str(name).strip() if name else "",
@@ -187,75 +198,11 @@ def streamer_art_url(station_slug, streamer_id):
     return f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamer/{streamer_id}/art"
 
 
-def normalize_streamer_name(value):
-    if not value:
-        return ""
-    return " ".join(str(value).strip().casefold().replace("_", " ").split())
-
-
-def get_streamer_list(station_slug):
-    data = fetch_json(f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers")
-    if isinstance(data, list):
-        return data
-    if isinstance(data, dict):
-        for key in ("streamers", "data", "items", "results"):
-            value = data.get(key)
-            if isinstance(value, list):
-                return value
-    return []
-
-
-def build_streamer_lookup(station_slug):
-    lookup = {}
-    for streamer in get_streamer_list(station_slug):
-        if not isinstance(streamer, dict):
-            continue
-
-        streamer_id = get_field(streamer, ["id", "streamer_id", "streamerId"])
-        name = get_field(
-            streamer,
-            ["name", "display_name", "username", "streamer_name", "dj_name", "title"],
-        )
-
-        if streamer_id is None or not name:
-            continue
-
-        streamer_id = str(streamer_id)
-        normalized = normalize_streamer_name(name)
-        lookup[normalized] = streamer_id
-
-        # AzuraCast schedule names may include "DJ " while the streamer
-        # profile name does not, or vice versa. Store both forms.
-        if normalized.startswith("dj "):
-            lookup[normalized[3:].strip()] = streamer_id
-        else:
-            lookup[f"dj {normalized}"] = streamer_id
-
-    return lookup
-
-
-def get_streamer_art(item, station_slug, streamer_lookup=None):
-    name, streamer_id = get_streamer_info(item)
-
-    if not streamer_id and streamer_lookup and name:
-        normalized_name = normalize_streamer_name(name)
-        streamer_id = streamer_lookup.get(normalized_name)
-
-        # Try a safe normalized-name match when AzuraCast uses a longer
-        # schedule label such as "DJ Brandon Stone - Live".
-        if not streamer_id:
-            for profile_name, profile_id in streamer_lookup.items():
-                if (
-                    normalized_name == profile_name
-                    or normalized_name.startswith(profile_name + " ")
-                    or profile_name.startswith(normalized_name + " ")
-                ):
-                    streamer_id = profile_id
-                    break
-
+def get_streamer_art(item, station_slug):
+    # The schedule API supplies the DJ/streamer ID. Use that ID directly.
+    _name, streamer_id = get_streamer_info(item)
     if streamer_id:
         return streamer_art_url(station_slug, streamer_id)
-
     return None
 
 
@@ -317,7 +264,7 @@ def fetch_station_schedule(station_slug, start_date, end_date):
     return schedules
 
 
-def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_lookup=None):
+def convert_schedule(channel, schedules, minimum, maximum, station_slug):
     events = []
 
     for item in schedules:
@@ -331,7 +278,7 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
             continue
 
         live_program = is_live_program(item)
-        icon = get_streamer_art(item, station_slug, streamer_lookup) if live_program else None
+        icon = get_streamer_art(item, station_slug) if live_program else None
 
         events.append({
             "channel_id": channel["id"],
@@ -593,14 +540,12 @@ def main():
                 end_time.date(),
             )
 
-        streamer_lookup = build_streamer_lookup(station_slug)
         actual_events = convert_schedule(
             channel,
             schedule_cache[station_slug],
             start_time,
             end_time,
             station_slug,
-            streamer_lookup,
         )
 
         all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
@@ -616,14 +561,12 @@ def main():
     ]
 
     fm_station_slug = STATIONS["913AycltFM"]
-    fm_streamer_lookup = build_streamer_lookup(fm_station_slug)
     fm_events = convert_schedule(
         fm_channel,
         schedule_cache[fm_station_slug],
         start_time,
         end_time,
         fm_station_slug,
-        fm_streamer_lookup,
     )
 
     live_cam_events = []
