@@ -1,3 +1,4 @@
+import hashlib
 import json
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -31,7 +32,9 @@ CHANNELS = [
 
 def fetch_json(url):
     request = Request(url, headers={
-        "User-Agent": "91.3-Ayclt-FM-EPG/1.1",
+        "User-Agent": "91.3-Ayclt-FM-EPG/1.2",
+        "Cache-Control": "no-cache, no-store, max-age=0",
+        "Pragma": "no-cache",
         "Accept": "application/json",
         "Connection": "close",
     })
@@ -218,6 +221,38 @@ def streamer_art_url(station_slug, streamer_id):
     return f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamer/{streamer_id}/art"
 
 
+def fetch_artwork_hash(url):
+    """Fetch current DJ artwork and return a short content hash."""
+    request = Request(url, headers={
+        "User-Agent": "91.3-Ayclt-FM-EPG/1.2",
+        "Accept": "image/*,*/*;q=0.8",
+        "Cache-Control": "no-cache, no-store, max-age=0",
+        "Pragma": "no-cache",
+        "Connection": "close",
+    })
+
+    try:
+        with urlopen(request, timeout=30) as response:
+            artwork = response.read()
+        if not artwork:
+            return None
+        return hashlib.sha256(artwork).hexdigest()[:16]
+    except (HTTPError, URLError, TimeoutError, ConnectionError, OSError) as error:
+        print(f"  Artwork refresh failed for {url}: {type(error).__name__}: {error}")
+        return None
+
+
+def cache_bust_artwork_url(url):
+    """Add a content-based cache-buster without changing the URL every run."""
+    if not url:
+        return None
+    content_hash = fetch_artwork_hash(url)
+    if not content_hash:
+        return url
+    separator = "&" if "?" in url else "?"
+    return f"{url}{separator}epg_art={content_hash}"
+
+
 def fetch_streamers(station_slug):
     endpoint = f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers"
 
@@ -255,6 +290,11 @@ def fetch_streamers(station_slug):
             art = streamer_art_url(station_slug, streamer_id)
 
         art = str(art).strip() if art else None
+
+        # Check the actual image every 5-minute workflow run. The content hash
+        # changes only when the DJ artwork changes, so normal runs stay stable.
+        if art:
+            art = cache_bust_artwork_url(art)
 
         by_id[streamer_id] = art
 
