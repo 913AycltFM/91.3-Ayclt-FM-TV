@@ -371,6 +371,15 @@ def create_no_schedule_channel(channel, start_time, end_time):
 
 
 def clean_events(events):
+    # Remove malformed/zero-duration entries before timeline validation.
+    # Valid future DJs are preserved; only events with end <= start are dropped.
+    events = [
+        event for event in events
+        if event.get("start") is not None
+        and event.get("end") is not None
+        and event["end"] > event["start"]
+    ]
+
     events.sort(key=lambda x: (x["channel_id"], x["start"], x["end"], x["title"]))
     seen = set()
     result = []
