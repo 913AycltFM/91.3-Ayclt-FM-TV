@@ -31,17 +31,42 @@ CHANNELS = [
 
 
 def fetch_json(url):
-    request = Request(url, headers={"User-Agent": "91.3-Ayclt-FM-EPG/1.0", "Accept": "application/json"})
+    request = Request(
+        url,
+        headers={
+            "User-Agent": "91.3-Ayclt-FM-EPG/1.0",
+            "Accept": "application/json",
+            "Connection": "close",
+        },
+    )
+    timeout_seconds = 90
+    last_error = None
+
     for attempt in range(1, 4):
         try:
-            with urlopen(request, timeout=30) as response:
-                return json.loads(response.read().decode("utf-8-sig"))
-        except (HTTPError, URLError) as error:
+            print(f"Fetching AzuraCast schedule (attempt {attempt}/3): {url}")
+            with urlopen(request, timeout=timeout_seconds) as response:
+                payload = response.read().decode("utf-8-sig")
+                return json.loads(payload)
+        except (HTTPError, URLError, TimeoutError, ConnectionError, OSError) as error:
+            last_error = error
             if attempt == 3:
-                raise RuntimeError(f"AzuraCast API request failed: {url}") from error
-            time.sleep((2, 5)[attempt - 1])
+                break
+            delay = 5 * attempt
+            print(
+                f"AzuraCast request failed on attempt {attempt}: "
+                f"{type(error).__name__}: {error}. Retrying in {delay}s..."
+            )
+            time.sleep(delay)
         except json.JSONDecodeError as error:
-            raise RuntimeError(f"AzuraCast API returned invalid JSON: {url}") from error
+            raise RuntimeError(
+                f"AzuraCast API returned invalid JSON: {url}"
+            ) from error
+
+    raise RuntimeError(
+        f"AzuraCast API request failed after 3 attempts "
+        f"(timeout={timeout_seconds}s): {url}"
+    ) from last_error
 
 
 def find_schedule_list(data):
