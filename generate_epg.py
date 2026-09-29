@@ -265,7 +265,7 @@ def normalize_streamer_name(value):
 # Add each DJ here once the numeric ID is known. The ID is used to build
 # /api/station/{station}/streamer/{id}/art.
 STREAMER_IDS = {
-    # "JB In The Morning": "10",
+    "JB In The Morning": "10",
 }
 
 
