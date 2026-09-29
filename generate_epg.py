@@ -227,7 +227,8 @@ def fetch_artwork_hash(url):
 
     A unique query parameter is added on every 5-minute workflow run so
     upstream/CDN caches cannot return an older DJ image."""
-    request = Request(url, headers={
+    refresh_url = f"{url}{'&' if '?' in url else '?'}epg_refresh={int(time.time())}"
+    request = Request(refresh_url, headers={
         "User-Agent": "91.3-Ayclt-FM-EPG/1.2",
         "Accept": "image/*,*/*;q=0.8",
         "Cache-Control": "no-cache, no-store, max-age=0",
@@ -242,7 +243,7 @@ def fetch_artwork_hash(url):
             return None
         return hashlib.sha256(artwork).hexdigest()[:16]
     except (HTTPError, URLError, TimeoutError, ConnectionError, OSError) as error:
-        print(f"  Artwork refresh failed for {url}: {type(error).__name__}: {error}")
+        print(f"  Artwork refresh failed for {refresh_url}: {type(error).__name__}: {error}")
         return None
 
 
