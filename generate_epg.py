@@ -366,17 +366,27 @@ def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_i
     name, streamer_id = get_streamer_info(item)
     normalized_name = normalize_streamer_name(name)
 
+    # Prefer the exact streamer ID when AzuraCast supplies one.
     if streamer_id:
         cached = streamer_art_by_id.get(str(streamer_id).strip())
         if cached:
             return cached
-        # AzuraCast's direct artwork endpoint works without the /streamers
-        # index and can redirect to the versioned custom artwork.
         if str(streamer_id).strip().isdigit():
             return streamer_art_url(station_slug, str(streamer_id).strip())
 
+    # Match the explicit streamer/DJ name.
     if normalized_name:
         cached = streamer_art_by_name.get(normalized_name)
+        if cached:
+            return cached
+
+    # Some AzuraCast schedule responses do not include a streamer object at
+    # all. For live-DJ entries, the programme title is the DJ name, so use it
+    # as a final artwork lookup key.
+    title = get_program_title(item, "")
+    normalized_title = normalize_streamer_name(title)
+    if normalized_title:
+        cached = streamer_art_by_name.get(normalized_title)
         if cached:
             return cached
 
