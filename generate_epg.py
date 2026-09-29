@@ -25,6 +25,7 @@ CHANNELS = [
     {"id": "913AycltFMHD2", "display": "1.2", "name": "91.3 Ayclt FM HD2", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png"},
     {"id": "913AycltFMHD3", "display": "1.3", "name": "91.3 Ayclt FM HD3", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png"},
     {"id": "913AycltFMLiveStudioCam", "display": "1.4", "name": "91.3 Ayclt FM Live Studio Cam", "description": "91.3 Ayclt FM Live Studio Cam", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
+    {"id": "913AycltFMMobileStudioCam", "display": "1.5", "name": "91.3 Ayclt FM Mobile Studio Cam", "description": "91.3 Ayclt FM Mobile Studio Cam", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
 ]
 
 
@@ -547,13 +548,14 @@ def main():
 
         all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
 
-    # Live Studio Cam mirrors the FM live-DJ schedule, including the same DJ artwork.
+    # Live Studio Cam and Mobile Studio Cam mirror the FM schedule exactly.
     live_cam = next(channel for channel in CHANNELS if channel["id"] == "913AycltFMLiveStudioCam")
+    mobile_cam = next(channel for channel in CHANNELS if channel["id"] == "913AycltFMMobileStudioCam")
     fm_channel = next(channel for channel in CHANNELS if channel["id"] == "913AycltFM")
 
     all_events = [
         event for event in all_events
-        if event["channel_id"] != live_cam["id"]
+        if event["channel_id"] not in {live_cam["id"], mobile_cam["id"]}
     ]
 
     fm_station_slug = STATIONS["913AycltFM"]
@@ -578,6 +580,17 @@ def main():
         live_cam_events.append(cam_event)
 
     all_events.extend(fill_schedule_gaps(live_cam, live_cam_events, start_time, end_time))
+
+    mobile_cam_events = []
+    for event in fm_events:
+        cam_event = dict(event)
+        cam_event["channel_id"] = mobile_cam["id"]
+        cam_event["channel_name"] = mobile_cam["name"]
+        if not cam_event.get("live_program"):
+            cam_event["icon"] = mobile_cam["icon"]
+        mobile_cam_events.append(cam_event)
+
+    all_events.extend(fill_schedule_gaps(mobile_cam, mobile_cam_events, start_time, end_time))
     all_events = clean_events(all_events)
 
     if not validate_timelines(all_events):
