@@ -371,6 +371,10 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
 
         live_program = is_live_program(item)
         icon = get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id, streamer_art_by_username) if live_program else None
+        if live_program and not icon:
+            _, streamer_id = get_streamer_info(item)
+            if streamer_id:
+                icon = streamer_art_url(station_slug, streamer_id)
 
         events.append({
             "channel_id": channel["id"],
