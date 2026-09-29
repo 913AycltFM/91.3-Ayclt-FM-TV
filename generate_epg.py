@@ -30,7 +30,7 @@ CHANNELS = [
 
 def fetch_json(url):
     request = Request(url, headers={
-        "User-Agent": "91.3-Ayclt-FM-EPG/1.0",
+        "User-Agent": "91.3-Ayclt-FM-EPG/1.1",
         "Accept": "application/json",
         "Connection": "close",
     })
@@ -60,7 +60,8 @@ def find_schedule_list(data):
         return data
     if not isinstance(data, dict):
         return []
-    keys = ["schedule", "schedules", "data", "items", "results"]
+
+    keys = ["schedule", "schedules", "streamers", "data", "items", "results"]
     for key in keys:
         value = data.get(key)
         if isinstance(value, list):
@@ -135,13 +136,18 @@ def get_program_title(item, channel_name):
 def get_streamer_info(item):
     streamer = get_field(item, ["streamer", "streamer_name", "dj", "dj_name", "presenter", "presenter_name"])
     streamer_id = get_field(item, ["streamer_id", "dj_id", "presenter_id"])
+
     if isinstance(streamer, dict):
         if streamer_id is None:
-            streamer_id = get_field(streamer, ["id", "streamer_id"])
-        name = get_field(streamer, ["name", "display_name", "username", "title"])
+            streamer_id = get_field(streamer, ["id", "streamer_id", "dj_id", "presenter_id"])
+        name = get_field(streamer, ["name", "display_name", "username", "title", "streamer_name"])
     else:
         name = streamer
-    return (str(name).strip() if name else "", str(streamer_id).strip() if streamer_id is not None else "")
+
+    return (
+        str(name).strip() if name else "",
+        str(streamer_id).strip() if streamer_id is not None else "",
+    )
 
 
 def streamer_art_url(station_slug, streamer_id):
@@ -151,29 +157,38 @@ def streamer_art_url(station_slug, streamer_id):
 
 
 def fetch_streamers(station_slug):
+    endpoint = f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers"
+
     try:
-        data = fetch_json(f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers")
+        data = fetch_json(endpoint)
     except RuntimeError as error:
-        print(f"Streamer artwork lookup unavailable for {station_slug}: {error}")
+        print(f"Streamer/DJ artwork lookup unavailable for {station_slug}: {error}")
         return {}, {}
 
-    rows = data if isinstance(data, list) else find_schedule_list(data)
+    rows = find_schedule_list(data)
     by_name = {}
     by_id = {}
 
     for streamer in rows:
         if not isinstance(streamer, dict):
             continue
-        streamer_id = get_field(streamer, ["id", "streamer_id"])
-        name = get_field(streamer, ["display_name", "name", "username", "streamer_name"])
+
+        streamer_id = get_field(streamer, ["id", "streamer_id", "dj_id"])
+        name = get_field(streamer, ["display_name", "name", "username", "streamer_name", "dj_name"])
+
         if streamer_id is None:
             continue
+
         streamer_id = str(streamer_id).strip()
         name = str(name).strip() if name else ""
         art = streamer_art_url(station_slug, streamer_id)
+
         by_id[streamer_id] = art
+
         if name:
             by_name[name.casefold()] = art
+
+        print(f"  DJ artwork: {name or streamer_id} -> {art}")
 
     print(f"Loaded {len(by_id)} streamer/DJ artwork entries for {station_slug}.")
     return by_name, by_id
@@ -181,10 +196,13 @@ def fetch_streamers(station_slug):
 
 def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id):
     name, streamer_id = get_streamer_info(item)
+
     if streamer_id and streamer_id in streamer_art_by_id:
         return streamer_art_by_id[streamer_id]
+
     if name and name.casefold() in streamer_art_by_name:
         return streamer_art_by_name[name.casefold()]
+
     return None
 
 
@@ -209,6 +227,7 @@ def is_live_program(item):
         description = str(description).strip()
         if description.lower().startswith(("streamer:", "live dj:")):
             return bool(description.split(":", 1)[1].strip())
+
     return False
 
 
@@ -234,23 +253,27 @@ def get_description(item, channel_description):
 def fetch_station_schedule(station_slug, start_date, end_date):
     schedules = []
     current_date = start_date
+
     while current_date <= end_date:
         chunk_end = min(current_date + timedelta(days=6), end_date)
         query = urlencode({"start": current_date.isoformat(), "end": chunk_end.isoformat()})
         data = fetch_json(f"{AZURACAST_BASE_URL}/api/station/{station_slug}/schedule?{query}")
         schedules.extend(find_schedule_list(data))
         current_date = chunk_end + timedelta(days=1)
+
     return schedules
 
 
 def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_art_by_name, streamer_art_by_id):
     events = []
+
     for item in schedules:
         if not isinstance(item, dict):
             continue
 
         start = parse_datetime(get_field(item, ["start", "start_time", "start_datetime", "startDateTime", "starts_at", "start_at"]))
         end = parse_datetime(get_field(item, ["end", "end_time", "end_datetime", "endDateTime", "ends_at", "end_at"]))
+
         if start is None or end is None or end <= start or end < minimum or start > maximum:
             continue
 
@@ -268,14 +291,27 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
             "fallback": False,
             "live_program": live_program,
         })
+
     return events
 
 
 def add_filler_blocks(result, channel, start_time, end_time):
     current = start_time
+
     while current < end_time:
         end = min(current + timedelta(hours=1), end_time)
-        result.append({"channel_id": channel["id"], "channel_name": channel["name"], "title": channel["name"], "description": channel["description"], "start": current, "end": end, "icon": channel["icon"], "fallback": True, "live_program": False, "live": False})
+        result.append({
+            "channel_id": channel["id"],
+            "channel_name": channel["name"],
+            "title": channel["name"],
+            "description": channel["description"],
+            "start": current,
+            "end": end,
+            "icon": channel["icon"],
+            "fallback": True,
+            "live_program": False,
+            "live": False,
+        })
         current = end
 
 
@@ -285,22 +321,28 @@ def fill_schedule_gaps(channel, events, start_time, end_time):
 
     for event in scheduled:
         event = dict(event)
+
         if real_events and event["start"] < real_events[-1]["end"]:
             if event["start"] == real_events[-1]["start"]:
                 if event["end"] <= real_events[-1]["end"]:
                     continue
                 real_events[-1] = event
                 continue
+
             event["start"] = real_events[-1]["end"]
+
             if event["end"] <= event["start"]:
                 continue
+
         real_events.append(event)
 
     result = []
     current = start_time
+
     for event in real_events:
         if event["start"] > current:
             add_filler_blocks(result, channel, current, event["start"])
+
         if event["end"] > current:
             event["start"] = max(event["start"], current)
             result.append(event)
@@ -308,40 +350,65 @@ def fill_schedule_gaps(channel, events, start_time, end_time):
 
     if current < end_time:
         add_filler_blocks(result, channel, current, end_time)
+
     return result
 
 
 def create_no_schedule_channel(channel, start_time, end_time):
-    return [{"channel_id": channel["id"], "channel_name": channel["name"], "title": channel["name"], "description": channel["description"], "start": start_time, "end": end_time, "icon": channel["icon"], "fallback": True, "live_program": False, "live": False}]
+    return [{
+        "channel_id": channel["id"],
+        "channel_name": channel["name"],
+        "title": channel["name"],
+        "description": channel["description"],
+        "start": start_time,
+        "end": end_time,
+        "icon": channel["icon"],
+        "fallback": True,
+        "live_program": False,
+        "live": False,
+    }]
 
 
 def clean_events(events):
     events.sort(key=lambda x: (x["channel_id"], x["start"], x["end"], x["title"]))
     seen = set()
     result = []
+
     for event in events:
-        key = (event["channel_id"], event["start"].isoformat(), event["end"].isoformat(), event["title"])
+        key = (
+            event["channel_id"],
+            event["start"].isoformat(),
+            event["end"].isoformat(),
+            event["title"],
+        )
+
         if key not in seen:
             seen.add(key)
             result.append(event)
+
     return result
 
 
 def validate_timelines(events):
     grouped = {}
+
     for event in events:
         grouped.setdefault(event["channel_id"], []).append(event)
 
     for channel_id, channel_events in grouped.items():
         channel_events.sort(key=lambda x: (x["start"], x["end"]))
         previous = None
+
         for event in channel_events:
             if event["end"] <= event["start"]:
                 return False
+
             if previous and event["start"] < previous["end"]:
                 print(f"Overlap: {channel_id}")
                 return False
+
             previous = event
+
     return True
 
 
@@ -361,6 +428,7 @@ def generate_xml(events):
         })
 
         is_live = event.get("live_program", False)
+
         ET.SubElement(programme, "title", {"lang": "en"}).text = event["title"]
         ET.SubElement(programme, "desc", {"lang": "en"}).text = event["description"]
 
@@ -378,14 +446,21 @@ def generate_xml(events):
     ET.ElementTree(root).write(path, encoding="utf-8", xml_declaration=True)
     xml = path.read_text(encoding="utf-8")
     xml = xml.replace("<?xml version='1.0' encoding='utf-8'?>", '<?xml version="1.0" encoding="utf-8"?>', 1)
+
     if "<!DOCTYPE tv SYSTEM" not in xml:
-        xml = xml.replace('<?xml version="1.0" encoding="utf-8"?>', '<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE tv SYSTEM "xmltv.dtd">', 1)
+        xml = xml.replace(
+            '<?xml version="1.0" encoding="utf-8"?>',
+            '<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE tv SYSTEM "xmltv.dtd">',
+            1,
+        )
+
     xml = xml.replace("<live />", "<live/>").replace("<new />", "<new/>")
     path.write_text(xml, encoding="utf-8")
 
 
 def generate_json(events):
     output = []
+
     for event in events:
         output.append({
             "channel_id": event["channel_id"],
@@ -400,7 +475,11 @@ def generate_json(events):
             "live_badge": "LIVE" if event.get("live_program", False) else "",
             "display_title": event["title"],
         })
-    Path(JSON_OUTPUT).write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    Path(JSON_OUTPUT).write_text(
+        json.dumps(output, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
 
 
 def validate_xml():
@@ -432,7 +511,11 @@ def main():
         station_slug = STATIONS[channel_id]
 
         if station_slug not in schedule_cache:
-            schedule_cache[station_slug] = fetch_station_schedule(station_slug, schedule_start_date, end_time.date())
+            schedule_cache[station_slug] = fetch_station_schedule(
+                station_slug,
+                schedule_start_date,
+                end_time.date(),
+            )
 
         if station_slug not in streamer_cache:
             streamer_cache[station_slug] = fetch_streamers(station_slug)
@@ -448,33 +531,49 @@ def main():
             streamer_art_by_name,
             streamer_art_by_id,
         )
-        all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
+
+        all_events.extend(
+            fill_schedule_gaps(channel, actual_events, start_time, end_time)
+        )
 
     # Live Studio Cam mirrors the FM live-DJ schedule, including the same DJ artwork.
     live_cam = next(channel for channel in CHANNELS if channel["id"] == "913AycltFMLiveStudioCam")
     fm_channel = next(channel for channel in CHANNELS if channel["id"] == "913AycltFM")
-    all_events = [event for event in all_events if event["channel_id"] != live_cam["id"]]
+
+    all_events = [
+        event for event in all_events
+        if event["channel_id"] != live_cam["id"]
+    ]
+
+    fm_station_slug = STATIONS["913AycltFM"]
+    fm_streamer_art_by_name, fm_streamer_art_by_id = streamer_cache[fm_station_slug]
 
     fm_events = convert_schedule(
         fm_channel,
-        schedule_cache[STATIONS["913AycltFM"]],
+        schedule_cache[fm_station_slug],
         start_time,
         end_time,
-        STATIONS["913AycltFM"],
-        streamer_cache[STATIONS["91.3_ayclt_fm"]][0],
-        streamer_cache[STATIONS["91.3_ayclt_fm"]][1],
+        fm_station_slug,
+        fm_streamer_art_by_name,
+        fm_streamer_art_by_id,
     )
 
     live_cam_events = []
+
     for event in fm_events:
         cam_event = dict(event)
         cam_event["channel_id"] = live_cam["id"]
         cam_event["channel_name"] = live_cam["name"]
+
         if not cam_event.get("live_program"):
             cam_event["icon"] = live_cam["icon"]
+
         live_cam_events.append(cam_event)
 
-    all_events.extend(fill_schedule_gaps(live_cam, live_cam_events, start_time, end_time))
+    all_events.extend(
+        fill_schedule_gaps(live_cam, live_cam_events, start_time, end_time)
+    )
+
     all_events = clean_events(all_events)
 
     if not validate_timelines(all_events):
