@@ -268,6 +268,10 @@ def fetch_streamers(station_slug):
         return load_station_streamer_cache(station_slug)
 
     rows = find_schedule_list(data)
+    if not rows:
+        print(f"Streamer/DJ API returned no streamer records for {station_slug}; using cached artwork instead.")
+        return load_station_streamer_cache(station_slug)
+
     by_name = {}
     by_username = {}
     by_id = {}
