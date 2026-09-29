@@ -31,7 +31,8 @@ CHANNELS = [
 
 
 def fetch_json(url):
-    request = Request(url, headers={
+    refresh_url = f"{url}{'&' if '?' in url else '?'}epg_refresh={int(time.time())}"
+    request = Request(refresh_url, headers={
         "User-Agent": "91.3-Ayclt-FM-EPG/1.2",
         "Cache-Control": "no-cache, no-store, max-age=0",
         "Pragma": "no-cache",
@@ -222,7 +223,10 @@ def streamer_art_url(station_slug, streamer_id):
 
 
 def fetch_artwork_hash(url):
-    """Fetch current DJ artwork and return a short content hash."""
+    """Force-fetch current DJ artwork and return a short content hash.
+
+    A unique query parameter is added on every 5-minute workflow run so
+    upstream/CDN caches cannot return an older DJ image."""
     request = Request(url, headers={
         "User-Agent": "91.3-Ayclt-FM-EPG/1.2",
         "Accept": "image/*,*/*;q=0.8",
@@ -254,7 +258,7 @@ def cache_bust_artwork_url(url):
 
 
 def fetch_streamers(station_slug):
-    endpoint = f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers"
+    endpoint = f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers?epg_refresh={int(time.time())}"
 
     try:
         data = fetch_json(endpoint)
