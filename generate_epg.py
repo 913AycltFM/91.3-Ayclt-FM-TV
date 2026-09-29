@@ -134,15 +134,76 @@ def get_program_title(item, channel_name):
 
 
 def get_streamer_info(item):
-    streamer = get_field(item, ["streamer", "streamer_name", "dj", "dj_name", "presenter", "presenter_name"])
-    streamer_id = get_field(item, ["streamer_id", "dj_id", "presenter_id"])
+    """Extract streamer/DJ name and ID from AzuraCast schedule data.
+
+    AzuraCast can return the streamer as a string, an object, or nested
+    inside another object. Check all common shapes so the artwork endpoint
+    can be called directly when a streamer ID is present.
+    """
+    if not isinstance(item, dict):
+        return "", ""
+
+    streamer = get_field(
+        item,
+        ["streamer", "streamer_name", "dj", "dj_name", "presenter", "presenter_name"],
+    )
+    streamer_id = get_field(
+        item,
+        [
+            "streamer_id",
+            "dj_id",
+            "presenter_id",
+            "streamerId",
+            "djId",
+            "presenterId",
+        ],
+    )
+
+    name = None
 
     if isinstance(streamer, dict):
         if streamer_id is None:
-            streamer_id = get_field(streamer, ["id", "streamer_id", "dj_id", "presenter_id"])
-        name = get_field(streamer, ["name", "display_name", "username", "title", "streamer_name"])
+            streamer_id = get_field(
+                streamer,
+                [
+                    "id",
+                    "streamer_id",
+                    "dj_id",
+                    "presenter_id",
+                    "streamerId",
+                    "djId",
+                    "presenterId",
+                ],
+            )
+        name = get_field(
+            streamer,
+            ["name", "display_name", "username", "title", "streamer_name", "dj_name"],
+        )
     else:
         name = streamer
+
+    # Some schedule payloads put the streamer object under a nested key.
+    for key in ("schedule", "data", "user", "presenter", "dj"):
+        nested = item.get(key)
+        if isinstance(nested, dict):
+            if streamer_id is None:
+                streamer_id = get_field(
+                    nested,
+                    [
+                        "streamer_id",
+                        "dj_id",
+                        "presenter_id",
+                        "streamerId",
+                        "djId",
+                        "presenterId",
+                        "id",
+                    ],
+                )
+            if not name:
+                name = get_field(
+                    nested,
+                    ["name", "display_name", "username", "title", "streamer_name", "dj_name"],
+                )
 
     return (
         str(name).strip() if name else "",
@@ -186,7 +247,7 @@ def fetch_streamers(station_slug):
         by_id[streamer_id] = art
 
         if name:
-            by_name[name.casefold()] = art
+            by_name[normalize_streamer_name(name)] = art
 
         print(f"  DJ artwork: {name or streamer_id} -> {art}")
 
@@ -194,14 +255,34 @@ def fetch_streamers(station_slug):
     return by_name, by_id
 
 
+def normalize_streamer_name(value):
+    if not value:
+        return ""
+    return " ".join(str(value).strip().casefold().replace("_", " ").split())
+
+
 def get_streamer_art(item, station_slug, streamer_art_by_name, streamer_art_by_id):
     name, streamer_id = get_streamer_info(item)
 
-    if streamer_id and streamer_id in streamer_art_by_id:
-        return streamer_art_by_id[streamer_id]
+    # Prefer the exact streamer ID from the schedule. This avoids depending
+    # on the /streamers collection endpoint being publicly accessible.
+    if streamer_id:
+        direct_url = streamer_art_url(station_slug, streamer_id)
+        if direct_url:
+            print(f"  Using direct DJ artwork: {name or streamer_id} -> {direct_url}")
+            return direct_url
 
-    if name and name.casefold() in streamer_art_by_name:
-        return streamer_art_by_name[name.casefold()]
+    normalized_name = normalize_streamer_name(name)
+
+    if normalized_name:
+        if normalized_name in streamer_art_by_name:
+            return streamer_art_by_name[normalized_name]
+
+        # Match common AzuraCast display-name variations such as
+        # "JB In The Morning" vs "JB In the Morning".
+        for known_name, art_url in streamer_art_by_name.items():
+            if normalized_name == normalize_streamer_name(known_name):
+                return art_url
 
     return None
 
