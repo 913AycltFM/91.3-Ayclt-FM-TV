@@ -706,6 +706,7 @@ def main():
             start_time,
             end_time,
             station_slug,
+            streamer_directories.get(station_slug),
         )
 
         all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
@@ -727,6 +728,7 @@ def main():
         start_time,
         end_time,
         fm_station_slug,
+        streamer_directories.get(fm_station_slug),
     )
 
     live_cam_events = []
