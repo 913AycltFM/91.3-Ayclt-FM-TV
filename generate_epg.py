@@ -322,26 +322,59 @@ def streamer_art_url(station_slug, streamer_id):
 
 
 def get_streamer_art(item, station_slug, streamer_directory=None):
-    # Prefer the streamer ID supplied by the schedule API.
+    """
+    Resolve DJ artwork from the live AzuraCast streamer directory.
+
+    The schedule API is not always consistent about where it exposes the
+    streamer ID/name. Match by every useful name we can find first, then
+    fall back to the schedule ID and finally the local cache.
+    """
     name, streamer_id = get_streamer_info(item)
 
-    if streamer_id:
-        return streamer_art_url(station_slug, streamer_id)
+    candidates = []
 
-    # The live Streamers API is the authoritative fallback when the schedule
-    # identifies the DJ by name but omits the streamer ID.
-    key = normalize_streamer_name(name) if name else ""
-    if key and streamer_directory:
-        entry = streamer_directory.get(key)
-        if entry:
+    def add_candidate(value):
+        if value is None:
+            return
+        value = str(value).strip()
+        if not value:
+            return
+        key = normalize_streamer_name(value)
+        if key and key not in candidates:
+            candidates.append(key)
+
+    add_candidate(name)
+
+    title = get_field(item, ["name", "title", "program_name", "show_name", "playlist_name"])
+    if isinstance(title, dict):
+        title = get_field(title, ["name", "title"])
+    add_candidate(title)
+
+    description = get_field(item, ["description", "desc"])
+    if description:
+        desc_text = str(description).strip()
+        if ":" in desc_text:
+            add_candidate(desc_text.split(":", 1)[1])
+
+    # First use the current live Streamers API directory. This makes DJ
+    # artwork follow DJs who are added, removed, or renamed in AzuraCast.
+    if streamer_directory:
+        for key in candidates:
+            entry = streamer_directory.get(key)
+            if not entry:
+                continue
             if entry.get("art"):
                 return entry["art"]
             if entry.get("id"):
                 return streamer_art_url(station_slug, entry["id"])
 
-    # Repository cache remains a last-resort fallback if the API response
-    # changes shape or a temporary API response omits a current streamer.
-    if key:
+    # If the schedule supplied a streamer ID but name matching failed,
+    # use that ID directly.
+    if streamer_id:
+        return streamer_art_url(station_slug, streamer_id)
+
+    # Last-resort repository cache for temporary API inconsistencies.
+    for key in candidates:
         cached_art = STREAMER_ART_CACHE.get(f"art:{key}")
         if cached_art:
             return cached_art
