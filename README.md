@@ -94,11 +94,11 @@ In Jellyfin, add the IPTV playlist as an **M3U tuner**.
 
 Use this playlist URL:
 
-`https://raw.githubusercontent.com/913AycltFM/Radio-Stations-That-Can-Be-Played-On-A-IPTV_or_Plex_or_jellyfin/main/91.3_Ayclt_FM_radio_playlist.m3u`
+`https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/main/91.3_Ayclt_FM_radio_playlist.m3u`
 
 For guide data, configure the XMLTV provider with:
 
-`https://raw.githubusercontent.com/913AycltFM/Radio-Stations-That-Can-Be-Played-On-A-IPTV_or_Plex_or_jellyfin/main/91.3_Ayclt_FM_radio_guide.xml`
+`https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/main/91.3_Ayclt_FM_radio_guide.xml`
 
 After adding or changing the guide provider, refresh the Live TV guide data in Jellyfin.
 
@@ -122,16 +122,21 @@ The repository-generated files are intended to remain compatible with the statio
 
 ## Notes
 
-The XMLTV standard does not define a universal graphical LIVE box. This project therefore supplies multiple LIVE signals for compatibility:
+The XMLTV standard does not define a universal graphical LIVE box. This project supplies LIVE metadata for compatible clients:
 
 - `<live/>` for clients that support the XMLTV live marker.
 - `<category lang="en">LIVE</category>` for clients that use programme categories.
 - `<sub-title lang="en">LIVE</sub-title>` for clients that expose programme subtitles.
-- `[LIVE]` at the beginning of the programme title as a mobile-friendly fallback for Android/iPhone clients that do not render a graphical LIVE badge.
 
-Jellyfin Web/Desktop can render its own LIVE indicator from the guide data. Android/iPhone clients may instead display the `[LIVE]` title fallback when their native guide UI does not expose the graphical badge.
+The programme title is kept clean without a `[LIVE]` prefix. Jellyfin Web/Desktop can render its own LIVE indicator from the guide data. Android/iPhone clients may not expose the graphical badge because their native guide UI handles LIVE metadata differently.
 
 Because the XMLTV and JSON files are generated automatically, manual edits to those generated files may be replaced by the next EPG update.
+
+## Repository
+
+GitHub repository:
+
+`https://github.com/913AycltFM/91.3-Ayclt-FM-TV`
 
 ## License
 
