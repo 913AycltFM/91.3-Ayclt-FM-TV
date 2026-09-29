@@ -271,6 +271,7 @@ def fetch_streamers(station_slug):
     by_name = {}
     by_username = {}
     by_id = {}
+    streamer_records = {}
 
     for streamer in rows:
         if not isinstance(streamer, dict):
@@ -302,6 +303,10 @@ def fetch_streamers(station_slug):
             art = cache_bust_artwork_url(art)
 
         by_id[streamer_id] = art
+        streamer_records[streamer_id] = {
+            "name": display_name,
+            "username": username,
+        }
 
         if display_name:
             by_name[normalize_streamer_name(display_name)] = art
@@ -312,7 +317,13 @@ def fetch_streamers(station_slug):
         print(f"  DJ artwork: {display_name or username or streamer_id} (ID {streamer_id}) -> {art}")
 
     print(f"Loaded {len(by_id)} streamer/DJ artwork entries for {station_slug}.")
-    save_streamer_art_cache(station_slug, by_name, by_id, by_username)
+    save_streamer_art_cache(
+        station_slug,
+        by_name,
+        by_id,
+        by_username,
+        streamer_records,
+    )
     return by_name, by_id, by_username
 
 
@@ -356,7 +367,7 @@ def load_streamer_art_cache():
     return by_name, by_id, by_username
 
 
-def save_streamer_art_cache(station_slug, by_name, by_id, by_username):
+def save_streamer_art_cache(station_slug, by_name, by_id, by_username, streamer_records=None):
     # Keep a compact, station-scoped cache so temporary API failures do not
     # replace known DJ artwork with station artwork.
     path = Path(STREAMER_ART_CACHE_FILE)
@@ -367,10 +378,15 @@ def save_streamer_art_cache(station_slug, by_name, by_id, by_username):
 
     stations = existing.setdefault("stations", {})
     rows = []
+    records = streamer_records or {}
     for streamer_id, art in sorted(by_id.items()):
-        name = next((n for n, a in by_name.items() if a == art), "")
-        username = next((u for u, a in by_username.items() if a == art), "")
-        rows.append({"id": streamer_id, "name": name, "username": username, "art": art})
+        record = records.get(streamer_id, {})
+        rows.append({
+            "id": streamer_id,
+            "name": record.get("name", ""),
+            "username": record.get("username", ""),
+            "art": art,
+        })
     stations[station_slug] = {"streamers": rows}
     path.write_text(json.dumps(existing, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
