@@ -123,6 +123,7 @@ jobs:
               "913AycltFMHD2",
               "913AycltFMHD3",
               "913AycltFMLiveStudioCam",
+              "913AycltFMMobileStudioCam",
           }
 
           with open("epg.json", encoding="utf-8") as f:
