@@ -146,50 +146,72 @@ def get_streamer_info(item):
     if not isinstance(item, dict):
         return "", ""
 
-    # Pull the streamer/DJ directly from the AzuraCast schedule API item.
-    streamer = get_field(
-        item,
-        ["streamer", "streamer_name", "dj", "dj_name", "presenter", "presenter_name"],
-    )
+    # AzuraCast schedule responses can expose the scheduled streamer under
+    # several names/nesting levels. Prefer the ID from the schedule item.
     streamer_id = get_field(
         item,
-        ["streamer_id", "dj_id", "presenter_id", "streamerId", "djId", "presenterId"],
+        [
+            "streamer_id", "streamerId", "streamer",
+            "dj_id", "djId", "presenter_id", "presenterId",
+        ],
+    )
+    streamer = get_field(
+        item,
+        [
+            "streamer_name", "streamerName", "dj_name", "djName",
+            "presenter_name", "presenterName", "streamer",
+            "dj", "presenter",
+        ],
     )
 
-    name = None
+    name = ""
 
     if isinstance(streamer, dict):
         if streamer_id is None:
             streamer_id = get_field(
                 streamer,
-                ["id", "streamer_id", "dj_id", "presenter_id", "streamerId", "djId", "presenterId"],
+                [
+                    "id", "streamer_id", "streamerId",
+                    "dj_id", "djId", "presenter_id", "presenterId",
+                ],
             )
         name = get_field(
             streamer,
-            ["name", "display_name", "username", "title", "streamer_name", "dj_name"],
+            [
+                "name", "display_name", "displayName", "username",
+                "title", "streamer_name", "streamerName",
+                "dj_name", "djName",
+            ],
         )
     elif streamer:
-        name = streamer
+        name = str(streamer).strip()
 
-    # AzuraCast can nest schedule/presenter data inside the schedule response.
+    # Also inspect common nested schedule/presenter structures.
     for key in ("schedule", "data", "user", "presenter", "dj", "streamer"):
         nested = item.get(key)
-        if isinstance(nested, dict):
-            if streamer_id is None:
-                streamer_id = get_field(
-                    nested,
-                    ["id", "streamer_id", "dj_id", "presenter_id", "streamerId", "djId", "presenterId"],
-                )
-            if not name:
-                name = get_field(
-                    nested,
-                    ["name", "display_name", "username", "title", "streamer_name", "dj_name"],
-                )
+        if not isinstance(nested, dict):
+            continue
 
-    return (
-        str(name).strip() if name else "",
-        str(streamer_id).strip() if streamer_id is not None else "",
-    )
+        if streamer_id is None:
+            streamer_id = get_field(
+                nested,
+                [
+                    "id", "streamer_id", "streamerId",
+                    "dj_id", "djId", "presenter_id", "presenterId",
+                ],
+            )
+
+        if not name:
+            name = get_field(
+                nested,
+                [
+                    "name", "display_name", "displayName", "username",
+                    "title", "streamer_name", "streamerName",
+                    "dj_name", "djName",
+                ],
+            )
+
+    return name, str(streamer_id).strip() if streamer_id is not None else ""
 
 
 def streamer_art_url(station_slug, streamer_id):
@@ -199,7 +221,8 @@ def streamer_art_url(station_slug, streamer_id):
 
 
 def get_streamer_art(item, station_slug):
-    # The schedule API supplies the DJ/streamer ID. Use that ID directly.
+    # The schedule API is authoritative. Do not use a separate streamer list
+    # to guess which DJ is assigned to a scheduled programme.
     _name, streamer_id = get_streamer_info(item)
     if streamer_id:
         return streamer_art_url(station_slug, streamer_id)
