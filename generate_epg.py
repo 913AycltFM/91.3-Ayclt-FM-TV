@@ -193,14 +193,40 @@ def normalize_streamer_name(value):
     return " ".join(str(value).strip().casefold().replace("_", " ").split())
 
 
-def get_streamer_art(item, station_slug):
+def get_streamer_list(station_slug):
+    data = fetch_json(f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers")
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict):
+        for key in ("streamers", "data", "items", "results"):
+            value = data.get(key)
+            if isinstance(value, list):
+                return value
+    return []
+
+
+def build_streamer_lookup(station_slug):
+    lookup = {}
+    for streamer in get_streamer_list(station_slug):
+        if not isinstance(streamer, dict):
+            continue
+        streamer_id = get_field(streamer, ["id", "streamer_id", "streamerId"])
+        name = get_field(streamer, ["name", "display_name", "username", "streamer_name", "dj_name", "title"])
+        if streamer_id is None or not name:
+            continue
+        lookup[normalize_streamer_name(name)] = str(streamer_id)
+    return lookup
+
+
+def get_streamer_art(item, station_slug, streamer_lookup=None):
     name, streamer_id = get_streamer_info(item)
+
+    if not streamer_id and streamer_lookup and name:
+        streamer_id = streamer_lookup.get(normalize_streamer_name(name))
 
     if streamer_id:
         return streamer_art_url(station_slug, streamer_id)
 
-    # If AzuraCast supplies the DJ name but not the ID, there is no safe way
-    # to construct the streamer-art endpoint. Use the channel artwork.
     return None
 
 
@@ -262,7 +288,7 @@ def fetch_station_schedule(station_slug, start_date, end_date):
     return schedules
 
 
-def convert_schedule(channel, schedules, minimum, maximum, station_slug):
+def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_lookup=None):
     events = []
 
     for item in schedules:
@@ -276,7 +302,7 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug):
             continue
 
         live_program = is_live_program(item)
-        icon = get_streamer_art(item, station_slug) if live_program else None
+        icon = get_streamer_art(item, station_slug, streamer_lookup) if live_program else None
 
         events.append({
             "channel_id": channel["id"],
@@ -538,12 +564,14 @@ def main():
                 end_time.date(),
             )
 
+        streamer_lookup = build_streamer_lookup(station_slug)
         actual_events = convert_schedule(
             channel,
             schedule_cache[station_slug],
             start_time,
             end_time,
             station_slug,
+            streamer_lookup,
         )
 
         all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
@@ -559,12 +587,14 @@ def main():
     ]
 
     fm_station_slug = STATIONS["913AycltFM"]
+    fm_streamer_lookup = build_streamer_lookup(fm_station_slug)
     fm_events = convert_schedule(
         fm_channel,
         schedule_cache[fm_station_slug],
         start_time,
         end_time,
         fm_station_slug,
+        fm_streamer_lookup,
     )
 
     live_cam_events = []
