@@ -17,7 +17,7 @@ This repository provides channel metadata, live HLS streams, a rolling XMLTV pro
 
 The IPTV playlist is:
 
-`91.3_Ayclt_FM_radio_playlist.m3u`
+`https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/refs/heads/main/91.3_Ayclt_FM_radio_playlist.m3u`
 
 The playlist is linked to this XMLTV guide:
 
