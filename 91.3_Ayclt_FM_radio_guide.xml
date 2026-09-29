@@ -17,19 +17,6 @@
     <display-name>1.4</display-name>
     <display-name>91.3 Ayclt FM Live Studio Cam</display-name>
   </channel>
-  <channel id="TheMidWestPlainsman">
-    <display-name>1.5</display-name>
-    <display-name>The Mid West Plainsman</display-name>
-  </channel>
-  <programme start="20260929100000 -0500" stop="20260929110000 -0500" channel="913AycltFM">
-    <title lang="en">Rock Doc</title>
-    <desc lang="en">Live DJ: Rock Doc</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-    <live/>
-    <category lang="en">LIVE</category>
-    <sub-title lang="en">LIVE</sub-title>
-    <new/>
-  </programme>
   <programme start="20260929110000 -0500" stop="20260929120000 -0500" channel="913AycltFM">
     <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
@@ -809,7 +796,7 @@
     <desc lang="en">Playlist: Best Of JB In the Morning (Tuesday Morning Edition)</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261006090000 -0500" stop="20261006100000 -0500" channel="913AycltFM">
+  <programme start="20261006090000 -0500" stop="20261006110000 -0500" channel="913AycltFM">
     <title lang="en">Rock Doc</title>
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
@@ -817,11 +804,6 @@
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
-  </programme>
-  <programme start="20260929100000 -0500" stop="20260929110000 -0500" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
   <programme start="20260929110000 -0500" stop="20260929120000 -0500" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
@@ -1658,10 +1640,10 @@
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20260929100000 -0500" stop="20260929110000 -0500" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261006100000 -0500" stop="20261006110000 -0500" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
   <programme start="20260929110000 -0500" stop="20260929120000 -0500" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
@@ -2498,14 +2480,10 @@
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20260929100000 -0500" stop="20260929110000 -0500" channel="913AycltFMLiveStudioCam">
-    <title lang="en">Rock Doc</title>
-    <desc lang="en">Live DJ: Rock Doc</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-    <live/>
-    <category lang="en">LIVE</category>
-    <sub-title lang="en">LIVE</sub-title>
-    <new/>
+  <programme start="20261006100000 -0500" stop="20261006110000 -0500" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
   <programme start="20260929110000 -0500" stop="20260929120000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
@@ -3286,7 +3264,7 @@
     <desc lang="en">Playlist: Best Of JB In the Morning (Tuesday Morning Edition)</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261006090000 -0500" stop="20261006100000 -0500" channel="913AycltFMLiveStudioCam">
+  <programme start="20261006090000 -0500" stop="20261006110000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">Rock Doc</title>
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
@@ -3294,10 +3272,5 @@
     <category lang="en">LIVE</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
-  </programme>
-  <programme start="20260929100000 -0500" stop="20261006100000 -0500" channel="TheMidWestPlainsman">
-    <title lang="en">The Mid West Plainsman</title>
-    <desc lang="en">The Mid West Plainsman Is A Media Broadcast Content Creator In Waterloo, Iowa Covering Everything In The Cedar Valley Corridor and Central Iowa</desc>
-    <icon src="https://mp3tourl.com/images/1790116455920-0030dd1a-85d7-401a-bb1b-8cdb4160da9a.png" />
   </programme>
 </tv>
