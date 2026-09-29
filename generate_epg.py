@@ -210,11 +210,27 @@ def build_streamer_lookup(station_slug):
     for streamer in get_streamer_list(station_slug):
         if not isinstance(streamer, dict):
             continue
+
         streamer_id = get_field(streamer, ["id", "streamer_id", "streamerId"])
-        name = get_field(streamer, ["name", "display_name", "username", "streamer_name", "dj_name", "title"])
+        name = get_field(
+            streamer,
+            ["name", "display_name", "username", "streamer_name", "dj_name", "title"],
+        )
+
         if streamer_id is None or not name:
             continue
-        lookup[normalize_streamer_name(name)] = str(streamer_id)
+
+        streamer_id = str(streamer_id)
+        normalized = normalize_streamer_name(name)
+        lookup[normalized] = streamer_id
+
+        # AzuraCast schedule names may include "DJ " while the streamer
+        # profile name does not, or vice versa. Store both forms.
+        if normalized.startswith("dj "):
+            lookup[normalized[3:].strip()] = streamer_id
+        else:
+            lookup[f"dj {normalized}"] = streamer_id
+
     return lookup
 
 
@@ -222,7 +238,20 @@ def get_streamer_art(item, station_slug, streamer_lookup=None):
     name, streamer_id = get_streamer_info(item)
 
     if not streamer_id and streamer_lookup and name:
-        streamer_id = streamer_lookup.get(normalize_streamer_name(name))
+        normalized_name = normalize_streamer_name(name)
+        streamer_id = streamer_lookup.get(normalized_name)
+
+        # Try a safe normalized-name match when AzuraCast uses a longer
+        # schedule label such as "DJ Brandon Stone - Live".
+        if not streamer_id:
+            for profile_name, profile_id in streamer_lookup.items():
+                if (
+                    normalized_name == profile_name
+                    or normalized_name.startswith(profile_name + " ")
+                    or profile_name.startswith(normalized_name + " ")
+                ):
+                    streamer_id = profile_id
+                    break
 
     if streamer_id:
         return streamer_art_url(station_slug, streamer_id)
