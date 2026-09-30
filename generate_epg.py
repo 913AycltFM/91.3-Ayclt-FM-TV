@@ -405,7 +405,14 @@ def validate_xml():
 
 def main():
     now = datetime.now(TIMEZONE)
-    start_time = now.replace(minute=0, second=0, microsecond=0)
+    # Keep the rolling window aligned to the 5-minute update cadence.
+    # This allows each GitHub Actions run to advance the EPG instead of
+    # keeping the window fixed at the top of the hour.
+    start_time = now.replace(
+        minute=(now.minute // 5) * 5,
+        second=0,
+        microsecond=0,
+    )
     end_time = start_time + timedelta(days=DAYS_AHEAD)
     schedule_start_date = start_time.date() - timedelta(days=1)
     all_events = []
