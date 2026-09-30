@@ -279,7 +279,11 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
             continue
         live_program = is_live_program(item)
         icon = get_streamer_art(item, station_slug, streamer_directory) if live_program else None
-        events.append({"channel_id": channel["id"], "channel_name": channel["name"], "title": get_program_title(item, channel["name"]), "description": get_description(item, channel["description"]), "start": max(start, minimum), "end": min(end, maximum), "icon": icon or channel["icon"], "fallback": False, "live_program": live_program})
+        # Never substitute the station background for a LIVE DJ. If AzuraCast's
+        # streamer artwork cannot be resolved, leave the programme icon absent.
+        # This prevents a stale/static station image from being published as DJ art.
+        programme_icon = icon if live_program else channel["icon"]
+        events.append({"channel_id": channel["id"], "channel_name": channel["name"], "title": get_program_title(item, channel["name"]), "description": get_description(item, channel["description"]), "start": max(start, minimum), "end": min(end, maximum), "icon": programme_icon, "fallback": False, "live_program": live_program})
     return events
 
 def add_filler_blocks(result, channel, start_time, end_time):
