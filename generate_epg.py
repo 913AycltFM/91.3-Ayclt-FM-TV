@@ -1,4 +1,3 @@
-import hashlib
 import json
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -217,7 +216,7 @@ def build_streamer_directory(station_slug):
         if not art and streamer_id is not None:
             art = streamer_art_url(station_slug, streamer_id)
         if art:
-            art = refresh_art_url(str(art))
+            art = streamer_art_url(station_slug, streamer_id) if streamer_id is not None else str(art)
         entry = {"id": str(streamer_id) if streamer_id is not None else "", "name": str(name), "username": str(get_field(streamer, ["username"]) or ""), "art": str(art) if art else ""}
         lookup[key] = entry
 
@@ -243,7 +242,7 @@ def write_streamer_art_cache(station_slug, streamers):
         if not art:
             art = streamer_art_url(station_slug, streamer_id)
         if art:
-            art = refresh_art_url(str(art))
+            art = streamer_art_url(station_slug, streamer_id) if streamer_id is not None else str(art)
         entries.append({"id": str(streamer_id), "name": str(name), "username": str(username or ""), "art": str(art or "")})
 
     payload = {"stations": {station_slug: {"streamers": sorted(entries, key=lambda x: x["name"].lower())}}}
@@ -328,36 +327,6 @@ def streamer_art_url(station_slug, streamer_id):
     return f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamer/{streamer_id}/art"
 
 
-def refresh_art_url(url):
-    """
-    Fetch the current artwork and add a content hash to the URL.
-
-    AzuraCast can keep the same artwork endpoint while the image itself
-    changes. A content hash makes IPTV/Jellyfin clients request the new
-    image without changing the URL every EPG run.
-    """
-    if not url:
-        return None
-
-    request = Request(url, headers={
-        "User-Agent": "91.3-Ayclt-FM-EPG/1.3",
-        "Cache-Control": "no-cache, no-store, max-age=0",
-        "Pragma": "no-cache",
-        "Accept": "image/*",
-        "Connection": "close",
-    })
-
-    try:
-        with urlopen(request, timeout=30) as response:
-            image_data = response.read()
-        digest = hashlib.sha256(image_data).hexdigest()[:16]
-        separator = "&" if "?" in url else "?"
-        return f"{url}{separator}v={digest}"
-    except (HTTPError, URLError, TimeoutError, ConnectionError, OSError) as error:
-        print(f"Artwork refresh failed for {url}: {type(error).__name__}: {error}")
-        return url
-
-
 def get_streamer_art(item, station_slug, streamer_directory=None):
     """
     Resolve DJ artwork from the live AzuraCast streamer directory.
@@ -400,8 +369,8 @@ def get_streamer_art(item, station_slug, streamer_directory=None):
             entry = streamer_directory.get(key)
             if not entry:
                 continue
-            if entry.get("art"):
-                return entry["art"]
+            if entry.get("id"):
+                return streamer_art_url(station_slug, entry["id"])
             if entry.get("id"):
                 return streamer_art_url(station_slug, entry["id"])
 
@@ -412,9 +381,6 @@ def get_streamer_art(item, station_slug, streamer_directory=None):
 
     # Last-resort repository cache for temporary API inconsistencies.
     for key in candidates:
-        cached_art = STREAMER_ART_CACHE.get(f"art:{key}")
-        if cached_art:
-            return cached_art
         cached_id = STREAMER_ART_CACHE.get(key)
         if cached_id:
             return streamer_art_url(station_slug, cached_id)
