@@ -188,12 +188,28 @@ STREAMER_ART_CACHE = load_streamer_art_cache()
 def fetch_streamer_directory(station_slug):
     """Fetch the current AzuraCast streamer directory for a station."""
     data = fetch_json(f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers")
-    if isinstance(data, dict):
-        for key in ("streamers", "data", "items", "results"):
-            value = data.get(key)
-            if isinstance(value, list):
+
+    # AzuraCast responses can be wrapped in different containers depending
+    # on API/version. Recursively find the first list of streamer objects
+    # instead of assuming a single response shape.
+    def find_streamers(value):
+        if isinstance(value, list):
+            if any(isinstance(item, dict) for item in value):
                 return value
-    return data if isinstance(data, list) else []
+            return []
+        if isinstance(value, dict):
+            for key in ("streamers", "data", "items", "results"):
+                if key in value:
+                    found = find_streamers(value[key])
+                    if found:
+                        return found
+            for value in value.values():
+                found = find_streamers(value)
+                if found:
+                    return found
+        return []
+
+    return find_streamers(data)
 
 
 def build_streamer_directory(station_slug):
@@ -213,6 +229,8 @@ def build_streamer_directory(station_slug):
             continue
 
         key = normalize_streamer_name(name)
+        username = get_field(streamer, ["username"])
+        username_key = normalize_streamer_name(username) if username else ""
         if not art and streamer_id is not None:
             art = streamer_art_url(station_slug, streamer_id)
         if art:
@@ -220,9 +238,8 @@ def build_streamer_directory(station_slug):
         entry = {"id": str(streamer_id) if streamer_id is not None else "", "name": str(name), "username": str(get_field(streamer, ["username"]) or ""), "art": str(art) if art else ""}
         lookup[key] = entry
 
-        username = get_field(streamer, ["username"])
-        if username:
-            lookup[normalize_streamer_name(username)] = entry
+        if username_key:
+            lookup[username_key] = entry
 
     return lookup, streamers
 
