@@ -40,6 +40,24 @@ Timezone:
 
 **America/Chicago (Central Time)**
 
+## Automatic DJ / Streamer Artwork
+
+The EPG generator discovers current AzuraCast streamers dynamically through the station's **Streamers API**.
+
+For LIVE DJ/streamer programmes, artwork is resolved from the live AzuraCast streamer endpoint using the streamer's current ID.
+
+The generator does **not** maintain:
+
+- A hard-coded DJ/streamer ID list
+- `streamer_art_cache.json`
+- A local streamer artwork cache
+
+This means DJs can be added, removed, or changed in AzuraCast without requiring their IDs to be manually added to `generate_epg.py`.
+
+If a LIVE DJ's artwork cannot be resolved, the EPG leaves the programme artwork unset rather than incorrectly using a stale station image.
+
+The GitHub Actions workflow supplies the AzuraCast API key through the repository secret `AZURACAST_API_KEY`. The secret value is never stored in the repository source code.
+
 ## LIVE indicator
 
 Live DJ/streamer programmes are marked in the XMLTV guide with:
@@ -50,7 +68,15 @@ The generator also keeps:
 
 `<category lang="en">LIVE</category>`
 
-The `<live />` element is important for Jellyfin because Jellyfin's XMLTV parser uses it to set the programme's live state.
+and:
+
+`<sub-title lang="en">LIVE</sub-title>`
+
+and:
+
+`<new/>`
+
+The `<live />` element is important for Jellyfin because Jellyfin's XMLTV parser can use it to set the programme's live state.
 
 ### LIVE rules
 
@@ -59,9 +85,9 @@ The `<live />` element is important for Jellyfin because Jellyfin's XMLTV parser
 - Past live DJ/streamer: LIVE metadata
 - Regular scheduled programme: no LIVE
 - Filler programme: no LIVE
-- HD2/HD3: LIVE only while a live DJ/streamer is currently airing
-- Live Studio Cam follows the main FM live-DJ schedule
-- Mobile Studio Cam follows the same main FM live-DJ schedule.
+- HD2/HD3: LIVE metadata when the scheduled programme is identified as a live DJ/streamer programme
+- Live Studio Cam follows the main FM schedule and LIVE state
+- Mobile Studio Cam follows the main FM schedule and LIVE state
 
 The XMLTV file provides the live metadata. The actual visual LIVE badge is rendered by the IPTV/Jellyfin client.
 
@@ -80,11 +106,13 @@ Schedule:
 The workflow:
 
 1. Fetches the AzuraCast schedule.
-2. Builds the 7-day rolling EPG.
-3. Adds scheduled programmes and filler blocks.
-4. Applies LIVE metadata to DJ/streamer programmes.
-5. Validates the XMLTV file.
-6. Updates `91.3_Ayclt_FM_radio_guide.xml` and `epg.json` when changes are detected.
+2. Discovers current streamer names and IDs from AzuraCast.
+3. Builds the 7-day rolling EPG.
+4. Adds scheduled programmes and filler blocks.
+5. Adds LIVE metadata to DJ/streamer programmes.
+6. Resolves LIVE DJ artwork from AzuraCast without a local cache.
+7. Validates the generated XMLTV data.
+8. Updates `91.3_Ayclt_FM_radio_guide.xml` and `epg.json` when changes are detected.
 
 The generator is:
 
@@ -116,11 +144,11 @@ After adding or changing the guide provider, refresh the Live TV guide data in J
 
 ## Data source
 
-Programme schedules are retrieved from the station's AzuraCast installation:
+Programme schedules and streamer information are retrieved from the station's AzuraCast installation:
 
 `https://radio.913aycltfm.com`
 
-The repository-generated files are intended to remain compatible with the station's IPTV and Live TV services.
+The generated EPG uses the AzuraCast API for schedule and streamer information.
 
 ## Notes
 
@@ -129,6 +157,7 @@ The XMLTV standard does not define a universal graphical LIVE box. This project 
 - `<live/>` for clients that support the XMLTV live marker.
 - `<category lang="en">LIVE</category>` for clients that use programme categories.
 - `<sub-title lang="en">LIVE</sub-title>` for clients that expose programme subtitles.
+- `<new/>` for clients that use the XMLTV new-programme marker.
 
 The programme title is kept clean without a `[LIVE]` prefix. Jellyfin Web/Desktop can render its own LIVE indicator from the guide data. Android/iPhone clients may not expose the graphical badge because their native guide UI handles LIVE metadata differently.
 
