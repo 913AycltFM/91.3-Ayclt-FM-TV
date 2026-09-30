@@ -61,7 +61,7 @@ The `<live />` element is important for Jellyfin because Jellyfin's XMLTV parser
 - Filler programme: no LIVE
 - HD2/HD3: LIVE only while a live DJ/streamer is currently airing
 - Live Studio Cam follows the main FM live-DJ schedule
-- Mobile Studio Cam (1.5) follows the same main FM live-DJ schedule
+- Mobile Studio Cam follows the same main FM live-DJ schedule.
 
 The XMLTV file provides the live metadata. The actual visual LIVE badge is rendered by the IPTV/Jellyfin client.
 
