@@ -49,6 +49,12 @@
           "name": "Rock Doc",
           "username": "Rock Doc",
           "art": "https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/12/art"
+        },
+        {
+          "id": "4",
+          "name": "DJ Beacon",
+          "username": "DJ Beacon",
+          "art": "https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art"
         }
       ]
     }
