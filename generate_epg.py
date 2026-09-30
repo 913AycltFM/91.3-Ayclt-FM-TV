@@ -242,6 +242,8 @@ def write_streamer_art_cache(station_slug, streamers):
             continue
         if not art:
             art = streamer_art_url(station_slug, streamer_id)
+        if art:
+            art = refresh_art_url(str(art))
         entries.append({"id": str(streamer_id), "name": str(name), "username": str(username or ""), "art": str(art or "")})
 
     payload = {"stations": {station_slug: {"streamers": sorted(entries, key=lambda x: x["name"].lower())}}}
