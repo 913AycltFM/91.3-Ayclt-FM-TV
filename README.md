@@ -36,13 +36,15 @@ A JSON version is also generated:
 
 The EPG is generated from the 91.3 Ayclt FM AzuraCast schedule and maintains a **7-day rolling guide**.
 
+The rolling window is aligned to the **5-minute update cadence**, so each successful scheduled run can advance the guide window instead of waiting for the next hour.
+
 Timezone:
 
 **America/Chicago (Central Time)**
 
 ## Automatic DJ / Streamer Artwork
 
-The EPG generator discovers current AzuraCast streamers dynamically through the station's **Streamers API**.
+The EPG generator discovers current AzuraCast streamers dynamically through the **Streamers API**.
 
 For LIVE DJ/streamer programmes, artwork is resolved from the live AzuraCast streamer endpoint using the streamer's current ID.
 
@@ -108,11 +110,20 @@ The workflow:
 1. Fetches the AzuraCast schedule.
 2. Discovers current streamer names and IDs from AzuraCast.
 3. Builds the 7-day rolling EPG.
-4. Adds scheduled programmes and filler blocks.
-5. Adds LIVE metadata to DJ/streamer programmes.
-6. Resolves LIVE DJ artwork from AzuraCast without a local cache.
-7. Validates the generated XMLTV data.
-8. Updates `91.3_Ayclt_FM_radio_guide.xml` and `epg.json` when changes are detected.
+4. Aligns the rolling window to the current 5-minute interval.
+5. Adds scheduled programmes and filler blocks.
+6. Adds LIVE metadata to DJ/streamer programmes.
+7. Resolves LIVE DJ artwork from AzuraCast without a local cache.
+8. Validates the generated XMLTV and JSON data.
+9. Commits updated `91.3_Ayclt_FM_radio_guide.xml` and `epg.json` when changes are detected.
+
+### Important note about the 5-minute schedule
+
+The workflow is configured for a **5-minute schedule**, but GitHub Actions scheduled workflows can occasionally start later than their scheduled minute because GitHub controls the runner scheduling.
+
+The workflow only creates a new EPG commit when the generated XMLTV or JSON actually changes. Therefore, the absence of a new EPG commit does **not** necessarily mean that a scheduled workflow did not run.
+
+The generator itself is designed so the 7-day rolling window advances in 5-minute increments when the workflow runs.
 
 The generator is:
 
