@@ -21,17 +21,6 @@ STATIONS = {
     "913AycltFMHD3": "91.3_ayclt_fm_hd3",
 }
 
-# Fallback streamer IDs used only when AzuraCast's public /streamers endpoint
-# is unavailable (for example, HTTP 403). Artwork is still fetched live from
-# the streamer art endpoint; this is not an artwork cache.
-STREAMER_ID_FALLBACKS = {
-    "beacon": "4",
-    "coyotedave": "5",
-    "jb": "10",
-    "wolfden": "11",
-    "nicko": "13",
-}
-
 CHANNELS = [
     {"id": "913AycltFM", "display": "1", "name": "91.3 Ayclt FM", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
     {"id": "913AycltFMHD2", "display": "1.2", "name": "91.3 Ayclt FM HD2", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png"},
@@ -235,12 +224,6 @@ def get_streamer_art(item, station_slug, streamer_directory=None):
     if streamer_id:
         return streamer_art_url(station_slug, streamer_id)
 
-    # If the streamer directory is blocked by AzuraCast/Cloudflare, resolve
-    # known DJ names by ID and still use the live streamer artwork endpoint.
-    for key in candidates:
-        fallback_id = STREAMER_ID_FALLBACKS.get(key.replace(" ", ""))
-        if fallback_id:
-            return streamer_art_url(station_slug, fallback_id)
     return None
 
 def is_live_program(item):
