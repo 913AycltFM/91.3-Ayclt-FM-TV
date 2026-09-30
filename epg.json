@@ -249,15 +249,28 @@
   {
     "channel_id": "913AycltFM",
     "station_name": "91.3 Ayclt FM",
-    "title": "DJ Beacon",
-    "description": "Live DJ: DJ Beacon",
+    "title": "91.3 Ayclt FM",
+    "description": "Dickinson's Texas #1 Hit Music Station",
     "start": "2026-10-01T16:00:00-05:00",
+    "end": "2026-10-01T17:00:00-05:00",
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
+    "fallback": true,
+    "live": false,
+    "live_badge": "",
+    "display_title": "91.3 Ayclt FM"
+  },
+  {
+    "channel_id": "913AycltFM",
+    "station_name": "91.3 Ayclt FM",
+    "title": "91.3 Ayclt FM",
+    "description": "Dickinson's Texas #1 Hit Music Station",
+    "start": "2026-10-01T17:00:00-05:00",
     "end": "2026-10-01T18:00:00-05:00",
-    "icon": "https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art",
-    "fallback": false,
-    "live": true,
-    "live_badge": "LIVE",
-    "display_title": "DJ Beacon"
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
+    "fallback": true,
+    "live": false,
+    "live_badge": "",
+    "display_title": "91.3 Ayclt FM"
   },
   {
     "channel_id": "913AycltFM",
@@ -6476,15 +6489,28 @@
   {
     "channel_id": "913AycltFMLiveStudioCam",
     "station_name": "91.3 Ayclt FM Live Studio Cam",
-    "title": "DJ Beacon",
-    "description": "Live DJ: DJ Beacon",
+    "title": "91.3 Ayclt FM Live Studio Cam",
+    "description": "91.3 Ayclt FM Live Studio Cam",
     "start": "2026-10-01T16:00:00-05:00",
+    "end": "2026-10-01T17:00:00-05:00",
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
+    "fallback": true,
+    "live": false,
+    "live_badge": "",
+    "display_title": "91.3 Ayclt FM Live Studio Cam"
+  },
+  {
+    "channel_id": "913AycltFMLiveStudioCam",
+    "station_name": "91.3 Ayclt FM Live Studio Cam",
+    "title": "91.3 Ayclt FM Live Studio Cam",
+    "description": "91.3 Ayclt FM Live Studio Cam",
+    "start": "2026-10-01T17:00:00-05:00",
     "end": "2026-10-01T18:00:00-05:00",
-    "icon": "https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art",
-    "fallback": false,
-    "live": true,
-    "live_badge": "LIVE",
-    "display_title": "DJ Beacon"
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
+    "fallback": true,
+    "live": false,
+    "live_badge": "",
+    "display_title": "91.3 Ayclt FM Live Studio Cam"
   },
   {
     "channel_id": "913AycltFMLiveStudioCam",
@@ -8335,15 +8361,28 @@
   {
     "channel_id": "913AycltFMMobileStudioCam",
     "station_name": "91.3 Ayclt FM Mobile Studio Cam",
-    "title": "DJ Beacon",
-    "description": "Live DJ: DJ Beacon",
+    "title": "91.3 Ayclt FM Mobile Studio Cam",
+    "description": "91.3 Ayclt FM Mobile Studio Cam",
     "start": "2026-10-01T16:00:00-05:00",
+    "end": "2026-10-01T17:00:00-05:00",
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
+    "fallback": true,
+    "live": false,
+    "live_badge": "",
+    "display_title": "91.3 Ayclt FM Mobile Studio Cam"
+  },
+  {
+    "channel_id": "913AycltFMMobileStudioCam",
+    "station_name": "91.3 Ayclt FM Mobile Studio Cam",
+    "title": "91.3 Ayclt FM Mobile Studio Cam",
+    "description": "91.3 Ayclt FM Mobile Studio Cam",
+    "start": "2026-10-01T17:00:00-05:00",
     "end": "2026-10-01T18:00:00-05:00",
-    "icon": "https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art",
-    "fallback": false,
-    "live": true,
-    "live_badge": "LIVE",
-    "display_title": "DJ Beacon"
+    "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png",
+    "fallback": true,
+    "live": false,
+    "live_badge": "",
+    "display_title": "91.3 Ayclt FM Mobile Studio Cam"
   },
   {
     "channel_id": "913AycltFMMobileStudioCam",

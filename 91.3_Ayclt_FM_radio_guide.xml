@@ -120,14 +120,15 @@
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261001160000 -0500" stop="20261001180000 -0500" channel="913AycltFM">
-    <title lang="en">DJ Beacon</title>
-    <desc lang="en">Live DJ: DJ Beacon</desc>
-    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
-    <live/>
-    <category lang="en">LIVE</category>
-    <sub-title lang="en">LIVE</sub-title>
-    <new/>
+  <programme start="20261001160000 -0500" stop="20261001170000 -0500" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261001170000 -0500" stop="20261001180000 -0500" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
   <programme start="20261001180000 -0500" stop="20261001220000 -0500" channel="913AycltFM">
     <title lang="en">DJ Nicko</title>
@@ -2587,14 +2588,15 @@
     <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261001160000 -0500" stop="20261001180000 -0500" channel="913AycltFMLiveStudioCam">
-    <title lang="en">DJ Beacon</title>
-    <desc lang="en">Live DJ: DJ Beacon</desc>
-    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
-    <live/>
-    <category lang="en">LIVE</category>
-    <sub-title lang="en">LIVE</sub-title>
-    <new/>
+  <programme start="20261001160000 -0500" stop="20261001170000 -0500" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261001170000 -0500" stop="20261001180000 -0500" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
   <programme start="20261001180000 -0500" stop="20261001220000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ Nicko</title>
@@ -3374,14 +3376,15 @@
     <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261001160000 -0500" stop="20261001180000 -0500" channel="913AycltFMMobileStudioCam">
-    <title lang="en">DJ Beacon</title>
-    <desc lang="en">Live DJ: DJ Beacon</desc>
-    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
-    <live/>
-    <category lang="en">LIVE</category>
-    <sub-title lang="en">LIVE</sub-title>
-    <new/>
+  <programme start="20261001160000 -0500" stop="20261001170000 -0500" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261001170000 -0500" stop="20261001180000 -0500" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
   <programme start="20261001180000 -0500" stop="20261001220000 -0500" channel="913AycltFMMobileStudioCam">
     <title lang="en">DJ Nicko</title>
