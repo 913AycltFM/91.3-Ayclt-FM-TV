@@ -265,15 +265,59 @@ def get_description(item, channel_description):
     return channel_description
 
 def fetch_station_schedule(station_slug, start_date, end_date):
+    """
+    Fetch the station schedule for the requested window.
+
+    AzuraCast's schedule endpoint defaults to a small result set when the
+    "rows" parameter is omitted. That can silently return only a handful of
+    schedule entries, causing the rest of the EPG to be filled with fallback
+    blocks. Request a large result set explicitly and de-duplicate entries
+    locally because AzuraCast has also historically returned entries outside
+    the requested date range.
+    """
     schedules = []
     current_date = start_date
+
     while current_date <= end_date:
         chunk_end = min(current_date + timedelta(days=6), end_date)
-        query = urlencode({"start": current_date.isoformat(), "end": chunk_end.isoformat()})
-        data = fetch_json(f"{AZURACAST_BASE_URL}/api/station/{station_slug}/schedule?{query}")
-        schedules.extend(find_schedule_list(data))
+        query = urlencode(
+            {
+                "start": current_date.isoformat(),
+                "end": chunk_end.isoformat(),
+                "rows": 1000,
+            }
+        )
+        url = f"{AZURACAST_BASE_URL}/api/station/{station_slug}/schedule?{query}"
+        data = fetch_json(url)
+        chunk = find_schedule_list(data)
+        schedules.extend(chunk)
+        print(
+            f"Schedule fetch {station_slug}: "
+            f"{current_date.isoformat()} -> {chunk_end.isoformat()} "
+            f"returned {len(chunk)} entries"
+        )
         current_date = chunk_end + timedelta(days=1)
-    return schedules
+
+    # AzuraCast may return entries outside the requested window. Keep the
+    # complete response here; convert_schedule performs the authoritative
+    # timestamp filtering against the EPG window.
+    unique = []
+    seen = set()
+    for item in schedules:
+        if not isinstance(item, dict):
+            continue
+        key = (
+            str(item.get("id", "")),
+            str(get_field(item, ["start", "start_time", "start_datetime", "startDateTime", "starts_at", "start_at"])),
+            str(get_field(item, ["end", "end_time", "end_datetime", "endDateTime", "ends_at", "end_at"])),
+            str(get_field(item, ["name", "title", "program_name", "show_name", "playlist_name", "streamer_name", "dj_name"])),
+        )
+        if key not in seen:
+            seen.add(key)
+            unique.append(item)
+
+    print(f"Schedule total {station_slug}: {len(unique)} unique entries")
+    return unique
 
 def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_directory=None):
     events = []
