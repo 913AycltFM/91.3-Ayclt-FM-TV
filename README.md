@@ -129,6 +129,26 @@ The generator is:
 
 `generate_epg.py`
 
+## Jellyfin EPG cache bypass
+
+Jellyfin can periodically refresh XMLTV data, but the public GitHub raw URL is CDN-backed. This repository includes an optional Cloudflare Worker that proxies the XMLTV guide with explicit no-cache response headers.
+
+Worker files:
+
+- `workers/jellyfin-epg.js`
+- `workers/wrangler.toml`
+
+Deploy the Worker with Cloudflare Wrangler:
+
+```bash
+cd workers
+npx wrangler deploy
+```
+
+After deployment, use the Worker URL as the XMLTV provider URL in Jellyfin instead of the GitHub raw XML URL. The Worker fetches the current GitHub XMLTV file on every request and prevents intermediary caching.
+
+For a custom domain, attach the Worker to a hostname in Cloudflare and use that hostname as the Jellyfin XMLTV URL.
+
 ## Jellyfin setup
 
 In Jellyfin, add the IPTV playlist as an **M3U tuner**.
