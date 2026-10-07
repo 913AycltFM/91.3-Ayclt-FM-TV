@@ -21,31 +21,7 @@
     <display-name>1.5</display-name>
     <display-name>91.3 Ayclt FM Mobile Studio Cam</display-name>
   </channel>
-  <programme start="20261007104500 -0500" stop="20261007114500 -0500" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-  </programme>
-  <programme start="20261007114500 -0500" stop="20261007120000 -0500" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-  </programme>
-  <programme start="20261007120000 -0500" stop="20261007140000 -0500" channel="913AycltFM">
-    <title lang="en">DJ WolfDen</title>
-    <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art" />
-    <live/>
-    <category lang="en">LIVE</category>
-    <sub-title lang="en">LIVE</sub-title>
-    <new/>
-  </programme>
-  <programme start="20261007140000 -0500" stop="20261007150000 -0500" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-  </programme>
-  <programme start="20261007150000 -0500" stop="20261007170000 -0500" channel="913AycltFM">
+  <programme start="20261007154500 -0500" stop="20261007170000 -0500" channel="913AycltFM">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art" />
@@ -798,35 +774,38 @@
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
-  <programme start="20261014100000 -0500" stop="20261014104500 -0500" channel="913AycltFM">
+  <programme start="20261014100000 -0500" stop="20261014110000 -0500" channel="913AycltFM">
     <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261007104500 -0500" stop="20261007114500 -0500" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261014110000 -0500" stop="20261014120000 -0500" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261007114500 -0500" stop="20261007124500 -0500" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
+  <programme start="20261014120000 -0500" stop="20261014140000 -0500" channel="913AycltFM">
+    <title lang="en">DJ WolfDen</title>
+    <desc lang="en">Live DJ: DJ WolfDen</desc>
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art" />
+    <live/>
+    <category lang="en">LIVE</category>
+    <sub-title lang="en">LIVE</sub-title>
+    <new/>
   </programme>
-  <programme start="20261007124500 -0500" stop="20261007134500 -0500" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261014140000 -0500" stop="20261014150000 -0500" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261007134500 -0500" stop="20261007144500 -0500" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
-  </programme>
-  <programme start="20261007144500 -0500" stop="20261007154500 -0500" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
+  <programme start="20261014150000 -0500" stop="20261014154500 -0500" channel="913AycltFM">
+    <title lang="en">DJ Brandon Stone</title>
+    <desc lang="en">Live DJ: DJ Brandon Stone</desc>
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art" />
+    <live/>
+    <category lang="en">LIVE</category>
+    <sub-title lang="en">LIVE</sub-title>
+    <new/>
   </programme>
   <programme start="20261007154500 -0500" stop="20261007164500 -0500" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
@@ -1643,35 +1622,35 @@
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261014100000 -0500" stop="20261014104500 -0500" channel="913AycltFMHD2">
+  <programme start="20261014100000 -0500" stop="20261014110000 -0500" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261007104500 -0500" stop="20261007114500 -0500" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261014110000 -0500" stop="20261014120000 -0500" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261007114500 -0500" stop="20261007124500 -0500" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261014120000 -0500" stop="20261014130000 -0500" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261007124500 -0500" stop="20261007134500 -0500" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261014130000 -0500" stop="20261014140000 -0500" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261007134500 -0500" stop="20261007144500 -0500" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261014140000 -0500" stop="20261014150000 -0500" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261007144500 -0500" stop="20261007154500 -0500" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261014150000 -0500" stop="20261014154500 -0500" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
   <programme start="20261007154500 -0500" stop="20261007164500 -0500" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
@@ -2488,31 +2467,32 @@
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261007104500 -0500" stop="20261007114500 -0500" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
-    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  <programme start="20261014104500 -0500" stop="20261014114500 -0500" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261007114500 -0500" stop="20261007120000 -0500" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
-    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  <programme start="20261014114500 -0500" stop="20261014124500 -0500" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261007120000 -0500" stop="20261007140000 -0500" channel="913AycltFMLiveStudioCam">
-    <title lang="en">DJ WolfDen</title>
-    <desc lang="en">Live DJ: DJ WolfDen</desc>
-    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art" />
-    <live/>
-    <category lang="en">LIVE</category>
-    <sub-title lang="en">LIVE</sub-title>
-    <new/>
+  <programme start="20261014124500 -0500" stop="20261014134500 -0500" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261007140000 -0500" stop="20261007150000 -0500" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
-    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  <programme start="20261014134500 -0500" stop="20261014144500 -0500" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261007150000 -0500" stop="20261007170000 -0500" channel="913AycltFMLiveStudioCam">
+  <programme start="20261014144500 -0500" stop="20261014154500 -0500" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
+  </programme>
+  <programme start="20261007154500 -0500" stop="20261007170000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art" />
@@ -3265,22 +3245,17 @@
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
-  <programme start="20261014100000 -0500" stop="20261014104500 -0500" channel="913AycltFMLiveStudioCam">
+  <programme start="20261014100000 -0500" stop="20261014110000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261007104500 -0500" stop="20261007114500 -0500" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
-    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
+  <programme start="20261014110000 -0500" stop="20261014120000 -0500" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261007114500 -0500" stop="20261007120000 -0500" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
-    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-  </programme>
-  <programme start="20261007120000 -0500" stop="20261007140000 -0500" channel="913AycltFMMobileStudioCam">
+  <programme start="20261014120000 -0500" stop="20261014140000 -0500" channel="913AycltFMLiveStudioCam">
     <title lang="en">DJ WolfDen</title>
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art" />
@@ -3289,12 +3264,21 @@
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
-  <programme start="20261007140000 -0500" stop="20261007150000 -0500" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
-    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
+  <programme start="20261014140000 -0500" stop="20261014150000 -0500" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261007150000 -0500" stop="20261007170000 -0500" channel="913AycltFMMobileStudioCam">
+  <programme start="20261014150000 -0500" stop="20261014154500 -0500" channel="913AycltFMLiveStudioCam">
+    <title lang="en">DJ Brandon Stone</title>
+    <desc lang="en">Live DJ: DJ Brandon Stone</desc>
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art" />
+    <live/>
+    <category lang="en">LIVE</category>
+    <sub-title lang="en">LIVE</sub-title>
+    <new/>
+  </programme>
+  <programme start="20261007154500 -0500" stop="20261007170000 -0500" channel="913AycltFMMobileStudioCam">
     <title lang="en">DJ Brandon Stone</title>
     <desc lang="en">Live DJ: DJ Brandon Stone</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art" />
@@ -4047,9 +4031,37 @@
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
-  <programme start="20261014100000 -0500" stop="20261014104500 -0500" channel="913AycltFMMobileStudioCam">
+  <programme start="20261014100000 -0500" stop="20261014110000 -0500" channel="913AycltFMMobileStudioCam">
     <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
     <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261014110000 -0500" stop="20261014120000 -0500" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261014120000 -0500" stop="20261014140000 -0500" channel="913AycltFMMobileStudioCam">
+    <title lang="en">DJ WolfDen</title>
+    <desc lang="en">Live DJ: DJ WolfDen</desc>
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art" />
+    <live/>
+    <category lang="en">LIVE</category>
+    <sub-title lang="en">LIVE</sub-title>
+    <new/>
+  </programme>
+  <programme start="20261014140000 -0500" stop="20261014150000 -0500" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261014150000 -0500" stop="20261014154500 -0500" channel="913AycltFMMobileStudioCam">
+    <title lang="en">DJ Brandon Stone</title>
+    <desc lang="en">Live DJ: DJ Brandon Stone</desc>
+    <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/16/art" />
+    <live/>
+    <category lang="en">LIVE</category>
+    <sub-title lang="en">LIVE</sub-title>
+    <new/>
   </programme>
 </tv>
