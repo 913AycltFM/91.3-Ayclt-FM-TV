@@ -112,8 +112,19 @@ def parse_datetime(value):
             continue
     return None
 
+def station_datetime(dt):
+    """Normalize every generated timestamp to America/Chicago.
+
+    Naive AzuraCast timestamps are interpreted as station-local time;
+    aware timestamps are converted while preserving the actual instant.
+    """
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=TIMEZONE)
+    return dt.astimezone(TIMEZONE)
+
+
 def xmltv_datetime(dt):
-    dt = dt.astimezone(TIMEZONE)
+    dt = station_datetime(dt)
     offset = dt.utcoffset() or timedelta(0)
     minutes = int(offset.total_seconds() / 60)
     sign = "+" if minutes >= 0 else "-"
@@ -436,7 +447,10 @@ def generate_xml(events):
 def generate_json(events):
     output = []
     for event in events:
-        output.append({"channel_id": event["channel_id"], "station_name": event["channel_name"], "title": event["title"], "description": event["description"], "start": event["start"].isoformat(), "end": event["end"].isoformat(), "icon": event["icon"], "fallback": event["fallback"], "live": event.get("live_program", False), "live_badge": "LIVE" if event.get("live_program", False) else "", "display_title": event["title"]})
+        # Use the same station-local conversion as XMLTV so both feeds agree.
+        start = station_datetime(event["start"])
+        end = station_datetime(event["end"])
+        output.append({"channel_id": event["channel_id"], "station_name": event["channel_name"], "title": event["title"], "description": event["description"], "start": start.isoformat(), "end": end.isoformat(), "icon": event["icon"], "fallback": event["fallback"], "live": event.get("live_program", False), "live_badge": "LIVE" if event.get("live_program", False) else "", "display_title": event["title"]})
     Path(JSON_OUTPUT).write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
 
 def validate_xml():
