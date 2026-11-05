@@ -1,0 +1,226 @@
+<div id="ayclt-tv-player">
+
+  <!-- PLAYER HEADER -->
+  <div class="tv-header">
+    <div class="tv-brand">
+      <h2>91.3 Ayclt FM TV</h2>
+      <p>LIVE TELEVISION NETWORK</p>
+    </div>
+    <span class="tv-status">● TV PLAYER</span>
+  </div>
+
+  <!-- VIDEO PLAYER -->
+  <div class="tv-screen">
+    <video
+      id="tv-frame"
+      controls
+      playsinline
+      webkit-playsinline
+      preload="none">
+    </video>
+  </div>
+
+  <!-- CHANNEL SELECTOR -->
+  <div class="tv-controls">
+    <h3>SELECT A CHANNEL</h3>
+    <div class="tv-buttons">
+      <button class="active" type="button" onclick="changeTV(0,this)">
+        <span>01</span>91.3 Ayclt FM
+      </button>
+      <button type="button" onclick="changeTV(1,this)">
+        <span>02</span>91.3 Ayclt FM HD2
+      </button>
+      <button type="button" onclick="changeTV(2,this)">
+        <span>03</span>91.3 Ayclt FM HD3
+      </button>
+      <button type="button" onclick="changeTV(3,this)">
+        <span>04</span>Live Studio Cam
+      </button>
+      <button type="button" onclick="changeTV(4,this)">
+        <span>05</span>Mobile Studio Cam
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="tv-footer">
+    <strong>91.3 Ayclt FM</strong>
+    <span>© All Rights Reserved</span>
+  </div>
+</div>
+
+<style>
+#ayclt-tv-player {
+  width:100%;
+  max-width:1100px;
+  margin:20px auto;
+  background:#101010;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
+  box-sizing:border-box;
+}
+#ayclt-tv-player * { box-sizing:border-box; }
+
+#ayclt-tv-player .tv-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:20px;
+  background:#181818;
+  border-bottom:3px solid #e31b35;
+}
+#ayclt-tv-player .tv-brand h2 {
+  margin:0;
+  font-size:23px;
+  font-weight:800;
+}
+#ayclt-tv-player .tv-brand p {
+  margin:6px 0 0;
+  color:#aaa;
+  font-size:11px;
+  letter-spacing:2px;
+}
+#ayclt-tv-player .tv-status {
+  color:#ff4055;
+  font-size:12px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+#ayclt-tv-player .tv-screen {
+  width:100%;
+  aspect-ratio:16 / 9;
+  background:#000;
+  position:relative;
+}
+#ayclt-tv-player .tv-screen video {
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+  background:#000;
+  object-fit:contain;
+}
+#ayclt-tv-player .tv-controls { padding:20px; }
+#ayclt-tv-player .tv-controls h3 {
+  margin:0 0 15px;
+  font-size:13px;
+  letter-spacing:1.5px;
+  color:#aaa;
+}
+#ayclt-tv-player .tv-buttons {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+}
+#ayclt-tv-player .tv-buttons button {
+  min-height:55px;
+  padding:12px;
+  background:#242424;
+  border:1px solid #414141;
+  border-radius:7px;
+  color:#fff;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:bold;
+  transition:background .2s,border-color .2s;
+}
+#ayclt-tv-player .tv-buttons button span {
+  display:block;
+  color:#999;
+  font-size:10px;
+  margin-bottom:5px;
+}
+#ayclt-tv-player .tv-buttons button:hover {
+  background:#383838;
+  border-color:#e31b35;
+}
+#ayclt-tv-player .tv-buttons button.active {
+  background:#e31b35;
+  border-color:#e31b35;
+}
+#ayclt-tv-player .tv-buttons button.active span { color:#fff; }
+
+#ayclt-tv-player .tv-footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:15px 20px;
+  background:#080808;
+  border-top:1px solid #292929;
+  font-size:11px;
+  color:#888;
+}
+#ayclt-tv-player .tv-footer strong { color:#fff; }
+
+@media(max-width:650px) {
+  #ayclt-tv-player .tv-header { padding:15px; }
+  #ayclt-tv-player .tv-brand h2 { font-size:18px; }
+  #ayclt-tv-player .tv-buttons {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  #ayclt-tv-player .tv-controls { padding:15px; }
+}
+@media(max-width:380px) {
+  #ayclt-tv-player .tv-status { font-size:9px; }
+  #ayclt-tv-player .tv-buttons button {
+    font-size:11px;
+    padding:10px 5px;
+  }
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+(function () {
+  const tvChannels = [
+    "https://tv.913aycltfm.com/memfs/37c1cf56-8954-42d5-b7a4-7c80abb86c48.m3u8",
+    "https://tv.913aycltfm.com/memfs/b502bd6f-86eb-4ca0-91c0-f09fb6a8f76e.m3u8",
+    "https://tv.913aycltfm.com/memfs/c421623b-6171-4fc8-8514-86993233d910.m3u8",
+    "https://tv.913aycltfm.com/memfs/02f36ef2-64c7-446c-a5c8-ca2fca15d02e.m3u8",
+    "https://tv.913aycltfm.com/memfs/034825aa-0374-40a9-8ebb-5cf4d3b05dfe.m3u8"
+  ];
+
+  const root = document.getElementById("ayclt-tv-player");
+  if (!root) return;
+
+  const video = root.querySelector("#tv-frame");
+  const buttons = root.querySelectorAll(".tv-buttons button");
+  let hls = null;
+
+  window.changeTV = function (index, button) {
+    if (!video || !tvChannels[index]) return;
+
+    if (hls) {
+      hls.destroy();
+      hls = null;
+    }
+
+    video.pause();
+    video.removeAttribute("src");
+    video.load();
+
+    if (window.Hls && Hls.isSupported()) {
+      hls = new Hls();
+      hls.loadSource(tvChannels[index]);
+      hls.attachMedia(video);
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = tvChannels[index];
+    } else {
+      alert("This browser does not support HLS playback.");
+      return;
+    }
+
+    buttons.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+    (button || buttons[index]).classList.add("active");
+  };
+
+  if (buttons.length) window.changeTV(0, buttons[0]);
+})();
+</script>
