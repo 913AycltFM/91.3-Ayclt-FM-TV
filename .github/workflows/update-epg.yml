@@ -23,13 +23,13 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -90,6 +90,34 @@ jobs:
           if not xml_programmes:
               raise SystemExit("EPG XML contains no programmes.")
 
+          # Keep the M3U tuner channel IDs exactly aligned with XMLTV/JSON.
+          with open("91.3_Ayclt_FM_radio_playlist.m3u", encoding="utf-8") as f:
+              playlist = f.read()
+          if "url-tvg=" in playlist.lower():
+              raise SystemExit("The M3U must not contain url-tvg; configure XMLTV separately.")
+          playlist_channels = set()
+          for line in playlist.splitlines():
+              if line.startswith("#EXTINF:"):
+                  marker = 'tvg-id="'
+                  if marker in line:
+                      playlist_channels.add(line.split(marker, 1)[1].split('"', 1)[0])
+          if playlist_channels != expected:
+              raise SystemExit(
+                  "M3U/XMLTV channel IDs do not match. "
+                  f"Missing from M3U: {sorted(expected - playlist_channels)}; "
+                  f"unexpected in M3U: {sorted(playlist_channels - expected)}"
+              )
+
+          # A channel can exist in XMLTV but still be filler-only. Report this
+          # separately so an empty AzuraCast schedule cannot pass unnoticed.
+          for channel_id in sorted(expected):
+              channel_items = [item for item in data if item.get("channel_id") == channel_id]
+              scheduled_items = [item for item in channel_items if item.get("fallback") is False]
+              if scheduled_items:
+                  print(f"{channel_id}: {len(scheduled_items)} real scheduled entries.")
+              else:
+                  print(f"WARNING: {channel_id} has no real AzuraCast schedule entries; its guide is filler-only.")
+
           def xml_time(value):
               dt, offset = value.rsplit(" ", 1)
               sign_char = "+" if offset[0] == "+" else "-"
@@ -121,15 +149,15 @@ jobs:
               only_xml = sorted(live_xml - live_json)
               raise SystemExit("LIVE metadata mismatch between JSON and XML.\n" f"Only in JSON: {only_json[:10]}\n" f"Only in XML: {only_xml[:10]}")
 
-          four_channels = {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "GamingCentralRadio", "913AycltFMLiveStudioCam", "913AycltFMMobileStudioCam"}
-          json_live_by_channel = {channel: 0 for channel in four_channels}
-          xml_live_by_channel = {channel: 0 for channel in four_channels}
+          tracked_channels = {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "GamingCentralRadio", "913AycltFMLiveStudioCam", "913AycltFMMobileStudioCam"}
+          json_live_by_channel = {channel: 0 for channel in tracked_channels}
+          xml_live_by_channel = {channel: 0 for channel in tracked_channels}
 
           for item in data:
-              if item.get("channel_id") in four_channels and item.get("live") is True:
+              if item.get("channel_id") in tracked_channels and item.get("live") is True:
                   json_live_by_channel[item["channel_id"]] += 1
           for programme in xml_programmes:
-              if programme.find("live") is not None and programme.get("channel") in four_channels:
+              if programme.find("live") is not None and programme.get("channel") in tracked_channels:
                   xml_live_by_channel[programme.get("channel")] += 1
 
           if json_live_by_channel != xml_live_by_channel:
