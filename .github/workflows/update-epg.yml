@@ -117,9 +117,7 @@ jobs:
               if scheduled_items:
                   print(f"{channel_id}: {len(scheduled_items)} real scheduled entries.")
               else:
-                  if channel_id in {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "GamingCentralRadio"}:
-                      raise SystemExit(f"{channel_id} has no real AzuraCast schedule entries. Refusing to publish a filler-only station guide.")
-                  print(f"WARNING: {channel_id} has no real AzuraCast schedule entries; its guide is filler-only.")
+                  print(f"WARNING: {channel_id} has no real AzuraCast schedule entries; its guide is filler-only. Publishing the channel with filler programming.")
 
           def xml_time(value):
               dt, offset = value.rsplit(" ", 1)
