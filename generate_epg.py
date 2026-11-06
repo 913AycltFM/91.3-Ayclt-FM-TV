@@ -41,8 +41,16 @@ CHANNELS = [
 def fetch_json(url):
     refresh_url = f"{url}{'&' if '?' in url else '?'}epg_refresh={int(time.time())}"
     headers = {"User-Agent": "91.3-Ayclt-FM-EPG/1.3", "Cache-Control": "no-cache, no-store, max-age=0", "Pragma": "no-cache", "Accept": "application/json", "Connection": "close"}
-    # The 91.3 Ayclt FM API key must never be sent to a different AzuraCast host.
-    api_key = os.getenv("AZURACAST_API_KEY", "").strip() if url.startswith(AZURACAST_BASE_URL + "/") else ""
+    # Keep credentials isolated: each key is sent only to its own AzuraCast host.
+    api_keys_by_base_url = {
+        AZURACAST_BASE_URL: os.getenv("AZURACAST_API_KEY", "").strip(),
+        STATION_BASE_URLS["gaming_central_radio"]: os.getenv("GAMING_CENTRAL_AZURACAST_API_KEY", "").strip(),
+    }
+    api_key = next(
+        (key for base_url, key in api_keys_by_base_url.items()
+         if key and url.startswith(base_url + "/")),
+        "",
+    )
     if api_key:
         headers["Authorization"] = f"Bearer {api_key}"
         headers["X-API-Key"] = api_key
@@ -498,13 +506,6 @@ def main():
     schedule_cache = {}
     streamer_directories = {}
     for station_slug in STATIONS.values():
-        # Gaming Central Radio's EPG is sourced from its public schedule API.
-        # Do not depend on the separate /streamers endpoint; schedule metadata
-        # is sufficient to build its programmes and may be available when that
-        # optional directory endpoint is restricted.
-        if station_slug == "gaming_central_radio":
-            streamer_directories[station_slug] = {}
-            continue
         try:
             directory, _raw_streamers = build_streamer_directory(station_slug, station_base_url(station_slug))
             streamer_directories[station_slug] = directory
