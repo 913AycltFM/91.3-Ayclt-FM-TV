@@ -349,9 +349,16 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
     return events
 
 def add_filler_blocks(result, channel, start_time, end_time):
+    """Fill schedule gaps using clock-aligned hourly boundaries.
+
+    The first/last block may be shorter when the rolling EPG window or a
+    scheduled programme begins/ends between hours. This keeps filler entries
+    aligned to :00 instead of drifting with the 5-minute EPG refresh time.
+    """
     current = start_time
     while current < end_time:
-        end = min(current + timedelta(hours=1), end_time)
+        next_hour = current.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
+        end = min(next_hour, end_time)
         result.append({"channel_id": channel["id"], "channel_name": channel["name"], "title": channel["name"], "description": channel["description"], "start": current, "end": end, "icon": channel["icon"], "fallback": True, "live_program": False, "live": False})
         current = end
 
