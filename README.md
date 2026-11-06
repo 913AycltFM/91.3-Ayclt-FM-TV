@@ -66,11 +66,11 @@ Live DJ/streamer programmes are marked in the XMLTV guide with:
 
 `<live />`
 
-The generator also keeps:
+The generator also sets the programme category to:
 
-`<category lang="en">LIVE</category>`
+`<category lang="en">Radio Show</category>`
 
-and:
+The subtitle remains:
 
 `<sub-title lang="en">LIVE</sub-title>`
 
@@ -186,7 +186,7 @@ The generated EPG uses the AzuraCast API for schedule and streamer information.
 The XMLTV standard does not define a universal graphical LIVE box. This project supplies LIVE metadata for compatible clients:
 
 - `<live/>` for clients that support the XMLTV live marker.
-- `<category lang="en">LIVE</category>` for clients that use programme categories.
+- `<category lang="en">Radio Show</category>` for the programme genre.
 - `<sub-title lang="en">LIVE</sub-title>` for clients that expose programme subtitles.
 - `<new/>` for clients that use the XMLTV new-programme marker.
 
