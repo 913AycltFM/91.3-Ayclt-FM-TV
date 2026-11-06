@@ -351,6 +351,40 @@ def fetch_station_schedule(station_slug, start_date, end_date, base_url=None):
     print(f"Schedule total {station_slug}: {len(unique)} unique entries")
     return unique
 
+def log_schedule_timestamp_formats(station_slug, schedules):
+    """Report AzuraCast timestamp formats without exposing credentials."""
+    fields = (
+        ("start", "start_time", "start_datetime", "startDateTime", "starts_at", "start_at"),
+        ("end", "end_time", "end_datetime", "endDateTime", "ends_at", "end_at"),
+    )
+    counts = {}
+    examples = {}
+    for item in schedules:
+        if not isinstance(item, dict):
+            continue
+        for names in fields:
+            value = get_field(item, names)
+            if value is None:
+                continue
+            if isinstance(value, (int, float)):
+                kind = "unix_numeric"
+            else:
+                raw = str(value).strip()
+                if raw.isdigit():
+                    kind = "unix_numeric_string"
+                else:
+                    try:
+                        parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+                        kind = "iso_with_offset" if parsed.tzinfo is not None else "iso_without_offset"
+                    except ValueError:
+                        kind = "other_string"
+            counts[kind] = counts.get(kind, 0) + 1
+            examples.setdefault(kind, str(value))
+    print(f"AzuraCast timestamp formats for {station_slug}: {counts or 'no timestamps found'}")
+    for kind, example in examples.items():
+        print(f"  timestamp example ({kind}): {example}")
+
+
 def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_directory=None, base_url=None):
     events = []
     for item in schedules:
@@ -523,6 +557,7 @@ def main():
             schedule_endpoint = f"{api_base}/api/station/{station_slug}/schedule"
             print(f"Loading {channel['name']} directly from AzuraCast schedule API: {schedule_endpoint}")
             schedule_cache[station_slug] = fetch_station_schedule(station_slug, schedule_start_date, end_time.date(), api_base)
+            log_schedule_timestamp_formats(station_slug, schedule_cache[station_slug])
             print(f"Loaded {len(schedule_cache[station_slug])} schedule entries from {channel['name']} AzuraCast API.")
         actual_events = convert_schedule(channel, schedule_cache[station_slug], start_time, end_time, station_slug, streamer_directories.get(station_slug), station_base_url(station_slug))
         all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
