@@ -11,8 +11,9 @@ This repository provides channel metadata, live HLS streams, a rolling XMLTV pro
 | 91.3 Ayclt FM | 1 | `913AycltFM` |
 | 91.3 Ayclt FM HD2 | 1.2 | `913AycltFMHD2` |
 | 91.3 Ayclt FM HD3 | 1.3 | `913AycltFMHD3` |
-| 91.3 Ayclt FM Live Studio Cam | 1.4 | `913AycltFMLiveStudioCam` |
-| 91.3 Ayclt FM Mobile Studio Cam | 1.5 | `913AycltFMMobileStudioCam` |
+| Gaming Central Radio | 1.4 | `GamingCentralRadio` |
+| 91.3 Ayclt FM Live Studio Cam | 1.5 | `913AycltFMLiveStudioCam` |
+| 91.3 Ayclt FM Mobile Studio Cam | 1.6 | `913AycltFMMobileStudioCam` |
 
 ## Playlist
 
@@ -34,7 +35,7 @@ A JSON version is also generated:
 
 `epg.json`
 
-The EPG is generated from the 91.3 Ayclt FM AzuraCast schedule and maintains a **7-day rolling guide**.
+The EPG is generated from the 91.3 Ayclt FM AzuraCast schedules and the separate Gaming Central Radio AzuraCast schedule. It maintains a **7-day rolling guide**.
 
 The rolling window is aligned to the **5-minute update cadence**, so each successful scheduled run can advance the guide window instead of waiting for the next hour.
 
@@ -179,7 +180,7 @@ Programme schedules and streamer information are retrieved from the station's Az
 
 `https://radio.913aycltfm.com`
 
-The generated EPG uses the AzuraCast API for schedule and streamer information.
+The generated EPG uses the 91.3 Ayclt FM AzuraCast API for its three FM services and studio-camera schedule, plus Gaming Central Radio's separate AzuraCast API at `https://radio.gamingcentralradio.net` for its schedule and streamer information. The 91.3 Ayclt FM API key is not sent to the Gaming Central Radio server.
 
 ## Notes
 
