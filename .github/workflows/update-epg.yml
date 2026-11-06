@@ -45,6 +45,7 @@ jobs:
       - name: Generate EPG
         env:
           AZURACAST_API_KEY: ${{ secrets.AZURACAST_API_KEY }}
+          AZURACAST_CA_CERT: ${{ secrets.AZURACAST_CA_CERT }}
         run: python generate_epg.py
 
       - name: Check generated EPG files
@@ -116,6 +117,8 @@ jobs:
               if scheduled_items:
                   print(f"{channel_id}: {len(scheduled_items)} real scheduled entries.")
               else:
+                  if channel_id in {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "GamingCentralRadio"}:
+                      raise SystemExit(f"{channel_id} has no real AzuraCast schedule entries. Refusing to publish a filler-only station guide.")
                   print(f"WARNING: {channel_id} has no real AzuraCast schedule entries; its guide is filler-only.")
 
           def xml_time(value):
