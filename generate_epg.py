@@ -7,6 +7,7 @@ from urllib.parse import urlencode
 from xml.etree import ElementTree as ET
 from zoneinfo import ZoneInfo
 import time
+import ssl
 from pathlib import Path
 
 AZURACAST_BASE_URL = "https://radio.913aycltfm.com"
@@ -49,11 +50,20 @@ def fetch_json(url):
         headers["Authorization"] = f"Bearer {api_key}"
         headers["X-API-Key"] = api_key
     request = Request(refresh_url, headers=headers)
+    # Keep TLS verification enabled. If an AzuraCast origin uses a private or
+    # self-signed CA, provide its PEM certificate chain in the
+    # AZURACAST_CA_CERT GitHub Actions secret. Never bypass certificate checks
+    # because this request carries the AzuraCast API key.
+    ca_certificate = os.getenv("AZURACAST_CA_CERT", "").strip()
+    try:
+        ssl_context = ssl.create_default_context(cadata=ca_certificate or None)
+    except (ssl.SSLError, ValueError) as error:
+        raise RuntimeError("AZURACAST_CA_CERT is not a valid PEM CA certificate.") from error
     last_error = None
     for attempt in range(1, 4):
         try:
             print(f"Fetching AzuraCast API (attempt {attempt}/3): {url}")
-            with urlopen(request, timeout=90) as response:
+            with urlopen(request, timeout=90, context=ssl_context) as response:
                 return json.loads(response.read().decode("utf-8-sig"))
         except (HTTPError, URLError, TimeoutError, ConnectionError, OSError) as error:
             last_error = error
