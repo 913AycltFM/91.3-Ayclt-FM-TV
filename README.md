@@ -59,7 +59,7 @@ This means DJs can be added, removed, or changed in AzuraCast without requiring 
 
 If a LIVE DJ's artwork cannot be resolved, the EPG leaves the programme artwork unset rather than incorrectly using a stale station image.
 
-The GitHub Actions workflow supplies the shared AzuraCast credential through the repository secret `AZURACAST_API_KEY`. The two stations use separate AzuraCast servers but the same API key: 91.3 Ayclt FM uses `https://radio.913aycltfm.com`, and Gaming Central Radio uses `https://radio.gamingcentralradio.net`. The secret value is never stored in repository source code.
+The GitHub Actions workflow supplies the shared AzuraCast credential through the repository secret `AZURACAST_API_KEY`. 91.3 Ayclt FM and Gaming Central Radio use the same AzuraCast server, `https://radio.913aycltfm.com`, and the same API key. Their station slugs are `91.3_ayclt_fm`, `91.3_ayclt_fm_hd2`, `91.3_ayclt_fm_hd3`, and `gaming_central_radio`. The secret value is never stored in repository source code.
 
 ## LIVE indicator
 
@@ -176,12 +176,13 @@ After adding or changing the guide provider, refresh the Live TV guide data in J
 
 ## Data source
 
-Programme schedules and streamer information are retrieved from two AzuraCast installations:
+Programme schedules and streamer information are retrieved from the same AzuraCast server:
 
-- 91.3 Ayclt FM: `https://radio.913aycltfm.com`
-- Gaming Central Radio: `https://radio.gamingcentralradio.net`
+- Server: `https://radio.913aycltfm.com`
+- 91.3 Ayclt FM station slugs: `91.3_ayclt_fm`, `91.3_ayclt_fm_hd2`, and `91.3_ayclt_fm_hd3`
+- Gaming Central Radio station slug: `gaming_central_radio`
 
-The generated EPG uses the 91.3 Ayclt FM API for its three FM services and studio-camera schedule, and Gaming Central Radio's separate API for its schedule and streamer information. Both servers use the same repository secret, `AZURACAST_API_KEY`.
+The generated EPG uses the corresponding station API endpoints for schedules and streamer information. All stations use the same repository secret, `AZURACAST_API_KEY`.
 
 ## Notes
 
