@@ -45,7 +45,6 @@ jobs:
       - name: Generate EPG
         env:
           AZURACAST_API_KEY: ${{ secrets.AZURACAST_API_KEY }}
-          GAMING_CENTRAL_AZURACAST_API_KEY: ${{ secrets.GAMING_CENTRAL_AZURACAST_API_KEY }}
         run: python generate_epg.py
 
       - name: Check generated EPG files
