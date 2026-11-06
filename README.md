@@ -59,7 +59,7 @@ This means DJs can be added, removed, or changed in AzuraCast without requiring 
 
 If a LIVE DJ's artwork cannot be resolved, the EPG leaves the programme artwork unset rather than incorrectly using a stale station image.
 
-The GitHub Actions workflow supplies the AzuraCast API key through the repository secret `AZURACAST_API_KEY`. The secret value is never stored in the repository source code.
+The GitHub Actions workflow supplies separate AzuraCast credentials through repository secrets: `AZURACAST_API_KEY` for 91.3 Ayclt FM and `GAMING_CENTRAL_AZURACAST_API_KEY` for Gaming Central Radio. Each key is sent only to its matching AzuraCast server. Add both under **Settings → Secrets and variables → Actions**. The secret values are never stored in repository source code. The Gaming Central key is optional if its public schedule and streamer endpoints do not require authentication.
 
 ## LIVE indicator
 
@@ -180,7 +180,7 @@ Programme schedules and streamer information are retrieved from the station's Az
 
 `https://radio.913aycltfm.com`
 
-The generated EPG uses the 91.3 Ayclt FM AzuraCast API for its three FM services and studio-camera schedule, plus Gaming Central Radio's separate AzuraCast API at `https://radio.gamingcentralradio.net` for its schedule and streamer information. The 91.3 Ayclt FM API key is not sent to the Gaming Central Radio server.
+The generated EPG uses the 91.3 Ayclt FM AzuraCast API for its three FM services and studio-camera schedule, plus Gaming Central Radio's separate AzuraCast API at `https://radio.gamingcentralradio.net` for its schedule and streamer information. The 91.3 Ayclt FM API key is not sent to the Gaming Central Radio server; Gaming Central Radio uses its own optional `GAMING_CENTRAL_AZURACAST_API_KEY` secret.
 
 ## Notes
 
