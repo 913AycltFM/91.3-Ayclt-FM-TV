@@ -42,6 +42,27 @@ jobs:
           echo "Scheduled expression: ${{ github.event.schedule }}"
           date -u
 
+      - name: Verify automatic Central Time daylight saving changes
+        run: |
+          python - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from generate_epg import xmltv_datetime
+
+          central = ZoneInfo("America/Chicago")
+          checks = [
+              (datetime(2026, 3, 8, 1, 59, tzinfo=central), "20260308015900 -0600"),
+              (datetime(2026, 3, 8, 3, 0, tzinfo=central), "20260308030000 -0500"),
+              (datetime(2026, 11, 1, 1, 0, tzinfo=central, fold=0), "20261101010000 -0500"),
+              (datetime(2026, 11, 1, 1, 0, tzinfo=central, fold=1), "20261101010000 -0600"),
+          ]
+          for value, expected in checks:
+              actual = xmltv_datetime(value)
+              if actual != expected:
+                  raise SystemExit(f"DST check failed: {actual} != {expected}")
+          print("Central Time daylight saving checks passed (CDT/CST).")
+          PY
+
       - name: Generate EPG
         env:
           AZURACAST_API_KEY: ${{ secrets.AZURACAST_API_KEY }}
