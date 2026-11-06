@@ -21,17 +21,12 @@
     <display-name>1.5</display-name>
     <display-name>91.3 Ayclt FM Mobile Studio Cam</display-name>
   </channel>
-  <programme start="20261106054500 -0600" stop="20261106064500 -0600" channel="913AycltFM">
+  <programme start="20261106061500 -0600" stop="20261106071500 -0600" channel="913AycltFM">
     <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261106064500 -0600" stop="20261106074500 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-  </programme>
-  <programme start="20261106074500 -0600" stop="20261106080000 -0600" channel="913AycltFM">
+  <programme start="20261106071500 -0600" stop="20261106080000 -0600" channel="913AycltFM">
     <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
@@ -41,7 +36,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -50,7 +45,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -64,7 +59,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -88,7 +83,7 @@
     <desc lang="en">Live DJ: DJ Nicko</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/7/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -187,7 +182,7 @@
     <desc lang="en">Live DJ: DJ CoyoteDave</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/5/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -276,7 +271,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -385,7 +380,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -394,7 +389,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -408,7 +403,7 @@
     <desc lang="en">Live DJ: The Milton Show</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -507,7 +502,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -621,7 +616,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -640,7 +635,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -669,7 +664,7 @@
     <desc lang="en">Live DJ: DJ Mike B</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -733,7 +728,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -767,7 +762,7 @@
     <desc lang="en">Live DJ: DJ Nicko</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/7/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -806,82 +801,82 @@
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261113050000 -0600" stop="20261113054500 -0600" channel="913AycltFM">
+  <programme start="20261113050000 -0600" stop="20261113060000 -0600" channel="913AycltFM">
     <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261106054500 -0600" stop="20261106064500 -0600" channel="913AycltFMHD2">
+  <programme start="20261113060000 -0600" stop="20261113061500 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261106061500 -0600" stop="20261106071500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106064500 -0600" stop="20261106074500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106071500 -0600" stop="20261106081500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106074500 -0600" stop="20261106084500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106081500 -0600" stop="20261106091500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106084500 -0600" stop="20261106094500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106091500 -0600" stop="20261106101500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106094500 -0600" stop="20261106104500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106101500 -0600" stop="20261106111500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106104500 -0600" stop="20261106114500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106111500 -0600" stop="20261106121500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106114500 -0600" stop="20261106124500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106121500 -0600" stop="20261106131500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106124500 -0600" stop="20261106134500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106131500 -0600" stop="20261106141500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106134500 -0600" stop="20261106144500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106141500 -0600" stop="20261106151500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106144500 -0600" stop="20261106154500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106151500 -0600" stop="20261106161500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106154500 -0600" stop="20261106164500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106161500 -0600" stop="20261106171500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106164500 -0600" stop="20261106174500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106171500 -0600" stop="20261106181500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106174500 -0600" stop="20261106184500 -0600" channel="913AycltFMHD2">
+  <programme start="20261106181500 -0600" stop="20261106191500 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106184500 -0600" stop="20261106194500 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
-    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
-  </programme>
-  <programme start="20261106194500 -0600" stop="20261106200000 -0600" channel="913AycltFMHD2">
+  <programme start="20261106191500 -0600" stop="20261106200000 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
@@ -1651,862 +1646,862 @@
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261113050000 -0600" stop="20261113054500 -0600" channel="913AycltFMHD2">
+  <programme start="20261113050000 -0600" stop="20261113060000 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
   </programme>
-  <programme start="20261106054500 -0600" stop="20261106064500 -0600" channel="913AycltFMHD3">
+  <programme start="20261113060000 -0600" stop="20261113061500 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
+    <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png" />
+  </programme>
+  <programme start="20261106061500 -0600" stop="20261106071500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106064500 -0600" stop="20261106074500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106071500 -0600" stop="20261106081500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106074500 -0600" stop="20261106084500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106081500 -0600" stop="20261106091500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106084500 -0600" stop="20261106094500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106091500 -0600" stop="20261106101500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106094500 -0600" stop="20261106104500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106101500 -0600" stop="20261106111500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106104500 -0600" stop="20261106114500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106111500 -0600" stop="20261106121500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106114500 -0600" stop="20261106124500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106121500 -0600" stop="20261106131500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106124500 -0600" stop="20261106134500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106131500 -0600" stop="20261106141500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106134500 -0600" stop="20261106144500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106141500 -0600" stop="20261106151500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106144500 -0600" stop="20261106154500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106151500 -0600" stop="20261106161500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106154500 -0600" stop="20261106164500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106161500 -0600" stop="20261106171500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106164500 -0600" stop="20261106174500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106171500 -0600" stop="20261106181500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106174500 -0600" stop="20261106184500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106181500 -0600" stop="20261106191500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106184500 -0600" stop="20261106194500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106191500 -0600" stop="20261106201500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106194500 -0600" stop="20261106204500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106201500 -0600" stop="20261106211500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106204500 -0600" stop="20261106214500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106211500 -0600" stop="20261106221500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106214500 -0600" stop="20261106224500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106221500 -0600" stop="20261106231500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106224500 -0600" stop="20261106234500 -0600" channel="913AycltFMHD3">
+  <programme start="20261106231500 -0600" stop="20261107001500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106234500 -0600" stop="20261107004500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107001500 -0600" stop="20261107011500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107004500 -0600" stop="20261107014500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107011500 -0600" stop="20261107021500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107014500 -0600" stop="20261107024500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107021500 -0600" stop="20261107031500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107024500 -0600" stop="20261107034500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107031500 -0600" stop="20261107041500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107034500 -0600" stop="20261107044500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107041500 -0600" stop="20261107051500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107044500 -0600" stop="20261107054500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107051500 -0600" stop="20261107061500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107054500 -0600" stop="20261107064500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107061500 -0600" stop="20261107071500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107064500 -0600" stop="20261107074500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107071500 -0600" stop="20261107081500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107074500 -0600" stop="20261107084500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107081500 -0600" stop="20261107091500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107084500 -0600" stop="20261107094500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107091500 -0600" stop="20261107101500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107094500 -0600" stop="20261107104500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107101500 -0600" stop="20261107111500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107104500 -0600" stop="20261107114500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107111500 -0600" stop="20261107121500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107114500 -0600" stop="20261107124500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107121500 -0600" stop="20261107131500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107124500 -0600" stop="20261107134500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107131500 -0600" stop="20261107141500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107134500 -0600" stop="20261107144500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107141500 -0600" stop="20261107151500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107144500 -0600" stop="20261107154500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107151500 -0600" stop="20261107161500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107154500 -0600" stop="20261107164500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107161500 -0600" stop="20261107171500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107164500 -0600" stop="20261107174500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107171500 -0600" stop="20261107181500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107174500 -0600" stop="20261107184500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107181500 -0600" stop="20261107191500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107184500 -0600" stop="20261107194500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107191500 -0600" stop="20261107201500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107194500 -0600" stop="20261107204500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107201500 -0600" stop="20261107211500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107204500 -0600" stop="20261107214500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107211500 -0600" stop="20261107221500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107214500 -0600" stop="20261107224500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107221500 -0600" stop="20261107231500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107224500 -0600" stop="20261107234500 -0600" channel="913AycltFMHD3">
+  <programme start="20261107231500 -0600" stop="20261108001500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261107234500 -0600" stop="20261108004500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108001500 -0600" stop="20261108011500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108004500 -0600" stop="20261108014500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108011500 -0600" stop="20261108021500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108014500 -0600" stop="20261108024500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108021500 -0600" stop="20261108031500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108024500 -0600" stop="20261108034500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108031500 -0600" stop="20261108041500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108034500 -0600" stop="20261108044500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108041500 -0600" stop="20261108051500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108044500 -0600" stop="20261108054500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108051500 -0600" stop="20261108061500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108054500 -0600" stop="20261108064500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108061500 -0600" stop="20261108071500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108064500 -0600" stop="20261108074500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108071500 -0600" stop="20261108081500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108074500 -0600" stop="20261108084500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108081500 -0600" stop="20261108091500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108084500 -0600" stop="20261108094500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108091500 -0600" stop="20261108101500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108094500 -0600" stop="20261108104500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108101500 -0600" stop="20261108111500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108104500 -0600" stop="20261108114500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108111500 -0600" stop="20261108121500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108114500 -0600" stop="20261108124500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108121500 -0600" stop="20261108131500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108124500 -0600" stop="20261108134500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108131500 -0600" stop="20261108141500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108134500 -0600" stop="20261108144500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108141500 -0600" stop="20261108151500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108144500 -0600" stop="20261108154500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108151500 -0600" stop="20261108161500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108154500 -0600" stop="20261108164500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108161500 -0600" stop="20261108171500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108164500 -0600" stop="20261108174500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108171500 -0600" stop="20261108181500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108174500 -0600" stop="20261108184500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108181500 -0600" stop="20261108191500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108184500 -0600" stop="20261108194500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108191500 -0600" stop="20261108201500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108194500 -0600" stop="20261108204500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108201500 -0600" stop="20261108211500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108204500 -0600" stop="20261108214500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108211500 -0600" stop="20261108221500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108214500 -0600" stop="20261108224500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108221500 -0600" stop="20261108231500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108224500 -0600" stop="20261108234500 -0600" channel="913AycltFMHD3">
+  <programme start="20261108231500 -0600" stop="20261109001500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261108234500 -0600" stop="20261109004500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109001500 -0600" stop="20261109011500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109004500 -0600" stop="20261109014500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109011500 -0600" stop="20261109021500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109014500 -0600" stop="20261109024500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109021500 -0600" stop="20261109031500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109024500 -0600" stop="20261109034500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109031500 -0600" stop="20261109041500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109034500 -0600" stop="20261109044500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109041500 -0600" stop="20261109051500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109044500 -0600" stop="20261109054500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109051500 -0600" stop="20261109061500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109054500 -0600" stop="20261109064500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109061500 -0600" stop="20261109071500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109064500 -0600" stop="20261109074500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109071500 -0600" stop="20261109081500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109074500 -0600" stop="20261109084500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109081500 -0600" stop="20261109091500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109084500 -0600" stop="20261109094500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109091500 -0600" stop="20261109101500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109094500 -0600" stop="20261109104500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109101500 -0600" stop="20261109111500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109104500 -0600" stop="20261109114500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109111500 -0600" stop="20261109121500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109114500 -0600" stop="20261109124500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109121500 -0600" stop="20261109131500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109124500 -0600" stop="20261109134500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109131500 -0600" stop="20261109141500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109134500 -0600" stop="20261109144500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109141500 -0600" stop="20261109151500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109144500 -0600" stop="20261109154500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109151500 -0600" stop="20261109161500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109154500 -0600" stop="20261109164500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109161500 -0600" stop="20261109171500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109164500 -0600" stop="20261109174500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109171500 -0600" stop="20261109181500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109174500 -0600" stop="20261109184500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109181500 -0600" stop="20261109191500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109184500 -0600" stop="20261109194500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109191500 -0600" stop="20261109201500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109194500 -0600" stop="20261109204500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109201500 -0600" stop="20261109211500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109204500 -0600" stop="20261109214500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109211500 -0600" stop="20261109221500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109214500 -0600" stop="20261109224500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109221500 -0600" stop="20261109231500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109224500 -0600" stop="20261109234500 -0600" channel="913AycltFMHD3">
+  <programme start="20261109231500 -0600" stop="20261110001500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261109234500 -0600" stop="20261110004500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110001500 -0600" stop="20261110011500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110004500 -0600" stop="20261110014500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110011500 -0600" stop="20261110021500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110014500 -0600" stop="20261110024500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110021500 -0600" stop="20261110031500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110024500 -0600" stop="20261110034500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110031500 -0600" stop="20261110041500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110034500 -0600" stop="20261110044500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110041500 -0600" stop="20261110051500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110044500 -0600" stop="20261110054500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110051500 -0600" stop="20261110061500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110054500 -0600" stop="20261110064500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110061500 -0600" stop="20261110071500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110064500 -0600" stop="20261110074500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110071500 -0600" stop="20261110081500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110074500 -0600" stop="20261110084500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110081500 -0600" stop="20261110091500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110084500 -0600" stop="20261110094500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110091500 -0600" stop="20261110101500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110094500 -0600" stop="20261110104500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110101500 -0600" stop="20261110111500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110104500 -0600" stop="20261110114500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110111500 -0600" stop="20261110121500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110114500 -0600" stop="20261110124500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110121500 -0600" stop="20261110131500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110124500 -0600" stop="20261110134500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110131500 -0600" stop="20261110141500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110134500 -0600" stop="20261110144500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110141500 -0600" stop="20261110151500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110144500 -0600" stop="20261110154500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110151500 -0600" stop="20261110161500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110154500 -0600" stop="20261110164500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110161500 -0600" stop="20261110171500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110164500 -0600" stop="20261110174500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110171500 -0600" stop="20261110181500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110174500 -0600" stop="20261110184500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110181500 -0600" stop="20261110191500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110184500 -0600" stop="20261110194500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110191500 -0600" stop="20261110201500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110194500 -0600" stop="20261110204500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110201500 -0600" stop="20261110211500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110204500 -0600" stop="20261110214500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110211500 -0600" stop="20261110221500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110214500 -0600" stop="20261110224500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110221500 -0600" stop="20261110231500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110224500 -0600" stop="20261110234500 -0600" channel="913AycltFMHD3">
+  <programme start="20261110231500 -0600" stop="20261111001500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261110234500 -0600" stop="20261111004500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111001500 -0600" stop="20261111011500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111004500 -0600" stop="20261111014500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111011500 -0600" stop="20261111021500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111014500 -0600" stop="20261111024500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111021500 -0600" stop="20261111031500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111024500 -0600" stop="20261111034500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111031500 -0600" stop="20261111041500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111034500 -0600" stop="20261111044500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111041500 -0600" stop="20261111051500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111044500 -0600" stop="20261111054500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111051500 -0600" stop="20261111061500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111054500 -0600" stop="20261111064500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111061500 -0600" stop="20261111071500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111064500 -0600" stop="20261111074500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111071500 -0600" stop="20261111081500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111074500 -0600" stop="20261111084500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111081500 -0600" stop="20261111091500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111084500 -0600" stop="20261111094500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111091500 -0600" stop="20261111101500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111094500 -0600" stop="20261111104500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111101500 -0600" stop="20261111111500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111104500 -0600" stop="20261111114500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111111500 -0600" stop="20261111121500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111114500 -0600" stop="20261111124500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111121500 -0600" stop="20261111131500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111124500 -0600" stop="20261111134500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111131500 -0600" stop="20261111141500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111134500 -0600" stop="20261111144500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111141500 -0600" stop="20261111151500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111144500 -0600" stop="20261111154500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111151500 -0600" stop="20261111161500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111154500 -0600" stop="20261111164500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111161500 -0600" stop="20261111171500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111164500 -0600" stop="20261111174500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111171500 -0600" stop="20261111181500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111174500 -0600" stop="20261111184500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111181500 -0600" stop="20261111191500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111184500 -0600" stop="20261111194500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111191500 -0600" stop="20261111201500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111194500 -0600" stop="20261111204500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111201500 -0600" stop="20261111211500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111204500 -0600" stop="20261111214500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111211500 -0600" stop="20261111221500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111214500 -0600" stop="20261111224500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111221500 -0600" stop="20261111231500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111224500 -0600" stop="20261111234500 -0600" channel="913AycltFMHD3">
+  <programme start="20261111231500 -0600" stop="20261112001500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261111234500 -0600" stop="20261112004500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112001500 -0600" stop="20261112011500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112004500 -0600" stop="20261112014500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112011500 -0600" stop="20261112021500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112014500 -0600" stop="20261112024500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112021500 -0600" stop="20261112031500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112024500 -0600" stop="20261112034500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112031500 -0600" stop="20261112041500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112034500 -0600" stop="20261112044500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112041500 -0600" stop="20261112051500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112044500 -0600" stop="20261112054500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112051500 -0600" stop="20261112061500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112054500 -0600" stop="20261112064500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112061500 -0600" stop="20261112071500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112064500 -0600" stop="20261112074500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112071500 -0600" stop="20261112081500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112074500 -0600" stop="20261112084500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112081500 -0600" stop="20261112091500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112084500 -0600" stop="20261112094500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112091500 -0600" stop="20261112101500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112094500 -0600" stop="20261112104500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112101500 -0600" stop="20261112111500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112104500 -0600" stop="20261112114500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112111500 -0600" stop="20261112121500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112114500 -0600" stop="20261112124500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112121500 -0600" stop="20261112131500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112124500 -0600" stop="20261112134500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112131500 -0600" stop="20261112141500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112134500 -0600" stop="20261112144500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112141500 -0600" stop="20261112151500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112144500 -0600" stop="20261112154500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112151500 -0600" stop="20261112161500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112154500 -0600" stop="20261112164500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112161500 -0600" stop="20261112171500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112164500 -0600" stop="20261112174500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112171500 -0600" stop="20261112181500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112174500 -0600" stop="20261112184500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112181500 -0600" stop="20261112191500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112184500 -0600" stop="20261112194500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112191500 -0600" stop="20261112201500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112194500 -0600" stop="20261112204500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112201500 -0600" stop="20261112211500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112204500 -0600" stop="20261112214500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112211500 -0600" stop="20261112221500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112214500 -0600" stop="20261112224500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112221500 -0600" stop="20261112231500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112224500 -0600" stop="20261112234500 -0600" channel="913AycltFMHD3">
+  <programme start="20261112231500 -0600" stop="20261113001500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261112234500 -0600" stop="20261113004500 -0600" channel="913AycltFMHD3">
+  <programme start="20261113001500 -0600" stop="20261113011500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261113004500 -0600" stop="20261113014500 -0600" channel="913AycltFMHD3">
+  <programme start="20261113011500 -0600" stop="20261113021500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261113014500 -0600" stop="20261113024500 -0600" channel="913AycltFMHD3">
+  <programme start="20261113021500 -0600" stop="20261113031500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261113024500 -0600" stop="20261113034500 -0600" channel="913AycltFMHD3">
+  <programme start="20261113031500 -0600" stop="20261113041500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261113034500 -0600" stop="20261113044500 -0600" channel="913AycltFMHD3">
+  <programme start="20261113041500 -0600" stop="20261113051500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261113044500 -0600" stop="20261113054500 -0600" channel="913AycltFMHD3">
+  <programme start="20261113051500 -0600" stop="20261113061500 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">Dickinson's Texas #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png" />
   </programme>
-  <programme start="20261106054500 -0600" stop="20261106064500 -0600" channel="913AycltFMLiveStudioCam">
+  <programme start="20261106061500 -0600" stop="20261106071500 -0600" channel="913AycltFMLiveStudioCam">
     <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261106064500 -0600" stop="20261106074500 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
-    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-  </programme>
-  <programme start="20261106074500 -0600" stop="20261106080000 -0600" channel="913AycltFMLiveStudioCam">
+  <programme start="20261106071500 -0600" stop="20261106080000 -0600" channel="913AycltFMLiveStudioCam">
     <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
@@ -2516,7 +2511,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2525,7 +2520,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2539,7 +2534,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2563,7 +2558,7 @@
     <desc lang="en">Live DJ: DJ Nicko</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/7/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2662,7 +2657,7 @@
     <desc lang="en">Live DJ: DJ CoyoteDave</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/5/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2751,7 +2746,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2860,7 +2855,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2869,7 +2864,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2883,7 +2878,7 @@
     <desc lang="en">Live DJ: The Milton Show</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -2982,7 +2977,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3096,7 +3091,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3115,7 +3110,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3144,7 +3139,7 @@
     <desc lang="en">Live DJ: DJ Mike B</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3208,7 +3203,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3242,7 +3237,7 @@
     <desc lang="en">Live DJ: DJ Nicko</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/7/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3281,22 +3276,22 @@
     <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261113050000 -0600" stop="20261113054500 -0600" channel="913AycltFMLiveStudioCam">
+  <programme start="20261113050000 -0600" stop="20261113060000 -0600" channel="913AycltFMLiveStudioCam">
     <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261106054500 -0600" stop="20261106064500 -0600" channel="913AycltFMMobileStudioCam">
+  <programme start="20261113060000 -0600" stop="20261113061500 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Live Studio Cam</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261106061500 -0600" stop="20261106071500 -0600" channel="913AycltFMMobileStudioCam">
     <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
     <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261106064500 -0600" stop="20261106074500 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
-    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
-  </programme>
-  <programme start="20261106074500 -0600" stop="20261106080000 -0600" channel="913AycltFMMobileStudioCam">
+  <programme start="20261106071500 -0600" stop="20261106080000 -0600" channel="913AycltFMMobileStudioCam">
     <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
     <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
@@ -3306,7 +3301,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3315,7 +3310,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3329,7 +3324,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3353,7 +3348,7 @@
     <desc lang="en">Live DJ: DJ Nicko</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/7/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3452,7 +3447,7 @@
     <desc lang="en">Live DJ: DJ CoyoteDave</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/5/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3541,7 +3536,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3650,7 +3645,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3659,7 +3654,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3673,7 +3668,7 @@
     <desc lang="en">Live DJ: The Milton Show</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/10/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3772,7 +3767,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3886,7 +3881,7 @@
     <desc lang="en">Live DJ: JB In The Morning</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/4/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3905,7 +3900,7 @@
     <desc lang="en">Live DJ: DJ WolfDen</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/6/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3934,7 +3929,7 @@
     <desc lang="en">Live DJ: DJ Mike B</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/11/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -3998,7 +3993,7 @@
     <desc lang="en">Live DJ: Rock Doc</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/3/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -4032,7 +4027,7 @@
     <desc lang="en">Live DJ: DJ Nicko</desc>
     <icon src="https://radio.913aycltfm.com/api/station/91.3_ayclt_fm/streamer/7/art" />
     <live/>
-    <category lang="en">LIVE</category>
+    <category lang="en">Radio Show</category>
     <sub-title lang="en">LIVE</sub-title>
     <new/>
   </programme>
@@ -4071,7 +4066,12 @@
     <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
   </programme>
-  <programme start="20261113050000 -0600" stop="20261113054500 -0600" channel="913AycltFMMobileStudioCam">
+  <programme start="20261113050000 -0600" stop="20261113060000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
+  </programme>
+  <programme start="20261113060000 -0600" stop="20261113061500 -0600" channel="913AycltFMMobileStudioCam">
     <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
     <desc lang="en">91.3 Ayclt FM Mobile Studio Cam</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png" />
