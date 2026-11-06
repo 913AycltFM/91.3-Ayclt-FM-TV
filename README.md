@@ -130,25 +130,19 @@ The generator is:
 
 `generate_epg.py`
 
-## Jellyfin EPG cache bypass
+## GitHub-hosted EPG
 
-Jellyfin can periodically refresh XMLTV data, but the public GitHub raw URL is CDN-backed. This repository includes an optional Cloudflare Worker that proxies the XMLTV guide with explicit no-cache response headers.
+The XMLTV guide, M3U playlist, JSON data, generator, and automatic update workflow are maintained in this GitHub repository. No Cloudflare Worker, external proxy, or separate deployment is required.
 
-Worker files:
+Use the GitHub-hosted XMLTV URL directly in Jellyfin:
 
-- `workers/jellyfin-epg.js`
-- `workers/wrangler.toml`
+`https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/main/91.3_Ayclt_FM_radio_guide.xml`
 
-Deploy the Worker with Cloudflare Wrangler:
+Use the GitHub-hosted M3U playlist:
 
-```bash
-cd workers
-npx wrangler deploy
-```
+`https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/main/91.3_Ayclt_FM_radio_playlist.m3u`
 
-After deployment, use the Worker URL as the XMLTV provider URL in Jellyfin instead of the GitHub raw XML URL. The Worker fetches the current GitHub XMLTV file on every request and prevents intermediary caching.
-
-For a custom domain, attach the Worker to a hostname in Cloudflare and use that hostname as the Jellyfin XMLTV URL.
+GitHub Actions regenerates the guide every 5 minutes and commits changed XMLTV/JSON files to the `main` branch. GitHub's raw-content delivery may still be subject to CDN propagation and client-side caching, so Jellyfin may not display a change immediately after a workflow completes.
 
 ## Jellyfin setup
 
