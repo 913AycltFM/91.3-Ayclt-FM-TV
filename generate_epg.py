@@ -498,6 +498,13 @@ def main():
     schedule_cache = {}
     streamer_directories = {}
     for station_slug in STATIONS.values():
+        # Gaming Central Radio's EPG is sourced from its public schedule API.
+        # Do not depend on the separate /streamers endpoint; schedule metadata
+        # is sufficient to build its programmes and may be available when that
+        # optional directory endpoint is restricted.
+        if station_slug == "gaming_central_radio":
+            streamer_directories[station_slug] = {}
+            continue
         try:
             directory, _raw_streamers = build_streamer_directory(station_slug, station_base_url(station_slug))
             streamer_directories[station_slug] = directory
@@ -512,7 +519,11 @@ def main():
             continue
         station_slug = STATIONS[channel_id]
         if station_slug not in schedule_cache:
-            schedule_cache[station_slug] = fetch_station_schedule(station_slug, schedule_start_date, end_time.date(), station_base_url(station_slug))
+            api_base = station_base_url(station_slug)
+            schedule_endpoint = f"{api_base}/api/station/{station_slug}/schedule"
+            print(f"Loading {channel['name']} directly from AzuraCast schedule API: {schedule_endpoint}")
+            schedule_cache[station_slug] = fetch_station_schedule(station_slug, schedule_start_date, end_time.date(), api_base)
+            print(f"Loaded {len(schedule_cache[station_slug])} schedule entries from {channel['name']} AzuraCast API.")
         actual_events = convert_schedule(channel, schedule_cache[station_slug], start_time, end_time, station_slug, streamer_directories.get(station_slug), station_base_url(station_slug))
         all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
     live_cam = next(channel for channel in CHANNELS if channel["id"] == "913AycltFMLiveStudioCam")
