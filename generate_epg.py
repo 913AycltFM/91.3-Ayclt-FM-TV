@@ -262,7 +262,7 @@ def set_live_metadata(programme, is_live):
     if not is_live:
         return
     ET.SubElement(programme, "live")
-    ET.SubElement(programme, "category", {"lang": "en"}).text = "LIVE"
+    ET.SubElement(programme, "category", {"lang": "en"}).text = "Radio Show"
     ET.SubElement(programme, "sub-title", {"lang": "en"}).text = "LIVE"
     ET.SubElement(programme, "new")
 
