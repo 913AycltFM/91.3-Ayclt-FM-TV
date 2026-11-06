@@ -22,7 +22,9 @@ STATIONS = {
     "GamingCentralRadio": "gaming_central_radio",
 }
 
-STATION_BASE_URLS = {}
+STATION_BASE_URLS = {
+    "gaming_central_radio": "https://radio.gamingcentralradio.net",
+}
 
 def station_base_url(station_slug):
     return STATION_BASE_URLS.get(station_slug, AZURACAST_BASE_URL)
@@ -31,7 +33,7 @@ CHANNELS = [
     {"id": "913AycltFM", "display": "1", "name": "91.3 Ayclt FM", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
     {"id": "913AycltFMHD2", "display": "1.2", "name": "91.3 Ayclt FM HD2", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png"},
     {"id": "913AycltFMHD3", "display": "1.3", "name": "91.3 Ayclt FM HD3", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png"},
-    {"id": "GamingCentralRadio", "display": "1.4", "name": "Gaming Central Radio", "description": "Your game, our community. Gaming Central, for gamers and music together!", "icon": "https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png"},
+    {"id": "GamingCentralRadio", "display": "1.4", "name": "Gaming Central Radio", "description": "Your game, our community. Gaming Central, for gamers and music together!", "icon": "https://radio.gamingcentralradio.net/api/nowplaying/gaming_central_radio/art"},
     {"id": "913AycltFMLiveStudioCam", "display": "1.5", "name": "91.3 Ayclt FM Live Studio Cam", "description": "91.3 Ayclt FM Live Studio Cam", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
     {"id": "913AycltFMMobileStudioCam", "display": "1.6", "name": "91.3 Ayclt FM Mobile Studio Cam", "description": "91.3 Ayclt FM Mobile Studio Cam", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
 ]
@@ -39,8 +41,10 @@ CHANNELS = [
 def fetch_json(url):
     refresh_url = f"{url}{'&' if '?' in url else '?'}epg_refresh={int(time.time())}"
     headers = {"User-Agent": "91.3-Ayclt-FM-EPG/1.3", "Cache-Control": "no-cache, no-store, max-age=0", "Pragma": "no-cache", "Accept": "application/json", "Connection": "close"}
-    # All configured stations are hosted on the same 91.3 AzuraCast server.
-    api_key = os.getenv("AZURACAST_API_KEY", "").strip() if url.startswith(AZURACAST_BASE_URL + "/") else ""
+    # Both AzuraCast servers use the same repository secret, but each station
+    # must be queried through its own configured base URL.
+    trusted_base_urls = {AZURACAST_BASE_URL, *STATION_BASE_URLS.values()}
+    api_key = os.getenv("AZURACAST_API_KEY", "").strip() if any(url.startswith(base.rstrip("/") + "/") for base in trusted_base_urls) else ""
     if api_key:
         headers["Authorization"] = f"Bearer {api_key}"
         headers["X-API-Key"] = api_key
