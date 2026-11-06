@@ -19,20 +19,30 @@ STATIONS = {
     "913AycltFM": "91.3_ayclt_fm",
     "913AycltFMHD2": "91.3_ayclt_fm_hd2",
     "913AycltFMHD3": "91.3_ayclt_fm_hd3",
+    "GamingCentralRadio": "gaming_central_radio",
 }
+
+STATION_BASE_URLS = {
+    "gaming_central_radio": "https://radio.gamingcentralradio.net",
+}
+
+def station_base_url(station_slug):
+    return STATION_BASE_URLS.get(station_slug, AZURACAST_BASE_URL)
 
 CHANNELS = [
     {"id": "913AycltFM", "display": "1", "name": "91.3 Ayclt FM", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
     {"id": "913AycltFMHD2", "display": "1.2", "name": "91.3 Ayclt FM HD2", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1779890739.png"},
     {"id": "913AycltFMHD3", "display": "1.3", "name": "91.3 Ayclt FM HD3", "description": "Dickinson's Texas #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1779890763.png"},
-    {"id": "913AycltFMLiveStudioCam", "display": "1.4", "name": "91.3 Ayclt FM Live Studio Cam", "description": "91.3 Ayclt FM Live Studio Cam", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
-    {"id": "913AycltFMMobileStudioCam", "display": "1.5", "name": "91.3 Ayclt FM Mobile Studio Cam", "description": "91.3 Ayclt FM Mobile Studio Cam", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
+    {"id": "GamingCentralRadio", "display": "1.4", "name": "Gaming Central Radio", "description": "Your game, our community. Gaming Central, for gamers and music together!", "icon": "https://radio.gamingcentralradio.net/api/nowplaying/gaming_central_radio/art"},
+    {"id": "913AycltFMLiveStudioCam", "display": "1.5", "name": "91.3 Ayclt FM Live Studio Cam", "description": "91.3 Ayclt FM Live Studio Cam", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
+    {"id": "913AycltFMMobileStudioCam", "display": "1.6", "name": "91.3 Ayclt FM Mobile Studio Cam", "description": "91.3 Ayclt FM Mobile Studio Cam", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1779890712.png"},
 ]
 
 def fetch_json(url):
     refresh_url = f"{url}{'&' if '?' in url else '?'}epg_refresh={int(time.time())}"
     headers = {"User-Agent": "91.3-Ayclt-FM-EPG/1.3", "Cache-Control": "no-cache, no-store, max-age=0", "Pragma": "no-cache", "Accept": "application/json", "Connection": "close"}
-    api_key = os.getenv("AZURACAST_API_KEY", "").strip()
+    # The 91.3 Ayclt FM API key must never be sent to a different AzuraCast host.
+    api_key = os.getenv("AZURACAST_API_KEY", "").strip() if url.startswith(AZURACAST_BASE_URL + "/") else ""
     if api_key:
         headers["Authorization"] = f"Bearer {api_key}"
         headers["X-API-Key"] = api_key
@@ -140,9 +150,10 @@ def get_program_title(item, channel_name):
 def normalize_streamer_name(value):
     return " ".join(str(value).strip().lower().split()).replace("dj ", "", 1)
 
-def fetch_streamer_directory(station_slug):
+def fetch_streamer_directory(station_slug, base_url=None):
     """Fetch the current AzuraCast streamer directory for a station."""
-    data = fetch_json(f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamers")
+    base_url = base_url or station_base_url(station_slug)
+    data = fetch_json(f"{base_url}/api/station/{station_slug}/streamers")
     def find_streamers(value):
         if isinstance(value, list):
             return value if any(isinstance(item, dict) for item in value) else []
@@ -159,15 +170,17 @@ def fetch_streamer_directory(station_slug):
         return []
     return find_streamers(data)
 
-def streamer_art_url(station_slug, streamer_id):
+def streamer_art_url(station_slug, streamer_id, base_url=None):
     if streamer_id is None or str(streamer_id).strip() == "":
         return None
-    return f"{AZURACAST_BASE_URL}/api/station/{station_slug}/streamer/{str(streamer_id).strip()}/art"
+    base_url = base_url or station_base_url(station_slug)
+    return f"{base_url}/api/station/{station_slug}/streamer/{str(streamer_id).strip()}/art"
 
-def build_streamer_directory(station_slug):
+def build_streamer_directory(station_slug, base_url=None):
     """Build name/ID lookups directly from the live AzuraCast Streamers API."""
     lookup = {}
-    streamers = fetch_streamer_directory(station_slug)
+    base_url = base_url or station_base_url(station_slug)
+    streamers = fetch_streamer_directory(station_slug, base_url)
     for streamer in streamers:
         if not isinstance(streamer, dict):
             continue
@@ -204,7 +217,7 @@ def get_streamer_info(item):
             name = get_field(nested, ["name", "display_name", "displayName", "username", "title", "streamer_name", "streamerName", "dj_name", "djName"])
     return name, str(streamer_id).strip() if streamer_id is not None else ""
 
-def get_streamer_art(item, station_slug, streamer_directory=None):
+def get_streamer_art(item, station_slug, streamer_directory=None, base_url=None):
     """Return the current AzuraCast streamer artwork URL; no local cache is used."""
     name, streamer_id = get_streamer_info(item)
     candidates = []
@@ -231,9 +244,9 @@ def get_streamer_art(item, station_slug, streamer_directory=None):
         for key in candidates:
             entry = streamer_directory.get(key)
             if entry and entry.get("id"):
-                return streamer_art_url(station_slug, entry["id"])
+                return streamer_art_url(station_slug, entry["id"], base_url)
     if streamer_id:
-        return streamer_art_url(station_slug, streamer_id)
+        return streamer_art_url(station_slug, streamer_id, base_url)
 
     return None
 
@@ -275,7 +288,7 @@ def get_description(item, channel_description):
         return text
     return channel_description
 
-def fetch_station_schedule(station_slug, start_date, end_date):
+def fetch_station_schedule(station_slug, start_date, end_date, base_url=None):
     """
     Fetch the station schedule for the requested window.
 
@@ -288,6 +301,7 @@ def fetch_station_schedule(station_slug, start_date, end_date):
     """
     schedules = []
     current_date = start_date
+    base_url = base_url or station_base_url(station_slug)
 
     while current_date <= end_date:
         chunk_end = min(current_date + timedelta(days=6), end_date)
@@ -298,7 +312,7 @@ def fetch_station_schedule(station_slug, start_date, end_date):
                 "rows": 1000,
             }
         )
-        url = f"{AZURACAST_BASE_URL}/api/station/{station_slug}/schedule?{query}"
+        url = f"{base_url}/api/station/{station_slug}/schedule?{query}"
         data = fetch_json(url)
         chunk = find_schedule_list(data)
         schedules.extend(chunk)
@@ -330,7 +344,7 @@ def fetch_station_schedule(station_slug, start_date, end_date):
     print(f"Schedule total {station_slug}: {len(unique)} unique entries")
     return unique
 
-def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_directory=None):
+def convert_schedule(channel, schedules, minimum, maximum, station_slug, streamer_directory=None, base_url=None):
     events = []
     for item in schedules:
         if not isinstance(item, dict):
@@ -340,7 +354,7 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
         if start is None or end is None or end <= start or end < minimum or start > maximum:
             continue
         live_program = is_live_program(item)
-        icon = get_streamer_art(item, station_slug, streamer_directory) if live_program else None
+        icon = get_streamer_art(item, station_slug, streamer_directory, base_url) if live_program else None
         # Never substitute the station background for a LIVE DJ. If AzuraCast's
         # streamer artwork cannot be resolved, leave the programme icon absent.
         # This prevents a stale/static station image from being published as DJ art.
@@ -485,7 +499,7 @@ def main():
     streamer_directories = {}
     for station_slug in STATIONS.values():
         try:
-            directory, _raw_streamers = build_streamer_directory(station_slug)
+            directory, _raw_streamers = build_streamer_directory(station_slug, station_base_url(station_slug))
             streamer_directories[station_slug] = directory
             print(f"Discovered {len(directory)} streamer name/ID mappings for {station_slug}")
         except Exception as error:
@@ -498,15 +512,15 @@ def main():
             continue
         station_slug = STATIONS[channel_id]
         if station_slug not in schedule_cache:
-            schedule_cache[station_slug] = fetch_station_schedule(station_slug, schedule_start_date, end_time.date())
-        actual_events = convert_schedule(channel, schedule_cache[station_slug], start_time, end_time, station_slug, streamer_directories.get(station_slug))
+            schedule_cache[station_slug] = fetch_station_schedule(station_slug, schedule_start_date, end_time.date(), station_base_url(station_slug))
+        actual_events = convert_schedule(channel, schedule_cache[station_slug], start_time, end_time, station_slug, streamer_directories.get(station_slug), station_base_url(station_slug))
         all_events.extend(fill_schedule_gaps(channel, actual_events, start_time, end_time))
     live_cam = next(channel for channel in CHANNELS if channel["id"] == "913AycltFMLiveStudioCam")
     mobile_cam = next(channel for channel in CHANNELS if channel["id"] == "913AycltFMMobileStudioCam")
     fm_channel = next(channel for channel in CHANNELS if channel["id"] == "913AycltFM")
     all_events = [event for event in all_events if event["channel_id"] not in {live_cam["id"], mobile_cam["id"]}]
     fm_station_slug = STATIONS["913AycltFM"]
-    fm_events = convert_schedule(fm_channel, schedule_cache[fm_station_slug], start_time, end_time, fm_station_slug, streamer_directories.get(fm_station_slug))
+    fm_events = convert_schedule(fm_channel, schedule_cache[fm_station_slug], start_time, end_time, fm_station_slug, streamer_directories.get(fm_station_slug), station_base_url(fm_station_slug))
     live_cam_events = []
     for event in fm_events:
         cam_event = dict(event)
