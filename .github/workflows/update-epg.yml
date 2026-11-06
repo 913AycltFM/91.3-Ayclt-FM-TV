@@ -68,7 +68,7 @@ jobs:
           import json
           import xml.etree.ElementTree as ET
 
-          expected = {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "913AycltFMLiveStudioCam", "913AycltFMMobileStudioCam"}
+          expected = {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "GamingCentralRadio", "913AycltFMLiveStudioCam", "913AycltFMMobileStudioCam"}
 
           with open("epg.json", encoding="utf-8") as f:
               data = json.load(f)
@@ -121,7 +121,7 @@ jobs:
               only_xml = sorted(live_xml - live_json)
               raise SystemExit("LIVE metadata mismatch between JSON and XML.\n" f"Only in JSON: {only_json[:10]}\n" f"Only in XML: {only_xml[:10]}")
 
-          four_channels = {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "913AycltFMLiveStudioCam"}
+          four_channels = {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "GamingCentralRadio", "913AycltFMLiveStudioCam", "913AycltFMMobileStudioCam"}
           json_live_by_channel = {channel: 0 for channel in four_channels}
           xml_live_by_channel = {channel: 0 for channel in four_channels}
 
