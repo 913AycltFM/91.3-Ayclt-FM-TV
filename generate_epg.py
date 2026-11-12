@@ -485,6 +485,8 @@ def generate_xml(events):
         channel_element = ET.SubElement(root, "channel", {"id": channel["id"]})
         ET.SubElement(channel_element, "display-name").text = channel["display"]
         ET.SubElement(channel_element, "display-name").text = channel["name"]
+        if channel.get("icon"):
+            ET.SubElement(channel_element, "icon", {"src": channel["icon"]})
     for event in events:
         programme = ET.SubElement(root, "programme", {"start": xmltv_datetime(event["start"]), "stop": xmltv_datetime(event["end"]), "channel": event["channel_id"]})
         is_live = event.get("live_program", False)
