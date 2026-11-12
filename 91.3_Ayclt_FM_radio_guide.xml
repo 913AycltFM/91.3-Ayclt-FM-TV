@@ -4,26 +4,32 @@
   <channel id="913AycltFM">
     <display-name>1</display-name>
     <display-name>91.3 Ayclt FM</display-name>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png" />
   </channel>
   <channel id="913AycltFMHD2">
     <display-name>1.2</display-name>
     <display-name>91.3 Ayclt FM HD2</display-name>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/album_art.1794485423.png" />
   </channel>
   <channel id="913AycltFMHD3">
     <display-name>1.3</display-name>
     <display-name>91.3 Ayclt FM HD3</display-name>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/album_art.1794485456.png" />
   </channel>
   <channel id="GamingCentralRadio">
     <display-name>1.4</display-name>
     <display-name>Gaming Central Radio</display-name>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/album_art.1793638436.png" />
   </channel>
   <channel id="913AycltFMLiveStudioCam">
     <display-name>1.5</display-name>
     <display-name>91.3 Ayclt FM Live Studio Cam</display-name>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png" />
   </channel>
   <channel id="913AycltFMMobileStudioCam">
     <display-name>1.6</display-name>
     <display-name>91.3 Ayclt FM Mobile Studio Cam</display-name>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png" />
   </channel>
   <programme start="20261112075500 -0600" stop="20261112090000 -0600" channel="913AycltFM">
     <title lang="en">Best Of JB In the Morning (Thursday Edition)</title>
