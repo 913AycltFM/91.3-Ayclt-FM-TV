@@ -574,8 +574,9 @@ def main():
         cam_event = dict(event)
         cam_event["channel_id"] = live_cam["id"]
         cam_event["channel_name"] = live_cam["name"]
-        if not cam_event.get("live_program"):
-            cam_event["icon"] = live_cam["icon"]
+        # Mirror the main 91.3 Ayclt FM artwork on every Live Studio Cam
+        # programme, including live shows, rather than using individual DJ art.
+        cam_event["icon"] = fm_channel["icon"]
         live_cam_events.append(cam_event)
     all_events.extend(fill_schedule_gaps(live_cam, live_cam_events, start_time, end_time))
     mobile_cam_events = []
@@ -583,8 +584,9 @@ def main():
         cam_event = dict(event)
         cam_event["channel_id"] = mobile_cam["id"]
         cam_event["channel_name"] = mobile_cam["name"]
-        if not cam_event.get("live_program"):
-            cam_event["icon"] = mobile_cam["icon"]
+        # Mirror the main 91.3 Ayclt FM artwork on every Mobile Studio Cam
+        # programme, including live shows, rather than using individual DJ art.
+        cam_event["icon"] = fm_channel["icon"]
         mobile_cam_events.append(cam_event)
     all_events.extend(fill_schedule_gaps(mobile_cam, mobile_cam_events, start_time, end_time))
     all_events = clean_events(all_events)
