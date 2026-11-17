@@ -28,13 +28,13 @@ def station_base_url(station_slug):
     return AZURACAST_BASE_URL
 
 CHANNELS = [
-    {"id": "913AycltFM", "display": "1", "name": "91.3 Ayclt FM", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png"},
-    {"id": "913AycltFMHD2", "display": "1.2", "name": "91.3 Ayclt FM HD2", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/album_art.1794485423.png"},
-    {"id": "913AycltFMHD3", "display": "1.3", "name": "91.3 Ayclt FM HD3", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/album_art.1794485456.png"},
-    {"id": "913AycltFMHD4", "display": "1.4", "name": "91.3 Ayclt FM HD4", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/album_art.1794880587.jpg"},
-    {"id": "GamingCentralRadio", "display": "1.5", "name": "Gaming Central Radio", "description": "Your game, our community. Gaming Central, for gamers and music together!", "icon": "https://radio.913aycltfm.com/static/uploads/gaming_central_radio/album_art.1794878937.png"},
-    {"id": "913AycltFMLiveStudioCam", "display": "1.6", "name": "91.3 Ayclt FM Live Studio Cam", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png"},
-    {"id": "913AycltFMMobileStudioCam", "display": "1.7", "name": "91.3 Ayclt FM Mobile Studio Cam", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png"},
+    {"id": "913AycltFM", "display": "1", "name": "91.3 Ayclt FM", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png", "background": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg"},
+    {"id": "913AycltFMHD2", "display": "1.2", "name": "91.3 Ayclt FM HD2", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/album_art.1794485423.png", "background": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg"},
+    {"id": "913AycltFMHD3", "display": "1.3", "name": "91.3 Ayclt FM HD3", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/album_art.1794485456.png", "background": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg"},
+    {"id": "913AycltFMHD4", "display": "1.4", "name": "91.3 Ayclt FM HD4", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/album_art.1794880587.jpg", "background": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg"},
+    {"id": "GamingCentralRadio", "display": "1.5", "name": "Gaming Central Radio", "description": "Your game, our community. Gaming Central, for gamers and music together!", "icon": "https://radio.913aycltfm.com/static/uploads/gaming_central_radio/album_art.1794878937.png", "background": "https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png"},
+    {"id": "913AycltFMLiveStudioCam", "display": "1.6", "name": "91.3 Ayclt FM Live Studio Cam", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png", "background": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg"},
+    {"id": "913AycltFMMobileStudioCam", "display": "1.7", "name": "91.3 Ayclt FM Mobile Studio Cam", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png", "background": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg"},
 ]
 
 def fetch_json(url):
@@ -401,7 +401,7 @@ def convert_schedule(channel, schedules, minimum, maximum, station_slug, streame
         # Never substitute the station background for a LIVE DJ. If AzuraCast's
         # streamer artwork cannot be resolved, leave the programme icon absent.
         # This prevents a stale/static station image from being published as DJ art.
-        programme_icon = icon if live_program else channel["icon"]
+        programme_icon = icon if live_program else channel["background"]
         events.append({"channel_id": channel["id"], "channel_name": channel["name"], "title": get_program_title(item, channel["name"]), "description": get_description(item, channel["description"]), "start": max(start, minimum), "end": min(end, maximum), "icon": programme_icon, "fallback": False, "live_program": live_program})
     return events
 
@@ -416,7 +416,7 @@ def add_filler_blocks(result, channel, start_time, end_time):
     while current < end_time:
         next_hour = current.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
         end = min(next_hour, end_time)
-        result.append({"channel_id": channel["id"], "channel_name": channel["name"], "title": channel["name"], "description": channel["description"], "start": current, "end": end, "icon": channel["icon"], "fallback": True, "live_program": False, "live": False})
+        result.append({"channel_id": channel["id"], "channel_name": channel["name"], "title": channel["name"], "description": channel["description"], "start": current, "end": end, "icon": channel["background"], "fallback": True, "live_program": False, "live": False})
         current = end
 
 def fill_schedule_gaps(channel, events, start_time, end_time):
@@ -448,7 +448,7 @@ def fill_schedule_gaps(channel, events, start_time, end_time):
     return result
 
 def create_no_schedule_channel(channel, start_time, end_time):
-    return [{"channel_id": channel["id"], "channel_name": channel["name"], "title": channel["name"], "description": channel["description"], "start": start_time, "end": end_time, "icon": channel["icon"], "fallback": True, "live_program": False, "live": False}]
+    return [{"channel_id": channel["id"], "channel_name": channel["name"], "title": channel["name"], "description": channel["description"], "start": start_time, "end": end_time, "icon": channel["background"], "fallback": True, "live_program": False, "live": False}]
 
 def clean_events(events):
     events = [event for event in events if event.get("start") is not None and event.get("end") is not None and event["end"] > event["start"]]
@@ -578,7 +578,7 @@ def main():
         cam_event["channel_name"] = live_cam["name"]
         # Mirror the main 91.3 Ayclt FM artwork on every Live Studio Cam
         # programme, including live shows, rather than using individual DJ art.
-        cam_event["icon"] = fm_channel["icon"]
+        cam_event["icon"] = fm_channel["background"]
         live_cam_events.append(cam_event)
     all_events.extend(fill_schedule_gaps(live_cam, live_cam_events, start_time, end_time))
     mobile_cam_events = []
@@ -588,7 +588,7 @@ def main():
         cam_event["channel_name"] = mobile_cam["name"]
         # Mirror the main 91.3 Ayclt FM artwork on every Mobile Studio Cam
         # programme, including live shows, rather than using individual DJ art.
-        cam_event["icon"] = fm_channel["icon"]
+        cam_event["icon"] = fm_channel["background"]
         mobile_cam_events.append(cam_event)
     all_events.extend(fill_schedule_gaps(mobile_cam, mobile_cam_events, start_time, end_time))
     all_events = clean_events(all_events)
