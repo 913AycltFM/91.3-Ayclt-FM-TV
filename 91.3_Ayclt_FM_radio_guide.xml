@@ -46,22 +46,7 @@
     <display-name>91.3 Ayclt FM TV</display-name>
     <icon src="http://tv.913aycltfm.com/images/uploads/ea8408cf-7ed8-41c0-8eaa-adc70b2bde7f.png" />
   </channel>
-  <programme start="20261122131000 -0600" stop="20261122140000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261122140000 -0600" stop="20261122150000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261122150000 -0600" stop="20261122160000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261122160000 -0600" stop="20261122170000 -0600" channel="913AycltFM">
+  <programme start="20261122162500 -0600" stop="20261122170000 -0600" channel="913AycltFM">
     <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
@@ -831,27 +816,27 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261129130000 -0600" stop="20261129131000 -0600" channel="913AycltFM">
+  <programme start="20261129130000 -0600" stop="20261129140000 -0600" channel="913AycltFM">
     <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122131000 -0600" stop="20261122140000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261129140000 -0600" stop="20261129150000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122140000 -0600" stop="20261122150000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261129150000 -0600" stop="20261129160000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122150000 -0600" stop="20261122160000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261129160000 -0600" stop="20261129162500 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122160000 -0600" stop="20261122170000 -0600" channel="913AycltFMHD2">
+  <programme start="20261122162500 -0600" stop="20261122170000 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
@@ -1676,27 +1661,27 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261129130000 -0600" stop="20261129131000 -0600" channel="913AycltFMHD2">
+  <programme start="20261129130000 -0600" stop="20261129140000 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261122131000 -0600" stop="20261122140000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261129140000 -0600" stop="20261129150000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261122140000 -0600" stop="20261122150000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261129150000 -0600" stop="20261129160000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261122150000 -0600" stop="20261122160000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261129160000 -0600" stop="20261129162500 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261122160000 -0600" stop="20261122170000 -0600" channel="913AycltFMHD3">
+  <programme start="20261122162500 -0600" stop="20261122170000 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
@@ -2521,27 +2506,27 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261129130000 -0600" stop="20261129131000 -0600" channel="913AycltFMHD3">
+  <programme start="20261129130000 -0600" stop="20261129140000 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261122131000 -0600" stop="20261122140000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261129140000 -0600" stop="20261129150000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261122140000 -0600" stop="20261122150000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261129150000 -0600" stop="20261129160000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261122150000 -0600" stop="20261122160000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261129160000 -0600" stop="20261129162500 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261122160000 -0600" stop="20261122170000 -0600" channel="913AycltFMHD4">
+  <programme start="20261122162500 -0600" stop="20261122170000 -0600" channel="913AycltFMHD4">
     <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
@@ -3366,27 +3351,27 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261129130000 -0600" stop="20261129131000 -0600" channel="913AycltFMHD4">
+  <programme start="20261129130000 -0600" stop="20261129140000 -0600" channel="913AycltFMHD4">
     <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261122131000 -0600" stop="20261122140000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261129140000 -0600" stop="20261129150000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261122140000 -0600" stop="20261122150000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261129150000 -0600" stop="20261129160000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261122150000 -0600" stop="20261122160000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261129160000 -0600" stop="20261129162500 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261122160000 -0600" stop="20261122170000 -0600" channel="913AycltFMLiveStudioCam">
+  <programme start="20261122162500 -0600" stop="20261122170000 -0600" channel="913AycltFMLiveStudioCam">
     <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
@@ -4156,27 +4141,27 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261129130000 -0600" stop="20261129131000 -0600" channel="913AycltFMLiveStudioCam">
+  <programme start="20261129130000 -0600" stop="20261129140000 -0600" channel="913AycltFMLiveStudioCam">
     <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122131000 -0600" stop="20261122140000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261129140000 -0600" stop="20261129150000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122140000 -0600" stop="20261122150000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261129150000 -0600" stop="20261129160000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122150000 -0600" stop="20261122160000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261129160000 -0600" stop="20261129162500 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122160000 -0600" stop="20261122170000 -0600" channel="913AycltFMMobileStudioCam">
+  <programme start="20261122162500 -0600" stop="20261122170000 -0600" channel="913AycltFMMobileStudioCam">
     <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
@@ -4946,27 +4931,27 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261129130000 -0600" stop="20261129131000 -0600" channel="913AycltFMMobileStudioCam">
+  <programme start="20261129130000 -0600" stop="20261129140000 -0600" channel="913AycltFMMobileStudioCam">
     <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122131000 -0600" stop="20261122134207 -0600" channel="C1.49.tunarr.com">
-    <title lang="en">ᴍortal ᴋombat</title>
-    <desc lang="en">djay CM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/690d639b-56f5-45c0-bae0-67596aeecff9/artwork/poster" />
+  <programme start="20261129140000 -0600" stop="20261129150000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122134207 -0600" stop="20261122151855 -0600" channel="C1.49.tunarr.com">
-    <title lang="en">The Angry Birds Movie 2</title>
-    <desc lang="en">Red, Chuck, Bomb and the rest of their feathered friends are surprised when a green pig suggests that they put aside their differences and unite to fight a common threat. Aggressive birds from an island covered in ice are planning to use an elaborate weapon to destroy the fowl and swine.</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/1454806f-1a25-473e-9308-83183de6ffe0/artwork/poster" />
+  <programme start="20261129150000 -0600" stop="20261129160000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122151855 -0600" stop="20261122154135 -0600" channel="C1.49.tunarr.com">
-    <title lang="en">Rick and Morty</title>
-    <desc lang="en">Rick and Morty need a break.</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/fd9703bc-e75f-49ad-83f0-931023c3d7a9/artwork/poster" />
+  <programme start="20261129160000 -0600" stop="20261129162500 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261122154135 -0600" stop="20261122162847 -0600" channel="C1.49.tunarr.com">
+  <programme start="20261122162500 -0600" stop="20261122162847 -0600" channel="C1.49.tunarr.com">
     <title lang="en">Breaking Bad</title>
     <desc lang="en">Walt and Jesse face the deadly consequences of their actions. Skyler deals with a puzzling disappearance, as Marie struggles to help Hank with his recovery.</desc>
     <icon src="http://tv.913aycltfm.com/api/programs/7c0aafe5-1bfb-466c-94aa-6fd7e6b2588f/artwork/poster" />
@@ -5001,202 +4986,17 @@
     <desc lang="en">When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.</desc>
     <icon src="http://tv.913aycltfm.com/api/programs/ccd2a1ef-1205-4cc2-ada0-221dd4c708f3/artwork/poster" />
   </programme>
-  <programme start="20261122131000 -0600" stop="20261122131328 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Keep Your Hands To Yourself by The Cheeney Brothers (August 1, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/d93298d5-6d8a-495d-9e4d-d1045e825010/artwork/poster" />
+  <programme start="20261123020426 -0600" stop="20261123035916 -0600" channel="C1.49.tunarr.com">
+    <title lang="en">Men in Black: International</title>
+    <desc lang="en">The Men in Black have always protected the Earth from the scum of the universe. In this new adventure, they tackle their biggest, most global threat to date: a mole in the Men in Black organization.</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/fabb66cb-e833-4fb8-8b65-2ec9d4827393/artwork/poster" />
   </programme>
-  <programme start="20261122131328 -0600" stop="20261122131756 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Faithfully by The Cheeney Brothers (July 18, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/5b8a75e0-8a63-4e7d-aca1-640226e01969/artwork/poster" />
+  <programme start="20261123035916 -0600" stop="20261123053809 -0600" channel="C1.49.tunarr.com">
+    <title lang="en">Flamin' Hot</title>
+    <desc lang="en">The inspiring true story of Richard Montañez, the Frito Lay janitor who channeled his Mexican American heritage and upbringing to turn the iconic Flamin' Hot Cheetos into a snack that disrupted the food industry and became a global pop culture phenomenon.</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/c3e2e7cb-6c46-43e4-8b8d-e8e0fe46c8b6/artwork/poster" />
   </programme>
-  <programme start="20261122131756 -0600" stop="20261122132142 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">SLOW DANCING IN THE DARK by The Cheeney Brothers (August 16, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/cac7f46f-9b1b-4b29-962f-5c41d4f4dd6d/artwork/poster" />
-  </programme>
-  <programme start="20261122132142 -0600" stop="20261122132628 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Yellow by The Cheeney Brothers (October 18, 2024)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/ec41c550-f02c-4a04-976b-e3eb29dd0c68/artwork/poster" />
-  </programme>
-  <programme start="20261122132628 -0600" stop="20261122133143 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Mr. Brightside by The Cheeney Brothers (July 25, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/4e7baaba-057a-4172-94d0-c31ed118f316/artwork/poster" />
-  </programme>
-  <programme start="20261122133143 -0600" stop="20261122133633 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">When You Say Nothing At All by The Cheeney Brothers (July 18, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/34b91d39-2c86-4450-baea-de40aba25a26/artwork/poster" />
-  </programme>
-  <programme start="20261122133633 -0600" stop="20261122134307 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">So Will I 100 Billion X by The Cheeney Brothers (January 31, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/671ee58e-0ff2-4ab1-9fed-8f55c46ef355/artwork/poster" />
-  </programme>
-  <programme start="20261122134307 -0600" stop="20261122134647 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Armadillo by Morning by The Cheeney Brothers (June 29, 2024)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/4acc2732-b5c7-4b61-b63a-9f84da31ca62/artwork/poster" />
-  </programme>
-  <programme start="20261122134647 -0600" stop="20261122135327 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Hotel California by The Cheeney Brothers (June 14, 2024)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/77534ad6-148c-4a8f-88e1-9fbbfabfc740/artwork/poster" />
-  </programme>
-  <programme start="20261122135327 -0600" stop="20261122135714 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Drinkin’ Problem by The Cheeney Brothers (January 31, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/da780be7-f820-46d7-bba2-8e6eaef90ce9/artwork/poster" />
-  </programme>
-  <programme start="20261122135714 -0600" stop="20261122140117 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">The Devil Went Down To Georgia by The Cheeney Brothers (July 10, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/7707c885-2198-4d2c-a247-05524d21741e/artwork/poster" />
-  </programme>
-  <programme start="20261122140117 -0600" stop="20261122140522 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Mustang Sally by The Cheeney Brothers (February 8, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/479336b0-5c7a-463e-87dd-6d4f234e5b2f/artwork/poster" />
-  </programme>
-  <programme start="20261122140522 -0600" stop="20261122140925 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Heavens To Betsy by The Cheeney Brothers (August 31, 2024)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/12403707-e9a7-4efc-ac71-4b09ce7709c9/artwork/poster" />
-  </programme>
-  <programme start="20261122140925 -0600" stop="20261122141244 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Amarillo by Morning by The Cheeney Brothers (November 29, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/cfc1f085-2bdc-475c-ab1d-73a1c20ee0ac/artwork/poster" />
-  </programme>
-  <programme start="20261122141244 -0600" stop="20261122141821 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Free Bird by The Cheeney Brothers (June 29, 2024)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/efa30133-0577-4949-8fc0-f59ae269562b/artwork/poster" />
-  </programme>
-  <programme start="20261122141821 -0600" stop="20261122142723 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Fool Around and Fell in Love and Every Rose Has It's Thorn by The Cheeney Brothers (March 21, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/98d38c77-5172-4ea5-8362-3e0fe9d46be6/artwork/poster" />
-  </programme>
-  <programme start="20261122142723 -0600" stop="20261122143258 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Friends in Low Places by The Cheeney Brothers (March 21, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/85278364-588c-42ab-aef7-46d6d8eca5b1/artwork/poster" />
-  </programme>
-  <programme start="20261122143258 -0600" stop="20261122143619 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Beautiful Crazy by The Cheeney Brothers (August 16, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/7de817aa-7bb8-45ff-86ab-3b87e8b8734f/artwork/poster" />
-  </programme>
-  <programme start="20261122143619 -0600" stop="20261122144259 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Snow by Chase H. Cheeney (January 2, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/2200ce56-11b3-4153-bf04-068240dcdb01/artwork/poster" />
-  </programme>
-  <programme start="20261122144259 -0600" stop="20261122144719 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Wonderwall by The Cheeney Brothers (September 5, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/6aff9a00-52fa-44ad-9d30-48b4d039d561/artwork/poster" />
-  </programme>
-  <programme start="20261122144719 -0600" stop="20261122145029 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Astray by The Cheeney Brothers (October 25, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/d5bd41a8-3cc6-4967-88ff-46b4ba687fc0/artwork/poster" />
-  </programme>
-  <programme start="20261122145029 -0600" stop="20261122145658 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Sign of the Times by The Cheeney Brothers (January 2, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/4727b6bc-57ee-47cb-8b50-fb87d0d7b882/artwork/poster" />
-  </programme>
-  <programme start="20261122145658 -0600" stop="20261122150202 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Free Fallin’  by The Cheeney Brothers (June 20, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/78492978-3777-42e4-9c33-4d405032bb44/artwork/poster" />
-  </programme>
-  <programme start="20261122150202 -0600" stop="20261122150659 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Yellow by The Cheeney Brothers (July 10, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/3c68dac9-a73b-4528-8c64-d61e92c03b50/artwork/poster" />
-  </programme>
-  <programme start="20261122150659 -0600" stop="20261122151222 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Magic by The Cheeney Brothers (July 18, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/d646f0d8-ea92-4be0-88b7-fe6a70980a8f/artwork/poster" />
-  </programme>
-  <programme start="20261122151222 -0600" stop="20261122151600 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Runaway Train by The Cheeney Brothers (June 20, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/3426f59b-42ec-41e2-b144-ed25eae7f45d/artwork/poster" />
-  </programme>
-  <programme start="20261122151600 -0600" stop="20261122152149 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Wonderwall by The Cheeney Brothers (August 1, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/c2d06c1d-8086-4ca0-89d7-1ce356603749/artwork/poster" />
-  </programme>
-  <programme start="20261122152149 -0600" stop="20261122152606 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">I'm Not The Devil by The Cheeney Brothers (November 17, 2024)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/2f7b7cf0-78bd-41a5-852f-0fdf2de62d92/artwork/poster" />
-  </programme>
-  <programme start="20261122152606 -0600" stop="20261122153049 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Mama, I’m Coming Home by The Cheeney Brothers (July 10, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/89ce4cfa-1d4a-4c75-b8e8-2f0015fe005a/artwork/poster" />
-  </programme>
-  <programme start="20261122153049 -0600" stop="20261122153443 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Beautiful Crazy by The Cheeney Brothers (September 12, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/8fddeb39-8e22-44c2-a97b-00119f9e1b2d/artwork/poster" />
-  </programme>
-  <programme start="20261122153443 -0600" stop="20261122153811 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">The Devil Went Down To Georgia by The Cheeney Brothers (June 14,2024)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/7f2c0035-a0e7-48c0-874a-f08ea619cd05/artwork/poster" />
-  </programme>
-  <programme start="20261122153811 -0600" stop="20261122154358 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Unknown Song by The Cheeney Brothers (September 12, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/48818d40-aaac-4f75-bd4d-db78d05c000a/artwork/poster" />
-  </programme>
-  <programme start="20261122154358 -0600" stop="20261122154832 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Watermelon Sugar by The Cheeney Brothers (October 4, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/e973a352-b5ec-432c-a4bd-29292f27f7b8/artwork/poster" />
-  </programme>
-  <programme start="20261122154832 -0600" stop="20261122155243 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Suspicious Minds by The Cheeney Brothers (October 17, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/6ab06357-8aba-4b74-84d5-bb96f878c248/artwork/poster" />
-  </programme>
-  <programme start="20261122155243 -0600" stop="20261122160259 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Seminole Wind and Wagon Wheel by The Cheeney Brothers (March 21, 2026)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/5cff85a1-2da6-4de3-916e-75a384d7b6d3/artwork/poster" />
-  </programme>
-  <programme start="20261122160259 -0600" stop="20261122160742 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Give Me One Reason by The Cheeney Brothers (September 12, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/0d8b5915-4dd2-41a1-9aa3-de0724a4425f/artwork/poster" />
-  </programme>
-  <programme start="20261122160742 -0600" stop="20261122161244 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">You Say by The Cheeney Brothers (June 27, 2024)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/ce76a908-2610-41a7-b578-2c8d638e8b86/artwork/poster" />
-  </programme>
-  <programme start="20261122161244 -0600" stop="20261122161728 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Let Her Cry by The Cheeney Brothers (November 21, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/cd83bc11-33ca-4331-80b6-679e63ec8294/artwork/poster" />
-  </programme>
-  <programme start="20261122161728 -0600" stop="20261122162259 -0600" channel="C2.50.tunarr.com">
-    <title lang="en">Yellow by The Cheeney Brothers (October 4, 2025)</title>
-    <desc lang="en">91.3 Ayclt FM TV</desc>
-    <icon src="http://tv.913aycltfm.com/api/programs/7bde18b2-3278-43a9-842c-0e786c885247/artwork/poster" />
-  </programme>
-  <programme start="20261122162259 -0600" stop="20261122162636 -0600" channel="C2.50.tunarr.com">
+  <programme start="20261122162500 -0600" stop="20261122162636 -0600" channel="C2.50.tunarr.com">
     <title lang="en">There Is a House in New Orleans by The Cheeney Brothers (June 20, 2026)</title>
     <desc lang="en">91.3 Ayclt FM TV</desc>
     <icon src="http://tv.913aycltfm.com/api/programs/9cfe340a-37bd-423b-82cf-51cf6988437e/artwork/poster" />
@@ -5701,22 +5501,252 @@
     <desc lang="en">91.3 Ayclt FM TV</desc>
     <icon src="http://tv.913aycltfm.com/api/programs/b91fcb60-df06-423a-b04a-189f4cb6dc37/artwork/poster" />
   </programme>
-  <programme start="20261122131000 -0600" stop="20261122140000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261123000127 -0600" stop="20261123000705 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Snow by Chase H. Cheeney (October 25, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/eab62378-7176-4f2b-8d18-f2ac1c0703dd/artwork/poster" />
   </programme>
-  <programme start="20261122140000 -0600" stop="20261122150000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261123000705 -0600" stop="20261123001258 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Purple Rain by The Cheeney Brothers (June 20, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/8a3bba78-1257-4e39-8bc3-70f4538e8593/artwork/poster" />
   </programme>
-  <programme start="20261122150000 -0600" stop="20261122160000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261123001258 -0600" stop="20261123001731 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">She Will Be Loved by The Cheeney Brothers (August 16, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/afac3a44-5610-49c8-bed2-a5b97efabb9b/artwork/poster" />
   </programme>
-  <programme start="20261122160000 -0600" stop="20261122170000 -0600" channel="GamingCentralRadio">
+  <programme start="20261123001731 -0600" stop="20261123002047 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">A Bar Song Tipsy by The Cheeney Brothers (June 20, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/5557dea3-acf1-49da-a01d-f5dd25cabfae/artwork/poster" />
+  </programme>
+  <programme start="20261123002047 -0600" stop="20261123002852 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Viva La Vida and Bad Habits by The Cheeney Brothers (September 5, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/663926b1-27fe-4b67-8c94-d3c44db5c12f/artwork/poster" />
+  </programme>
+  <programme start="20261123002852 -0600" stop="20261123003405 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Every Rose Has It's Thorn by The Cheeney Brothers (January 2, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/2312ef43-444c-4ee4-834a-b094563a3aab/artwork/poster" />
+  </programme>
+  <programme start="20261123003405 -0600" stop="20261123003924 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Friends in Low Places by The Cheeney Brothers (June 20, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/f82f62cc-261b-49be-9ff2-2a8f8bdcdc9b/artwork/poster" />
+  </programme>
+  <programme start="20261123003924 -0600" stop="20261123004416 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">When You Say Nothing At All by The Cheeney Brothers (July 25, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/58be4729-a57d-4be3-9ea9-8603b41cd4f8/artwork/poster" />
+  </programme>
+  <programme start="20261123004416 -0600" stop="20261123004811 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">The Devil Went Down To Georgia by The Cheeney Brothers (October 18, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/5c2ba04a-1480-43bc-a938-36071c30c137/artwork/poster" />
+  </programme>
+  <programme start="20261123004811 -0600" stop="20261123005142 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Bad Moon Rising by The Cheeney Brothers (June 27, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/cecc37e9-57af-4f3a-a4ea-6aa8d714bd97/artwork/poster" />
+  </programme>
+  <programme start="20261123005142 -0600" stop="20261123005531 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Keep Your Hands To Yourself by The Cheeney Brothers (August 1, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/d93298d5-6d8a-495d-9e4d-d1045e825010/artwork/poster" />
+  </programme>
+  <programme start="20261123005531 -0600" stop="20261123005958 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Faithfully by The Cheeney Brothers (July 18, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/5b8a75e0-8a63-4e7d-aca1-640226e01969/artwork/poster" />
+  </programme>
+  <programme start="20261123005958 -0600" stop="20261123010345 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">SLOW DANCING IN THE DARK by The Cheeney Brothers (August 16, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/cac7f46f-9b1b-4b29-962f-5c41d4f4dd6d/artwork/poster" />
+  </programme>
+  <programme start="20261123010345 -0600" stop="20261123010831 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Yellow by The Cheeney Brothers (October 18, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/ec41c550-f02c-4a04-976b-e3eb29dd0c68/artwork/poster" />
+  </programme>
+  <programme start="20261123010831 -0600" stop="20261123011345 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Mr. Brightside by The Cheeney Brothers (July 25, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/4e7baaba-057a-4172-94d0-c31ed118f316/artwork/poster" />
+  </programme>
+  <programme start="20261123011345 -0600" stop="20261123011836 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">When You Say Nothing At All by The Cheeney Brothers (July 18, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/34b91d39-2c86-4450-baea-de40aba25a26/artwork/poster" />
+  </programme>
+  <programme start="20261123011836 -0600" stop="20261123012509 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">So Will I 100 Billion X by The Cheeney Brothers (January 31, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/671ee58e-0ff2-4ab1-9fed-8f55c46ef355/artwork/poster" />
+  </programme>
+  <programme start="20261123012509 -0600" stop="20261123012850 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Armadillo by Morning by The Cheeney Brothers (June 29, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/4acc2732-b5c7-4b61-b63a-9f84da31ca62/artwork/poster" />
+  </programme>
+  <programme start="20261123012850 -0600" stop="20261123013530 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Hotel California by The Cheeney Brothers (June 14, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/77534ad6-148c-4a8f-88e1-9fbbfabfc740/artwork/poster" />
+  </programme>
+  <programme start="20261123013530 -0600" stop="20261123013917 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Drinkin’ Problem by The Cheeney Brothers (January 31, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/da780be7-f820-46d7-bba2-8e6eaef90ce9/artwork/poster" />
+  </programme>
+  <programme start="20261123013917 -0600" stop="20261123014319 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">The Devil Went Down To Georgia by The Cheeney Brothers (July 10, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/7707c885-2198-4d2c-a247-05524d21741e/artwork/poster" />
+  </programme>
+  <programme start="20261123014319 -0600" stop="20261123014725 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Mustang Sally by The Cheeney Brothers (February 8, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/479336b0-5c7a-463e-87dd-6d4f234e5b2f/artwork/poster" />
+  </programme>
+  <programme start="20261123014725 -0600" stop="20261123015128 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Heavens To Betsy by The Cheeney Brothers (August 31, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/12403707-e9a7-4efc-ac71-4b09ce7709c9/artwork/poster" />
+  </programme>
+  <programme start="20261123015128 -0600" stop="20261123015446 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Amarillo by Morning by The Cheeney Brothers (November 29, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/cfc1f085-2bdc-475c-ab1d-73a1c20ee0ac/artwork/poster" />
+  </programme>
+  <programme start="20261123015446 -0600" stop="20261123020024 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Free Bird by The Cheeney Brothers (June 29, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/efa30133-0577-4949-8fc0-f59ae269562b/artwork/poster" />
+  </programme>
+  <programme start="20261123020024 -0600" stop="20261123020925 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Fool Around and Fell in Love and Every Rose Has It's Thorn by The Cheeney Brothers (March 21, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/98d38c77-5172-4ea5-8362-3e0fe9d46be6/artwork/poster" />
+  </programme>
+  <programme start="20261123020925 -0600" stop="20261123021500 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Friends in Low Places by The Cheeney Brothers (March 21, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/85278364-588c-42ab-aef7-46d6d8eca5b1/artwork/poster" />
+  </programme>
+  <programme start="20261123021500 -0600" stop="20261123021821 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Beautiful Crazy by The Cheeney Brothers (August 16, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/7de817aa-7bb8-45ff-86ab-3b87e8b8734f/artwork/poster" />
+  </programme>
+  <programme start="20261123021821 -0600" stop="20261123022501 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Snow by Chase H. Cheeney (January 2, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/2200ce56-11b3-4153-bf04-068240dcdb01/artwork/poster" />
+  </programme>
+  <programme start="20261123022501 -0600" stop="20261123022921 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Wonderwall by The Cheeney Brothers (September 5, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/6aff9a00-52fa-44ad-9d30-48b4d039d561/artwork/poster" />
+  </programme>
+  <programme start="20261123022921 -0600" stop="20261123023231 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Astray by The Cheeney Brothers (October 25, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/d5bd41a8-3cc6-4967-88ff-46b4ba687fc0/artwork/poster" />
+  </programme>
+  <programme start="20261123023231 -0600" stop="20261123023900 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Sign of the Times by The Cheeney Brothers (January 2, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/4727b6bc-57ee-47cb-8b50-fb87d0d7b882/artwork/poster" />
+  </programme>
+  <programme start="20261123023900 -0600" stop="20261123024404 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Free Fallin’  by The Cheeney Brothers (June 20, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/78492978-3777-42e4-9c33-4d405032bb44/artwork/poster" />
+  </programme>
+  <programme start="20261123024404 -0600" stop="20261123024901 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Yellow by The Cheeney Brothers (July 10, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/3c68dac9-a73b-4528-8c64-d61e92c03b50/artwork/poster" />
+  </programme>
+  <programme start="20261123024901 -0600" stop="20261123025424 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Magic by The Cheeney Brothers (July 18, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/d646f0d8-ea92-4be0-88b7-fe6a70980a8f/artwork/poster" />
+  </programme>
+  <programme start="20261123025424 -0600" stop="20261123025802 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Runaway Train by The Cheeney Brothers (June 20, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/3426f59b-42ec-41e2-b144-ed25eae7f45d/artwork/poster" />
+  </programme>
+  <programme start="20261123025802 -0600" stop="20261123030351 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Wonderwall by The Cheeney Brothers (August 1, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/c2d06c1d-8086-4ca0-89d7-1ce356603749/artwork/poster" />
+  </programme>
+  <programme start="20261123030351 -0600" stop="20261123030809 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">I'm Not The Devil by The Cheeney Brothers (November 17, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/2f7b7cf0-78bd-41a5-852f-0fdf2de62d92/artwork/poster" />
+  </programme>
+  <programme start="20261123030809 -0600" stop="20261123031252 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Mama, I’m Coming Home by The Cheeney Brothers (July 10, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/89ce4cfa-1d4a-4c75-b8e8-2f0015fe005a/artwork/poster" />
+  </programme>
+  <programme start="20261123031252 -0600" stop="20261123031646 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Beautiful Crazy by The Cheeney Brothers (September 12, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/8fddeb39-8e22-44c2-a97b-00119f9e1b2d/artwork/poster" />
+  </programme>
+  <programme start="20261123031646 -0600" stop="20261123032014 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">The Devil Went Down To Georgia by The Cheeney Brothers (June 14,2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/7f2c0035-a0e7-48c0-874a-f08ea619cd05/artwork/poster" />
+  </programme>
+  <programme start="20261123032014 -0600" stop="20261123032600 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Unknown Song by The Cheeney Brothers (September 12, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/48818d40-aaac-4f75-bd4d-db78d05c000a/artwork/poster" />
+  </programme>
+  <programme start="20261123032600 -0600" stop="20261123033035 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Watermelon Sugar by The Cheeney Brothers (October 4, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/e973a352-b5ec-432c-a4bd-29292f27f7b8/artwork/poster" />
+  </programme>
+  <programme start="20261123033035 -0600" stop="20261123033445 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Suspicious Minds by The Cheeney Brothers (October 17, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/6ab06357-8aba-4b74-84d5-bb96f878c248/artwork/poster" />
+  </programme>
+  <programme start="20261123033445 -0600" stop="20261123034502 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Seminole Wind and Wagon Wheel by The Cheeney Brothers (March 21, 2026)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/5cff85a1-2da6-4de3-916e-75a384d7b6d3/artwork/poster" />
+  </programme>
+  <programme start="20261123034502 -0600" stop="20261123034944 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Give Me One Reason by The Cheeney Brothers (September 12, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/0d8b5915-4dd2-41a1-9aa3-de0724a4425f/artwork/poster" />
+  </programme>
+  <programme start="20261123034944 -0600" stop="20261123035447 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">You Say by The Cheeney Brothers (June 27, 2024)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/ce76a908-2610-41a7-b578-2c8d638e8b86/artwork/poster" />
+  </programme>
+  <programme start="20261123035447 -0600" stop="20261123035931 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Let Her Cry by The Cheeney Brothers (November 21, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/cd83bc11-33ca-4331-80b6-679e63ec8294/artwork/poster" />
+  </programme>
+  <programme start="20261123035931 -0600" stop="20261123040501 -0600" channel="C2.50.tunarr.com">
+    <title lang="en">Yellow by The Cheeney Brothers (October 4, 2025)</title>
+    <desc lang="en">91.3 Ayclt FM TV</desc>
+    <icon src="http://tv.913aycltfm.com/api/programs/7bde18b2-3278-43a9-842c-0e786c885247/artwork/poster" />
+  </programme>
+  <programme start="20261122162500 -0600" stop="20261122170000 -0600" channel="GamingCentralRadio">
     <title lang="en">Gaming Central Radio</title>
     <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
@@ -6541,7 +6571,22 @@
     <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
   </programme>
-  <programme start="20261129130000 -0600" stop="20261129131000 -0600" channel="GamingCentralRadio">
+  <programme start="20261129130000 -0600" stop="20261129140000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261129140000 -0600" stop="20261129150000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261129150000 -0600" stop="20261129160000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261129160000 -0600" stop="20261129162500 -0600" channel="GamingCentralRadio">
     <title lang="en">Gaming Central Radio</title>
     <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
