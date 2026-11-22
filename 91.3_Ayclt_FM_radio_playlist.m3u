@@ -20,3 +20,9 @@ https://rtmp.913aycltfm.com/memfs/810e35d3-d0c9-4d33-9b18-5878d0277a23.m3u8
 
 #EXTINF:-1 tvg-id="913AycltFMMobileStudioCam" tvg-name="91.3 Ayclt FM Mobile Studio Cam" tvg-logo="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png" tvg-background="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" tvg-art="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" tvg-chno="1.7" group-title="Live",91.3 Ayclt FM Mobile Studio Cam
 https://rtmp.913aycltfm.com/memfs/8ec7bda8-0ae8-4d41-83f9-68e140c17757.m3u8
+
+#EXTINF:-1 tvg-id="C1.49.tunarr.com" tvg-name="djay CM TV" tvg-logo="http://tv.913aycltfm.com/images/uploads/6e2c1920-a246-433a-bb44-63dc10ca5ff5.jpg" tvg-chno="1.8" group-title="TV",djay CM TV
+http://tv.913aycltfm.com/stream/channels/81c11cc1-cc51-4c02-b3c3-bf6857621399?streamMode=hls
+
+#EXTINF:-1 tvg-id="C2.50.tunarr.com" tvg-name="91.3 Ayclt FM TV" tvg-logo="http://tv.913aycltfm.com/images/uploads/ea8408cf-7ed8-41c0-8eaa-adc70b2bde7f.png" tvg-chno="1.9" group-title="TV",91.3 Ayclt FM TV
+http://tv.913aycltfm.com/stream/channels/966e8b48-7adf-46be-9092-e1a436a86314?streamMode=hls
