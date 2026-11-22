@@ -104,8 +104,8 @@ Each run:
 1. Checks out the repository and sets up Python 3.12.
 2. Checks Central Time daylight-saving timestamp handling.
 3. Retrieves each radio station's AzuraCast schedule and streamer directory.
-4. Generates the 7-day radio schedule and merges the two TV schedules from the Tunarr XMLTV feed into the same XMLTV and JSON guides. Radio schedule gaps receive fallback programming; TV entries retain their Tunarr programme metadata.
-5. Validates XML, JSON, all seven channel IDs, playlist/XMLTV alignment, programme timelines, and LIVE metadata. The run fails if the Tunarr feed is unavailable or either TV channel has no in-window programmes.
+4. Generates the 7-day radio schedule. Radio schedule gaps receive fallback programming.
+5. Validates XML, JSON, all seven channel IDs, playlist/XMLTV alignment, programme timelines, and LIVE metadata.
 6. Reports channels that have no real schedule entries and are filler-only.
 7. Commits the generated XMLTV and JSON files when their contents change.
 
