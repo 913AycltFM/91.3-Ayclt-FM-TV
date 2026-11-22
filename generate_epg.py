@@ -15,8 +15,6 @@ TIMEZONE = ZoneInfo("America/Chicago")
 DAYS_AHEAD = 7
 XML_OUTPUT = "91.3_Ayclt_FM_radio_guide.xml"
 JSON_OUTPUT = "epg.json"
-TUNARR_XMLTV_URL = "https://tv.913aycltfm.com/api/xmltv.xml"
-EXTERNAL_CHANNEL_IDS = {"C1.49.tunarr.com", "C2.50.tunarr.com"}
 
 STATIONS = {
     "913AycltFM": "91.3_ayclt_fm",
@@ -37,8 +35,6 @@ CHANNELS = [
     {"id": "GamingCentralRadio", "display": "1.5", "name": "Gaming Central Radio", "description": "Your game, our community. Gaming Central, for gamers and music together!", "icon": "https://radio.913aycltfm.com/static/uploads/gaming_central_radio/album_art.1794878937.png", "background": "https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png"},
     {"id": "913AycltFMLiveStudioCam", "display": "1.6", "name": "91.3 Ayclt FM Live Studio Cam", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png", "background": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg"},
     {"id": "913AycltFMMobileStudioCam", "display": "1.7", "name": "91.3 Ayclt FM Mobile Studio Cam", "description": "La Marque TX #1 Hit Music Station", "icon": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png", "background": "https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg"},
-    {"id": "C1.49.tunarr.com", "display": "1.8", "name": "djay CM TV", "description": "djay CM TV", "icon": "http://tv.913aycltfm.com/images/uploads/6e2c1920-a246-433a-bb44-63dc10ca5ff5.jpg", "background": "http://tv.913aycltfm.com/images/uploads/6e2c1920-a246-433a-bb44-63dc10ca5ff5.jpg"},
-    {"id": "C2.50.tunarr.com", "display": "1.9", "name": "91.3 Ayclt FM TV", "description": "91.3 Ayclt FM TV", "icon": "http://tv.913aycltfm.com/images/uploads/ea8408cf-7ed8-41c0-8eaa-adc70b2bde7f.png", "background": "http://tv.913aycltfm.com/images/uploads/ea8408cf-7ed8-41c0-8eaa-adc70b2bde7f.png"},
 ]
 
 def fetch_json(url):
@@ -76,68 +72,6 @@ def fetch_json(url):
         except json.JSONDecodeError as error:
             raise RuntimeError(f"AzuraCast API returned invalid JSON: {url}") from error
     raise RuntimeError(f"AzuraCast API request failed after 3 attempts: {url}") from last_error
-
-def fetch_external_xmltv_programmes(minimum, maximum):
-    """Import the two Tunarr TV schedules into the combined XMLTV/JSON guide."""
-    request = Request(TUNARR_XMLTV_URL, headers={
-        "User-Agent": "91.3-Ayclt-FM-EPG/1.0",
-        "Accept": "application/xml,text/xml,*/*",
-        "Cache-Control": "no-cache",
-    })
-    for attempt in range(1, 4):
-        try:
-            print(f"Fetching Tunarr XMLTV (attempt {attempt}/3): {TUNARR_XMLTV_URL}")
-            with urlopen(request, timeout=90) as response:
-                source_root = ET.fromstring(response.read())
-            break
-        except (HTTPError, URLError, TimeoutError, ConnectionError, OSError, ET.ParseError) as error:
-            if attempt == 3:
-                raise RuntimeError("Unable to retrieve or parse the Tunarr XMLTV feed after 3 attempts.") from error
-            time.sleep(5 * attempt)
-
-    source_channels = {item.get("id"): item for item in source_root.findall("channel")}
-    missing_channels = EXTERNAL_CHANNEL_IDS - set(source_channels)
-    if missing_channels:
-        raise RuntimeError(f"Tunarr XMLTV is missing expected channel IDs: {sorted(missing_channels)}")
-
-    imported = []
-    counts = {channel_id: 0 for channel_id in EXTERNAL_CHANNEL_IDS}
-    for programme in source_root.findall("programme"):
-        channel_id = programme.get("channel")
-        if channel_id not in EXTERNAL_CHANNEL_IDS:
-            continue
-        raw_start, raw_stop = programme.get("start"), programme.get("stop")
-        if not raw_start or not raw_stop:
-            continue
-        def parse_xmltv_time(value):
-            value = value.strip()
-            try:
-                parsed = datetime.strptime(value, "%Y%m%d%H%M%S %z")
-            except ValueError:
-                parsed = datetime.strptime(value[:14], "%Y%m%d%H%M%S").replace(tzinfo=TIMEZONE)
-            return parsed.astimezone(TIMEZONE)
-        try:
-            start, end = parse_xmltv_time(raw_start), parse_xmltv_time(raw_stop)
-        except ValueError:
-            continue
-        if end <= start or end <= minimum or start >= maximum:
-            continue
-        channel = next(item for item in CHANNELS if item["id"] == channel_id)
-        title = (programme.findtext("title") or channel["name"]).strip()
-        description = (programme.findtext("desc") or channel["description"]).strip()
-        icon_element = programme.find("icon")
-        icon = icon_element.get("src") if icon_element is not None else channel["icon"]
-        imported.append({
-            "channel_id": channel_id, "channel_name": channel["name"],
-            "title": title, "description": description,
-            "start": max(start, minimum), "end": min(end, maximum),
-            "icon": icon, "fallback": False, "live_program": False,
-        })
-        counts[channel_id] += 1
-    if any(count == 0 for count in counts.values()):
-        raise RuntimeError(f"Tunarr XMLTV returned no in-window programmes for one or more TV channels: {counts}")
-    print(f"Imported Tunarr XMLTV programmes: {counts}")
-    return imported
 
 
 def find_schedule_list(data):
@@ -619,8 +553,6 @@ def main():
             streamer_directories[station_slug] = {}
     for channel in CHANNELS:
         channel_id = channel["id"]
-        if channel_id in EXTERNAL_CHANNEL_IDS:
-            continue
         if channel_id not in STATIONS:
             all_events.extend(create_no_schedule_channel(channel, start_time, end_time))
             continue
@@ -662,7 +594,6 @@ def main():
             cam_event["icon"] = fm_channel["background"]
         mobile_cam_events.append(cam_event)
     all_events.extend(fill_schedule_gaps(mobile_cam, mobile_cam_events, start_time, end_time))
-    all_events.extend(fetch_external_xmltv_programmes(start_time, end_time))
     all_events = clean_events(all_events)
     if not validate_timelines(all_events):
         raise RuntimeError("EPG timeline validation failed")
