@@ -8,6 +8,7 @@ on:
   push:
     paths:
       - "generate_epg.py"
+      - "91.3_Ayclt_FM_radio_playlist.m3u"
       - ".github/workflows/update-epg.yml"
 
 permissions:
@@ -90,7 +91,7 @@ jobs:
           import json
           import xml.etree.ElementTree as ET
 
-          expected = {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "913AycltFMHD4", "GamingCentralRadio", "913AycltFMLiveStudioCam", "913AycltFMMobileStudioCam", "C1.49.tunarr.com", "C2.50.tunarr.com"}
+          expected = {"913AycltFM", "913AycltFMHD2", "913AycltFMHD3", "913AycltFMHD4", "GamingCentralRadio", "913AycltFMLiveStudioCam", "913AycltFMMobileStudioCam"}
 
           with open("epg.json", encoding="utf-8") as f:
               data = json.load(f)
