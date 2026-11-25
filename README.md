@@ -26,7 +26,7 @@ Use these public GitHub-hosted files in your IPTV player or media server:
 - **XMLTV guide:** [91.3 Ayclt FM XMLTV EPG](https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/main/91.3_Ayclt_FM_radio_guide.xml)
 - **JSON guide:** [epg.json](https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/main/epg.json)
 
-The M3U intentionally does not contain a `url-tvg` attribute. Configure the XMLTV guide separately in your IPTV application.
+The M3U includes a `url-tvg` attribute pointing to the XMLTV guide published in this repository. IPTV applications that support this attribute can use it to discover the guide automatically. Some applications, including Jellyfin in many setups, may still require the XMLTV guide URL to be entered separately in the Live TV guide provider settings. The GitHub Actions workflow verifies that the M3U contains the expected guide URL and that its channel IDs match the XMLTV and JSON guide.
 
 ## EPG generation and schedule filters
 
