@@ -116,9 +116,8 @@ jobs:
           # Keep the M3U tuner channel IDs exactly aligned with XMLTV/JSON.
           with open("91.3_Ayclt_FM_radio_playlist.m3u", encoding="utf-8") as f:
               playlist = f.read()
-          expected_guide_url = "https://raw.githubusercontent.com/913AycltFM/91.3-Ayclt-FM-TV/refs/heads/main/91.3_Ayclt_FM_radio_guide.xml"
-          if f'url-tvg="{expected_guide_url}"' not in playlist:
-              raise SystemExit("The M3U is missing the expected url-tvg XMLTV guide reference.")
+          if "url-tvg=" in playlist.lower():
+              raise SystemExit("The M3U must not contain url-tvg; configure XMLTV separately.")
           playlist_channels = set()
           for line in playlist.splitlines():
               if line.startswith("#EXTINF:"):
