@@ -36,52 +36,7 @@
     <display-name>91.3 Ayclt FM Mobile Studio Cam</display-name>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/album_art.1794485401.png" />
   </channel>
-  <programme start="20261125222500 -0600" stop="20261125230000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261125230000 -0600" stop="20261126000000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261126000000 -0600" stop="20261126010000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261126010000 -0600" stop="20261126020000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261126020000 -0600" stop="20261126030000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261126030000 -0600" stop="20261126040000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261126040000 -0600" stop="20261126050000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261126050000 -0600" stop="20261126060000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261126060000 -0600" stop="20261126070000 -0600" channel="913AycltFM">
-    <title lang="en">91.3 Ayclt FM</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
-  </programme>
-  <programme start="20261126070000 -0600" stop="20261126090000 -0600" channel="913AycltFM">
+  <programme start="20261126081000 -0600" stop="20261126090000 -0600" channel="913AycltFM">
     <title lang="en">Best Of JB In the Morning (Thursday Edition)</title>
     <desc lang="en">Playlist: Best Of JB In the Morning (Thursday Edition)</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
@@ -821,62 +776,57 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261202220000 -0600" stop="20261202222500 -0600" channel="913AycltFM">
+  <programme start="20261202220000 -0600" stop="20261202230000 -0600" channel="913AycltFM">
     <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261125222500 -0600" stop="20261125230000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261202230000 -0600" stop="20261203000000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261125230000 -0600" stop="20261126000000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261203000000 -0600" stop="20261203010000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126000000 -0600" stop="20261126010000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261203010000 -0600" stop="20261203020000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126010000 -0600" stop="20261126020000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261203020000 -0600" stop="20261203030000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126020000 -0600" stop="20261126030000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261203030000 -0600" stop="20261203040000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126030000 -0600" stop="20261126040000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261203040000 -0600" stop="20261203050000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126040000 -0600" stop="20261126050000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261203050000 -0600" stop="20261203060000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126050000 -0600" stop="20261126060000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
+  <programme start="20261203060000 -0600" stop="20261203070000 -0600" channel="913AycltFM">
+    <title lang="en">91.3 Ayclt FM</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126060000 -0600" stop="20261126070000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
+  <programme start="20261203070000 -0600" stop="20261203081000 -0600" channel="913AycltFM">
+    <title lang="en">Best Of JB In the Morning (Thursday Edition)</title>
+    <desc lang="en">Playlist: Best Of JB In the Morning (Thursday Edition)</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126070000 -0600" stop="20261126080000 -0600" channel="913AycltFMHD2">
-    <title lang="en">91.3 Ayclt FM HD2</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
-  </programme>
-  <programme start="20261126080000 -0600" stop="20261126090000 -0600" channel="913AycltFMHD2">
+  <programme start="20261126081000 -0600" stop="20261126090000 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
@@ -1666,62 +1616,62 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261202220000 -0600" stop="20261202222500 -0600" channel="913AycltFMHD2">
+  <programme start="20261202220000 -0600" stop="20261202230000 -0600" channel="913AycltFMHD2">
     <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261125222500 -0600" stop="20261125230000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261202230000 -0600" stop="20261203000000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261125230000 -0600" stop="20261126000000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203000000 -0600" stop="20261203010000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126000000 -0600" stop="20261126010000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203010000 -0600" stop="20261203020000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126010000 -0600" stop="20261126020000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203020000 -0600" stop="20261203030000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126020000 -0600" stop="20261126030000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203030000 -0600" stop="20261203040000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126030000 -0600" stop="20261126040000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203040000 -0600" stop="20261203050000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126040000 -0600" stop="20261126050000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203050000 -0600" stop="20261203060000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126050000 -0600" stop="20261126060000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203060000 -0600" stop="20261203070000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126060000 -0600" stop="20261126070000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203070000 -0600" stop="20261203080000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126070000 -0600" stop="20261126080000 -0600" channel="913AycltFMHD3">
-    <title lang="en">91.3 Ayclt FM HD3</title>
+  <programme start="20261203080000 -0600" stop="20261203081000 -0600" channel="913AycltFMHD2">
+    <title lang="en">91.3 Ayclt FM HD2</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd2/background.1794491282.jpg" />
   </programme>
-  <programme start="20261126080000 -0600" stop="20261126090000 -0600" channel="913AycltFMHD3">
+  <programme start="20261126081000 -0600" stop="20261126090000 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
@@ -2511,62 +2461,62 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261202220000 -0600" stop="20261202222500 -0600" channel="913AycltFMHD3">
+  <programme start="20261202220000 -0600" stop="20261202230000 -0600" channel="913AycltFMHD3">
     <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261125222500 -0600" stop="20261125230000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261202230000 -0600" stop="20261203000000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261125230000 -0600" stop="20261126000000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203000000 -0600" stop="20261203010000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126000000 -0600" stop="20261126010000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203010000 -0600" stop="20261203020000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126010000 -0600" stop="20261126020000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203020000 -0600" stop="20261203030000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126020000 -0600" stop="20261126030000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203030000 -0600" stop="20261203040000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126030000 -0600" stop="20261126040000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203040000 -0600" stop="20261203050000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126040000 -0600" stop="20261126050000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203050000 -0600" stop="20261203060000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126050000 -0600" stop="20261126060000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203060000 -0600" stop="20261203070000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126060000 -0600" stop="20261126070000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203070000 -0600" stop="20261203080000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126070000 -0600" stop="20261126080000 -0600" channel="913AycltFMHD4">
-    <title lang="en">91.3 Ayclt FM HD4</title>
+  <programme start="20261203080000 -0600" stop="20261203081000 -0600" channel="913AycltFMHD3">
+    <title lang="en">91.3 Ayclt FM HD3</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd3/background.1794491309.jpg" />
   </programme>
-  <programme start="20261126080000 -0600" stop="20261126090000 -0600" channel="913AycltFMHD4">
+  <programme start="20261126081000 -0600" stop="20261126090000 -0600" channel="913AycltFMHD4">
     <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
@@ -3356,57 +3306,62 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261202220000 -0600" stop="20261202222500 -0600" channel="913AycltFMHD4">
+  <programme start="20261202220000 -0600" stop="20261202230000 -0600" channel="913AycltFMHD4">
     <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261125222500 -0600" stop="20261125230000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261202230000 -0600" stop="20261203000000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261125230000 -0600" stop="20261126000000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261203000000 -0600" stop="20261203010000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261126000000 -0600" stop="20261126010000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261203010000 -0600" stop="20261203020000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261126010000 -0600" stop="20261126020000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261203020000 -0600" stop="20261203030000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261126020000 -0600" stop="20261126030000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261203030000 -0600" stop="20261203040000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261126030000 -0600" stop="20261126040000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261203040000 -0600" stop="20261203050000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261126040000 -0600" stop="20261126050000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261203050000 -0600" stop="20261203060000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261126050000 -0600" stop="20261126060000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261203060000 -0600" stop="20261203070000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261126060000 -0600" stop="20261126070000 -0600" channel="913AycltFMLiveStudioCam">
-    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
+  <programme start="20261203070000 -0600" stop="20261203080000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
   </programme>
-  <programme start="20261126070000 -0600" stop="20261126090000 -0600" channel="913AycltFMLiveStudioCam">
+  <programme start="20261203080000 -0600" stop="20261203081000 -0600" channel="913AycltFMHD4">
+    <title lang="en">91.3 Ayclt FM HD4</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm_hd4/background.1794880715.jpg" />
+  </programme>
+  <programme start="20261126081000 -0600" stop="20261126090000 -0600" channel="913AycltFMLiveStudioCam">
     <title lang="en">Best Of JB In the Morning (Thursday Edition)</title>
     <desc lang="en">Playlist: Best Of JB In the Morning (Thursday Edition)</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
@@ -4146,57 +4101,57 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261202220000 -0600" stop="20261202222500 -0600" channel="913AycltFMLiveStudioCam">
+  <programme start="20261202220000 -0600" stop="20261202230000 -0600" channel="913AycltFMLiveStudioCam">
     <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261125222500 -0600" stop="20261125230000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261202230000 -0600" stop="20261203000000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261125230000 -0600" stop="20261126000000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261203000000 -0600" stop="20261203010000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126000000 -0600" stop="20261126010000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261203010000 -0600" stop="20261203020000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126010000 -0600" stop="20261126020000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261203020000 -0600" stop="20261203030000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126020000 -0600" stop="20261126030000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261203030000 -0600" stop="20261203040000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126030000 -0600" stop="20261126040000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261203040000 -0600" stop="20261203050000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126040000 -0600" stop="20261126050000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261203050000 -0600" stop="20261203060000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126050000 -0600" stop="20261126060000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+  <programme start="20261203060000 -0600" stop="20261203070000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">91.3 Ayclt FM Live Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126060000 -0600" stop="20261126070000 -0600" channel="913AycltFMMobileStudioCam">
-    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
-    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+  <programme start="20261203070000 -0600" stop="20261203081000 -0600" channel="913AycltFMLiveStudioCam">
+    <title lang="en">Best Of JB In the Morning (Thursday Edition)</title>
+    <desc lang="en">Playlist: Best Of JB In the Morning (Thursday Edition)</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126070000 -0600" stop="20261126090000 -0600" channel="913AycltFMMobileStudioCam">
+  <programme start="20261126081000 -0600" stop="20261126090000 -0600" channel="913AycltFMMobileStudioCam">
     <title lang="en">Best Of JB In the Morning (Thursday Edition)</title>
     <desc lang="en">Playlist: Best Of JB In the Morning (Thursday Edition)</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
@@ -4936,62 +4891,57 @@
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261202220000 -0600" stop="20261202222500 -0600" channel="913AycltFMMobileStudioCam">
+  <programme start="20261202220000 -0600" stop="20261202230000 -0600" channel="913AycltFMMobileStudioCam">
     <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
     <desc lang="en">La Marque TX #1 Hit Music Station</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261125222500 -0600" stop="20261125230000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261202230000 -0600" stop="20261203000000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261125230000 -0600" stop="20261126000000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261203000000 -0600" stop="20261203010000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126000000 -0600" stop="20261126010000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261203010000 -0600" stop="20261203020000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126010000 -0600" stop="20261126020000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261203020000 -0600" stop="20261203030000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126020000 -0600" stop="20261126030000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261203030000 -0600" stop="20261203040000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126030000 -0600" stop="20261126040000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261203040000 -0600" stop="20261203050000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126040000 -0600" stop="20261126050000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261203050000 -0600" stop="20261203060000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126050000 -0600" stop="20261126060000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261203060000 -0600" stop="20261203070000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">91.3 Ayclt FM Mobile Studio Cam</title>
+    <desc lang="en">La Marque TX #1 Hit Music Station</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126060000 -0600" stop="20261126070000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  <programme start="20261203070000 -0600" stop="20261203081000 -0600" channel="913AycltFMMobileStudioCam">
+    <title lang="en">Best Of JB In the Morning (Thursday Edition)</title>
+    <desc lang="en">Playlist: Best Of JB In the Morning (Thursday Edition)</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/91.3_ayclt_fm/background.1794491246.jpg" />
   </programme>
-  <programme start="20261126070000 -0600" stop="20261126080000 -0600" channel="GamingCentralRadio">
-    <title lang="en">Gaming Central Radio</title>
-    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
-    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
-  </programme>
-  <programme start="20261126080000 -0600" stop="20261126090000 -0600" channel="GamingCentralRadio">
+  <programme start="20261126081000 -0600" stop="20261126090000 -0600" channel="GamingCentralRadio">
     <title lang="en">Gaming Central Radio</title>
     <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
@@ -5781,7 +5731,57 @@
     <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
   </programme>
-  <programme start="20261202220000 -0600" stop="20261202222500 -0600" channel="GamingCentralRadio">
+  <programme start="20261202220000 -0600" stop="20261202230000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261202230000 -0600" stop="20261203000000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203000000 -0600" stop="20261203010000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203010000 -0600" stop="20261203020000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203020000 -0600" stop="20261203030000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203030000 -0600" stop="20261203040000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203040000 -0600" stop="20261203050000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203050000 -0600" stop="20261203060000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203060000 -0600" stop="20261203070000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203070000 -0600" stop="20261203080000 -0600" channel="GamingCentralRadio">
+    <title lang="en">Gaming Central Radio</title>
+    <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
+    <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
+  </programme>
+  <programme start="20261203080000 -0600" stop="20261203081000 -0600" channel="GamingCentralRadio">
     <title lang="en">Gaming Central Radio</title>
     <desc lang="en">Your game, our community. Gaming Central, for gamers and music together!</desc>
     <icon src="https://radio.913aycltfm.com/static/uploads/gaming_central_radio/background.1793638432.png" />
